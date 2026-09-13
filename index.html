@@ -756,6 +756,119 @@ footer p{
     }
 }
 
+
+/* ================= BEHANCE PORTFOLIO ================= */
+
+.behance-portfolio{
+    background:
+        radial-gradient(circle at 15% 15%,rgba(229,9,20,.08),transparent 28%),
+        #080808;
+}
+
+.behance-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.behance-project{
+    display:block;
+    background:#111;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:16px;
+    overflow:hidden;
+    transition:.35s ease;
+}
+
+.behance-project:hover{
+    transform:translateY(-8px);
+    border-color:rgba(229,9,20,.65);
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+.behance-image-wrap{
+    height:260px;
+    position:relative;
+    overflow:hidden;
+    background:#171717;
+}
+
+.behance-image-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s ease;
+}
+
+.behance-project:hover .behance-image-wrap img{
+    transform:scale(1.06);
+}
+
+.behance-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,.62);
+    opacity:0;
+    transition:.3s ease;
+}
+
+.behance-project:hover .behance-overlay{
+    opacity:1;
+}
+
+.behance-overlay span{
+    border:1px solid rgba(255,255,255,.7);
+    padding:10px 16px;
+    border-radius:50px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1px;
+    background:rgba(0,0,0,.35);
+}
+
+.behance-project-info{
+    padding:20px;
+}
+
+.behance-project-info span{
+    color:var(--red);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.3px;
+    text-transform:uppercase;
+}
+
+.behance-project-info h3{
+    margin-top:8px;
+    font-size:18px;
+    line-height:1.4;
+}
+
+.behance-more{
+    text-align:center;
+    margin-top:38px;
+}
+
+@media(max-width:900px){
+    .behance-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .behance-grid{
+        grid-template-columns:1fr;
+    }
+
+    .behance-image-wrap{
+        height:250px;
+    }
+}
+
 </style>
 </head>
 
@@ -1215,101 +1328,177 @@ The approved design moves toward printing and production.
 
 
 <!-- ================= PORTFOLIO ================= -->
+<section id="portfolio" class="behance-portfolio">
 
-<section id="portfolio">
+    <div class="container">
 
-<div class="container">
+        <div class="section-title">
+            <small>BEHANCE PORTFOLIO</small>
+            <h2>Selected Projects</h2>
+            <p>
+                Explore selected work from Ingenious Groups Algeria.
+                Each project opens its original Behance presentation.
+            </p>
+        </div>
 
-<div class="section-title">
+        <div class="behance-grid">
 
-<small>OUR WORK</small>
+        <a class="behance-project" href="https://www.behance.net/gallery/254806349/-PS6-" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/267693254806349.Y3JvcCw1MTQ1LDQwMjQsMCwxMTQ2.jpg" alt="نكشف لكم علبة PS6 أول مرة" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>Packaging Concept</span>
+                <h3>نكشف لكم علبة PS6 أول مرة</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/gallery/254429829/_" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/150847254429829.Y3JvcCwzNjM3LDI4NDUsMTg5LDA.jpg" alt="شاهد كيف نكسر المعادلة في الأسواق" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>Branding & Marketing</span>
+                <h3>شاهد كيف نكسر المعادلة في الأسواق</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/gallery/253689695/EDITION-LIMITEE" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/0fe7db253689695.Y3JvcCwzMDA2LDIzNTEsMCwxNDcz.jpg" alt="ÉDITION LIMITÉE" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>Packaging & Branding</span>
+                <h3>ÉDITION LIMITÉE</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/gallery/252918289/FIND-YOUR-WAY-WITH-US-PRINTING-PP-ETIQUETTES" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/1290df252918289.Y3JvcCwxMDI0LDgwMCwwLDA.jpg" alt="FIND YOUR WAY WITH US - PRINTING PP ÉTIQUETTES" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>PP Labels & Printing</span>
+                <h3>FIND YOUR WAY WITH US - PRINTING PP ÉTIQUETTES</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/gallery/249036441/-PP" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/a94e07249036441.Y3JvcCw0NjI1LDM2MTcsMTc4NiwxNDk5.jpg" alt="تقنيات طباعة متقدمة PP" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>PP Printing</span>
+                <h3>تقنيات طباعة متقدمة PP</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/gallery/248780933/_" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/bd210f248780933.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png" alt="نصل بكم لصناعة الأفلام حيث ننطلق من الجزائر" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>Creative Visual Design</span>
+                <h3>نصل بكم لصناعة الأفلام حيث ننطلق من الجزائر</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/gallery/248195547/designs-emballage-en-carton" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/ae6198248195547.Y3JvcCw1NDE3LDQyMzcsMCw1Mw.jpg" alt="designs emballage en carton" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>Carton Packaging</span>
+                <h3>designs emballage en carton</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/ingineosedesign/projects" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/776ee8246801585.Y3JvcCwxMTAzLDg2MiwxNDcsMA.jpg" alt="الطباعة الفليكسوغرافية الخاصة بكل منتوجاتكم" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>Flexographic Printing</span>
+                <h3>الطباعة الفليكسوغرافية الخاصة بكل منتوجاتكم</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/gallery/245439651/_" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/1c8d71245439651.Y3JvcCwyNTc3LDIwMTYsNTA0LDA.jpg" alt="هنا، يتحول التصميم إلى حقيقة ملموسة" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>3D Product Design</span>
+                <h3>هنا، يتحول التصميم إلى حقيقة ملموسة</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/gallery/242917735/-Doypack-" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/138b53242917735.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg" alt="تصميم وطباعة أغلفة Doypack بأحدث التقنيات العالمية" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>Doypack & Flexible Packaging</span>
+                <h3>تصميم وطباعة أغلفة Doypack بأحدث التقنيات العالمية</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/gallery/242917409/We-Make-The-Furute-for-you" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7defd5242917409.Y3JvcCw3MzYsNTc1LDI2NiwxNTM.jpg" alt="We Make The Furute for you" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>Packaging Design</span>
+                <h3>We Make The Furute for you</h3>
+            </div>
+        </a>
+        <a class="behance-project" href="https://www.behance.net/gallery/240424211/_" target="_blank" rel="noopener noreferrer">
+            <div class="behance-image-wrap">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/4fbbf0240424211.Y3JvcCw1MDM1LDM5MzksMTAzNCww.png" alt="حيث تتحول الأفكار إلى بصمة لا تُمحى" loading="lazy">
+                <div class="behance-overlay">
+                    <span>VIEW ON BEHANCE ↗</span>
+                </div>
+            </div>
+            <div class="behance-project-info">
+                <span>Cosmetic Packaging</span>
+                <h3>حيث تتحول الأفكار إلى بصمة لا تُمحى</h3>
+            </div>
+        </a>
+        </div>
 
-<h2>Our Work & Solutions</h2>
+        <div class="behance-more">
+            <a href="https://www.behance.net/ingineosedesign/projects"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-red">
+                View All Projects on Behance ↗
+            </a>
+        </div>
 
-<p>
-Explore the areas where Ingenious Groups Algeria provides
-professional design, packaging and printing solutions.
-</p>
-
-</div>
-
-<div class="portfolio-grid">
-
-<div class="project">
-
-<div class="project-info">
-
-<h3>LABEL DESIGN</h3>
-
-<p>Professional label design & printing</p>
-
-</div>
-
-</div>
-
-<div class="project">
-
-<div class="project-info">
-
-<h3>DOYPACK</h3>
-
-<p>Flexible packaging solutions</p>
-
-</div>
-
-</div>
-
-<div class="project">
-
-<div class="project-info">
-
-<h3>COSMETIC PACKAGING</h3>
-
-<p>Cosmetics packaging solutions</p>
-
-</div>
-
-</div>
-
-<div class="project">
-
-<div class="project-info">
-
-<h3>FOOD PACKAGING</h3>
-
-<p>Food product packaging</p>
-
-</div>
-
-</div>
-
-<div class="project">
-
-<div class="project-info">
-
-<h3>FLEXO PRINTING</h3>
-
-<p>Flexographic printing solutions</p>
-
-</div>
-
-</div>
-
-<div class="project">
-
-<div class="project-info">
-
-<h3>PRODUCT BOX</h3>
-
-<p>Custom product box design</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
