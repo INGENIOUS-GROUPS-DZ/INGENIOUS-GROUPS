@@ -1,74 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta name="google-site-verification" content="b8Q-406m4GFQJpvt63bYzQWHedWFuFnH-4as6m1Orxw" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>INGENIOUS GROUPS ALGERIA | Packaging & Printing</title>
 
-<meta name="description" content="Ingenious Groups Algeria - Professional packaging, labels, flexographic printing, branding and product design solutions.">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="INGENIOUS GROUPS ALGERIA - Professional packaging, flexographic printing, label design, 3D design and product packaging.">
 
 <style>
+:root{
+    --red:#e50914;
+    --black:#050505;
+    --dark:#0b0b0b;
+    --card:#111111;
+    --border:#252525;
+    --white:#ffffff;
+    --gray:#aaaaaa;
+}
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-:root{
-    --red:#e50914;
-    --dark:#080808;
-    --dark2:#111111;
-    --white:#ffffff;
-    --gray:#bdbdbd;
-    --border:rgba(255,255,255,.10);
 }
 
 html{
-    scroll-padding-top:90px;
+    scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--dark);
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--black);
     color:var(--white);
-    line-height:1.7;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
 }
 
 a{
     color:inherit;
-    text-decoration:none;
-}
-
-button{
-    font-family:inherit;
 }
 
 .container{
     width:90%;
-    max-width:1250px;
+    max-width:1200px;
     margin:auto;
 }
 
-/* ================= HEADER ================= */
+/* =========================
+   HEADER
+========================= */
 
 header{
-    position:fixed;
+    position:sticky;
     top:0;
-    left:0;
-    width:100%;
     z-index:1000;
-    background:rgba(8,8,8,.95);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid var(--border);
+    background:rgba(5,5,5,.96);
+    border-bottom:1px solid #222;
+    backdrop-filter:blur(10px);
 }
 
 .navbar{
-    min-height:78px;
+    min-height:75px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -76,8 +73,10 @@ header{
 }
 
 .logo{
-    font-size:21px;
+    text-decoration:none;
+    color:white;
     font-weight:900;
+    font-size:18px;
     letter-spacing:1px;
 }
 
@@ -88,13 +87,14 @@ header{
 nav{
     display:flex;
     align-items:center;
-    gap:26px;
+    gap:22px;
 }
 
 nav a{
-    font-size:14px;
-    font-weight:bold;
     color:#ddd;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
     transition:.3s;
 }
 
@@ -102,74 +102,36 @@ nav a:hover{
     color:var(--red);
 }
 
-.nav-contact{
-    background:var(--red);
-    padding:10px 18px;
-    border-radius:7px;
-    color:white!important;
-}
-
-/* ACCESSIBLE MOBILE MENU BUTTON */
-
 .menu{
     display:none;
-    width:46px;
-    height:46px;
-    align-items:center;
-    justify-content:center;
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:8px;
-    background:#111;
-    color:#fff;
-    font-size:25px;
+    background:none;
+    border:0;
+    color:white;
+    font-size:28px;
     cursor:pointer;
-    transition:.25s ease;
 }
 
-.menu:hover{
-    border-color:var(--red);
-    color:var(--red);
-}
-
-.menu:focus-visible,
-nav a:focus-visible{
-    outline:3px solid rgba(229,9,20,.75);
-    outline-offset:4px;
-}
-
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    min-height:100vh;
+    min-height:90vh;
     display:flex;
     align-items:center;
     position:relative;
     overflow:hidden;
     background:
-        radial-gradient(circle at 15% 30%,rgba(229,9,20,.23),transparent 35%),
-        radial-gradient(circle at 85% 70%,rgba(229,9,20,.12),transparent 30%),
-        #080808;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    width:600px;
-    height:600px;
-    border:1px solid rgba(229,9,20,.18);
-    border-radius:50%;
-    left:-250px;
-    top:100px;
+        radial-gradient(circle at 80% 30%,rgba(229,9,20,.20),transparent 35%),
+        linear-gradient(135deg,#050505,#101010);
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
-    max-width:950px;
-    padding-top:80px;
+    max-width:850px;
+    padding:80px 0;
 }
 
-.badges{
+.hero-badges{
     display:flex;
     flex-wrap:wrap;
     gap:10px;
@@ -177,17 +139,18 @@ nav a:focus-visible{
 }
 
 .badge{
-    border:1px solid rgba(229,9,20,.5);
-    color:#fff;
-    padding:7px 14px;
-    border-radius:50px;
+    border:1px solid #333;
+    background:#111;
+    color:#ddd;
+    padding:7px 13px;
+    border-radius:30px;
     font-size:12px;
-    letter-spacing:1px;
+    font-weight:700;
 }
 
 .hero h1{
-    font-size:clamp(42px,6vw,78px);
-    line-height:1.05;
+    font-size:clamp(42px,7vw,85px);
+    line-height:1;
     font-weight:900;
     margin-bottom:25px;
 }
@@ -197,262 +160,250 @@ nav a:focus-visible{
 }
 
 .hero p{
-    max-width:800px;
-    color:#cfcfcf;
-    font-size:19px;
+    max-width:700px;
+    color:#bbb;
+    font-size:18px;
     margin-bottom:35px;
 }
 
-.buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-}
-
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+    display:inline-block;
     padding:14px 25px;
     border-radius:7px;
-    font-weight:bold;
+    text-decoration:none;
+    font-weight:800;
+    margin-right:10px;
+    margin-bottom:10px;
     transition:.3s;
 }
 
 .btn-red{
     background:var(--red);
-    color:#fff;
-}
-
-.btn-red:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(229,9,20,.3);
-}
-
-.btn-outline{
-    border:1px solid #555;
     color:white;
 }
 
-.btn-outline:hover{
-    border-color:var(--red);
-    color:var(--red);
+.btn-dark{
+    background:#151515;
+    border:1px solid #333;
+    color:white;
 }
 
-/* ================= SECTIONS ================= */
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section{
-    padding:100px 0;
+    padding:90px 0;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:55px;
+    margin-bottom:50px;
 }
 
-.section-title small{
+.section-title span{
     color:var(--red);
-    font-weight:bold;
-    letter-spacing:2px;
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:3px;
 }
 
 .section-title h2{
     font-size:42px;
-    margin-top:8px;
+    margin:10px 0;
 }
 
 .section-title p{
-    color:#aaa;
-    max-width:700px;
-    margin:12px auto 0;
+    color:var(--gray);
 }
 
-/* ================= INGENIOUS TV ================= */
+/* =========================
+   INGENIOUS TV
+========================= */
 
-.ingenious-tv{
-    background:
-        radial-gradient(circle at 85% 20%,rgba(229,9,20,.14),transparent 30%),
-        radial-gradient(circle at 10% 80%,rgba(229,9,20,.08),transparent 30%),
-        #090909;
+.tv-section{
+    background:#080808;
 }
 
-.tv-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
+.video-list{
+    max-width:950px;
+    margin:auto;
 }
 
-.tv-card{
-    background:#111;
-    border:1px solid var(--border);
-    border-radius:16px;
-    overflow:hidden;
-    transition:.35s ease;
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
-}
-
-.tv-card:hover{
-    transform:translateY(-7px);
-    border-color:rgba(229,9,20,.65);
-    box-shadow:0 20px 50px rgba(229,9,20,.12);
-}
-
-.tv-video{
-    position:relative;
-    width:100%;
-    aspect-ratio:16/9;
-    background:#000;
-}
-
-.tv-video iframe{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    border:0;
-}
-
-.tv-info{
-    padding:20px 22px 23px;
-}
-
-.tv-label{
-    color:var(--red);
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
-
-.tv-info h3{
-    font-size:20px;
-    margin-top:6px;
-}
-
-.tv-info p{
-    color:#888;
-    font-size:13px;
-    margin-top:5px;
-}
-
-.tv-buttons{
+.video-item{
     display:flex;
-    justify-content:center;
-    margin-top:40px;
-}
-
-.tv-youtube{
-    display:inline-flex;
     align-items:center;
-    justify-content:center;
-    gap:8px;
-    background:var(--red);
-    color:#fff;
-    padding:14px 24px;
-    border-radius:8px;
-    font-weight:bold;
+    gap:25px;
+    padding:15px;
+    margin-bottom:18px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    text-decoration:none;
     transition:.3s;
 }
 
-.tv-youtube:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(229,9,20,.3);
+.video-item:hover{
+    transform:translateY(-4px);
+    border-color:var(--red);
+    background:#151515;
 }
 
-/* ================= ABOUT ================= */
+.video-thumb{
+    position:relative;
+    width:270px;
+    min-width:270px;
+    aspect-ratio:16/9;
+    overflow:hidden;
+    border-radius:8px;
+    background:#000;
+}
+
+.video-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.play{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:58px;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--red);
+    color:white;
+    border-radius:50%;
+    font-size:20px;
+    box-shadow:0 5px 25px rgba(0,0,0,.5);
+}
+
+.video-info h3{
+    color:white;
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.video-info p{
+    color:#999;
+    font-size:14px;
+}
+
+.all-videos{
+    display:block;
+    width:max-content;
+    max-width:100%;
+    margin:35px auto 0;
+    padding:14px 25px;
+    background:var(--red);
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.all-videos:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   ABOUT
+========================= */
 
 .about{
-    background:#0d0d0d;
+    background:#050505;
 }
 
 .about-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:50px;
     align-items:center;
 }
 
-.about-text h3{
-    font-size:34px;
+.about-text h2{
+    font-size:42px;
     margin-bottom:20px;
 }
 
-.about-text h3 span{
+.about-text h2 span{
     color:var(--red);
 }
 
 .about-text p{
-    color:#bbb;
-    margin-bottom:15px;
+    color:#aaa;
+    margin-bottom:18px;
 }
 
 .about-box{
-    background:linear-gradient(145deg,#151515,#090909);
-    border:1px solid var(--border);
-    padding:40px;
-    border-radius:18px;
-    position:relative;
-    overflow:hidden;
+    background:#101010;
+    border:1px solid #252525;
+    padding:35px;
+    border-radius:15px;
 }
 
-.about-box::after{
-    content:"INGENIOUS";
-    position:absolute;
-    font-size:90px;
-    font-weight:900;
-    color:rgba(255,255,255,.025);
-    bottom:-20px;
-    left:-10px;
-}
-
-.about-box h4{
-    font-size:28px;
+.about-box h3{
     color:var(--red);
     margin-bottom:15px;
 }
 
-.about-box p{
-    color:#aaa;
-    margin-bottom:8px;
+.about-box ul{
+    list-style:none;
 }
 
-/* ================= SERVICES ================= */
+.about-box li{
+    padding:10px 0;
+    border-bottom:1px solid #222;
+    color:#ccc;
+}
 
-.services-grid{
+.about-box li:last-child{
+    border-bottom:0;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:#090909;
+}
+
+.cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
 .card{
-    background:#111;
+    background:var(--card);
     border:1px solid var(--border);
-    border-radius:14px;
     padding:30px;
-    transition:.35s;
+    border-radius:12px;
+    transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(229,9,20,.6);
+    transform:translateY(-5px);
+    border-color:var(--red);
 }
 
-.icon{
-    width:52px;
-    height:52px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:10px;
-    background:rgba(229,9,20,.12);
-    color:var(--red);
-    font-size:25px;
-    margin-bottom:20px;
+.card-icon{
+    font-size:35px;
+    margin-bottom:18px;
 }
 
 .card h3{
     margin-bottom:10px;
-    font-size:21px;
 }
 
 .card p{
@@ -460,72 +411,72 @@ section{
     font-size:14px;
 }
 
-/* ================= MATERIALS ================= */
+/* =========================
+   MATERIALS
+========================= */
 
 .materials{
-    background:#0d0d0d;
+    background:#050505;
 }
 
-.materials-grid{
+.material-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:15px;
 }
 
 .material{
+    background:#101010;
+    border:1px solid #222;
     padding:25px;
-    border:1px solid var(--border);
-    background:#111;
-    border-radius:10px;
     text-align:center;
-    font-weight:bold;
-    font-size:18px;
+    border-radius:10px;
+}
+
+.material strong{
+    display:block;
+    color:white;
+    margin-bottom:7px;
 }
 
 .material span{
-    display:block;
-    color:var(--red);
-    font-size:12px;
-    margin-top:5px;
+    color:#888;
+    font-size:13px;
 }
 
-/* ================= INDUSTRIES ================= */
+/* =========================
+   INDUSTRIES
+========================= */
 
-.industries-grid{
+.industries{
+    background:#090909;
+}
+
+.industry-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    gap:15px;
 }
 
 .industry{
-    min-height:180px;
+    min-height:150px;
     display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    padding:25px;
-    border-radius:15px;
-    background:linear-gradient(145deg,#1b1b1b,#090909);
-    border:1px solid var(--border);
-    transition:.3s;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:#111;
+    border:1px solid #222;
+    border-radius:12px;
+    padding:20px;
+    font-weight:800;
 }
 
-.industry:hover{
-    border-color:var(--red);
-    transform:translateY(-5px);
-}
-
-.industry strong{
-    font-size:21px;
-}
-
-.industry small{
-    color:#888;
-}
-
-/* ================= PROCESS ================= */
+/* =========================
+   PROCESS
+========================= */
 
 .process{
-    background:#0d0d0d;
+    background:#050505;
 }
 
 .process-grid{
@@ -535,20 +486,18 @@ section{
 }
 
 .step{
-    text-align:center;
+    position:relative;
+    background:#101010;
+    border:1px solid #222;
+    padding:30px 20px;
+    border-radius:12px;
 }
 
-.number{
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    background:var(--red);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 20px;
-    font-size:20px;
+.step-number{
+    color:var(--red);
+    font-size:35px;
     font-weight:900;
+    margin-bottom:10px;
 }
 
 .step h3{
@@ -556,113 +505,19 @@ section{
 }
 
 .step p{
-    color:#999;
+    color:#888;
     font-size:14px;
 }
 
-/* ================= BEHANCE PORTFOLIO ================= */
+/* =========================
+   PROJECTS
+========================= */
 
-.behance-portfolio{
-    background:
-        radial-gradient(circle at 15% 15%,rgba(229,9,20,.08),transparent 28%),
-        #080808;
+.projects{
+    background:#090909;
 }
 
-.behance-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
-}
-
-.behance-project{
-    display:block;
-    background:#111;
-    border:1px solid rgba(255,255,255,.10);
-    border-radius:16px;
-    overflow:hidden;
-    transition:.35s ease;
-}
-
-.behance-project:hover{
-    transform:translateY(-8px);
-    border-color:rgba(229,9,20,.65);
-    box-shadow:0 20px 50px rgba(0,0,0,.45);
-}
-
-.behance-image-wrap{
-    height:260px;
-    position:relative;
-    overflow:hidden;
-    background:#171717;
-}
-
-.behance-image-wrap img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transition:.5s ease;
-}
-
-.behance-project:hover .behance-image-wrap img{
-    transform:scale(1.06);
-}
-
-.behance-overlay{
-    position:absolute;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(0,0,0,.62);
-    opacity:0;
-    transition:.3s ease;
-}
-
-.behance-project:hover .behance-overlay{
-    opacity:1;
-}
-
-.behance-overlay span{
-    border:1px solid rgba(255,255,255,.7);
-    padding:10px 16px;
-    border-radius:50px;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1px;
-    background:rgba(0,0,0,.35);
-}
-
-.behance-project-info{
-    padding:20px;
-}
-
-.behance-project-info span{
-    color:var(--red);
-    font-size:11px;
-    font-weight:800;
-    letter-spacing:1.3px;
-    text-transform:uppercase;
-}
-
-.behance-project-info h3{
-    margin-top:8px;
-    font-size:18px;
-    line-height:1.4;
-}
-
-.behance-more{
-    text-align:center;
-    margin-top:38px;
-}
-
-/* ================= PRODUCTS ================= */
-
-.products{
-    background:#080808;
-}
-
-.products-grid{
+.product-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
@@ -670,238 +525,210 @@ section{
 
 .product-card{
     background:#111;
-    border:1px solid var(--border);
-    border-radius:15px;
+    border:1px solid #222;
+    border-radius:12px;
     overflow:hidden;
-    transition:.35s;
+    transition:.3s;
 }
 
 .product-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-5px);
     border-color:var(--red);
-    box-shadow:0 15px 40px rgba(229,9,20,.15);
 }
 
 .product-card img{
     width:100%;
-    height:280px;
+    aspect-ratio:1/1;
     object-fit:cover;
-    display:block;
+}
+
+.product-card-content{
+    padding:18px;
 }
 
 .product-card h3{
-    padding:18px;
-    font-size:20px;
-    text-align:center;
+    margin-bottom:5px;
 }
 
-/* ================= CONTACT ================= */
-
-.contact{
-    background:
-        radial-gradient(circle at 80% 20%,rgba(229,9,20,.15),transparent 30%),
-        #0d0d0d;
+.product-card p{
+    color:#888;
+    font-size:13px;
 }
 
-.contact-grid{
+/* =========================
+   BEHANCE
+========================= */
+
+.portfolio{
+    background:#050505;
+}
+
+.behance-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.contact-card{
+.behance-card{
     background:#111;
-    border:1px solid var(--border);
-    border-radius:15px;
-    padding:30px;
-}
-
-.contact-card h3{
-    font-size:25px;
-    margin-bottom:20px;
-}
-
-.contact-item{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding:15px 0;
-    border-bottom:1px solid var(--border);
-}
-
-.contact-item:last-child{
-    border-bottom:0;
-}
-
-.contact-icon{
-    width:42px;
-    height:42px;
-    border-radius:8px;
-    background:rgba(229,9,20,.13);
-    color:var(--red);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-}
-
-.contact-item span{
-    color:#999;
-    display:block;
-    font-size:12px;
-}
-
-.contact-item strong{
-    font-size:16px;
-    direction:ltr;
-    display:block;
-}
-
-.whatsapp{
-    display:block;
-    width:100%;
-    text-align:center;
-    margin-top:20px;
-    background:var(--red);
-    padding:15px;
-    border-radius:8px;
-    font-weight:bold;
+    border:1px solid #222;
+    border-radius:12px;
+    overflow:hidden;
+    text-decoration:none;
     transition:.3s;
 }
 
-.whatsapp:hover{
-    transform:translateY(-3px);
+.behance-card:hover{
+    transform:translateY(-5px);
+    border-color:var(--red);
 }
 
-/* ================= FOOTER ================= */
+.behance-card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+}
+
+.behance-card div{
+    padding:15px;
+}
+
+.behance-card h3{
+    font-size:16px;
+}
+
+.behance-card p{
+    color:#888;
+    font-size:13px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#090909;
+}
+
+.contact-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    background:#111;
+    border:1px solid #222;
+    border-radius:15px;
+    padding:50px 30px;
+}
+
+.contact-box h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#999;
+    margin-bottom:25px;
+}
+
+.contact-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    background:#050505;
-    border-top:1px solid var(--border);
-    padding:35px 0;
+    background:#000;
+    border-top:1px solid #222;
+    padding:30px 0;
     text-align:center;
-}
-
-footer strong{
-    font-size:20px;
-}
-
-footer strong span{
-    color:var(--red);
 }
 
 footer p{
     color:#777;
-    margin-top:8px;
     font-size:13px;
 }
 
-/* ================= FLOATING WHATSAPP ================= */
+footer span{
+    color:var(--red);
+}
 
-.floating-whatsapp{
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
     position:fixed;
-    bottom:22px;
-    left:22px;
+    right:20px;
+    bottom:20px;
+    z-index:999;
     width:58px;
     height:58px;
-    border-radius:50%;
-    background:var(--red);
     display:flex;
     align-items:center;
     justify-content:center;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    text-decoration:none;
     font-size:25px;
-    z-index:999;
-    box-shadow:0 10px 30px rgba(0,0,0,.5);
-    transition:.3s;
+    box-shadow:0 5px 25px rgba(0,0,0,.4);
 }
 
-.floating-whatsapp:hover{
-    transform:scale(1.1);
-}
-
-/* ================= TABLET ================= */
-
-@media(max-width:1100px){
-
-    .products-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .materials-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .industries-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-/* ================= MOBILE NAV ================= */
+/* =========================
+   MOBILE MENU
+========================= */
 
 @media(max-width:900px){
 
     .menu{
-        display:flex;
+        display:block;
     }
 
     nav{
         position:absolute;
-        top:78px;
+        top:75px;
         left:0;
-        right:0;
         width:100%;
-        background:rgba(9,9,9,.98);
-        backdrop-filter:blur(15px);
-
+        padding:20px;
+        background:#080808;
+        border-bottom:1px solid #222;
+        display:flex;
         flex-direction:column;
-        align-items:stretch;
-        gap:0;
+        align-items:flex-start;
+        gap:15px;
 
-        padding:10px 20px 20px;
-
-        border-bottom:1px solid var(--border);
-
-        visibility:hidden;
         opacity:0;
-        transform:translateY(-10px);
+        visibility:hidden;
         pointer-events:none;
-
-        transition:
-            opacity .25s ease,
-            transform .25s ease,
-            visibility .25s ease;
+        transform:translateY(-10px);
+        transition:.25s;
     }
 
     nav.active{
-        visibility:visible;
         opacity:1;
-        transform:translateY(0);
+        visibility:visible;
         pointer-events:auto;
+        transform:translateY(0);
     }
 
-    nav a{
-        width:100%;
-        padding:15px 12px;
-        border-bottom:1px solid rgba(255,255,255,.07);
-        font-size:15px;
-    }
-
-    nav a:last-child{
-        border-bottom:0;
-    }
-
-    .nav-contact{
-        margin-top:10px;
-        text-align:center;
-    }
-
-    .about-grid,
-    .contact-grid{
+    .about-grid{
         grid-template-columns:1fr;
     }
 
-    .services-grid{
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .material-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .industry-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -909,166 +736,108 @@ footer p{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .tv-grid{
-        grid-template-columns:1fr;
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .behance-grid{
         grid-template-columns:repeat(2,1fr);
     }
-
 }
-
-/* ================= SMALL MOBILE ================= */
 
 @media(max-width:600px){
 
-    .container{
-        width:92%;
-    }
-
     section{
-        padding:75px 0;
+        padding:65px 0;
     }
 
     .hero{
-        min-height:100svh;
-    }
-
-    .hero-content{
-        padding-top:100px;
+        min-height:80vh;
     }
 
     .hero h1{
-        font-size:43px;
-    }
-
-    .hero p{
-        font-size:16px;
+        font-size:48px;
     }
 
     .section-title h2{
         font-size:32px;
     }
 
-    .services-grid,
-    .materials-grid,
-    .industries-grid,
+    .cards,
+    .material-grid,
+    .industry-grid,
     .process-grid,
-    .products-grid,
+    .product-grid,
     .behance-grid{
         grid-template-columns:1fr;
     }
 
-    .buttons{
+    .video-item{
         flex-direction:column;
+        align-items:stretch;
     }
 
-    .btn{
+    .video-thumb{
         width:100%;
+        min-width:100%;
     }
 
-    .logo{
-        font-size:16px;
+    .video-info{
+        padding:5px 5px 10px;
     }
 
-    .menu{
-        width:44px;
-        height:44px;
+    .contact-box h2{
+        font-size:30px;
     }
-
-    .tv-info h3{
-        font-size:18px;
-    }
-
-    .about-box{
-        padding:28px;
-    }
-
-    .behance-image-wrap{
-        height:230px;
-    }
-
-    .product-card img{
-        height:260px;
-    }
-
-    .floating-whatsapp{
-        width:52px;
-        height:52px;
-        bottom:18px;
-        left:18px;
-    }
-
 }
-
-/* ================= REDUCED MOTION ================= */
 
 @media(prefers-reduced-motion:reduce){
-
-    *,
-    *::before,
-    *::after{
-        scroll-behavior:auto!important;
-        transition:none!important;
-        animation:none!important;
+    html{
+        scroll-behavior:auto;
     }
 
+    *{
+        transition:none !important;
+    }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
 <div class="container navbar">
 
-<a
-href="#home"
-class="logo"
-aria-label="INGENIOUS GROUPS ALGERIA - Home">
-
+<a href="#home" class="logo">
 INGENIOUS <span>GROUPS</span> ALGERIA
-
 </a>
 
 <button
-class="menu"
-id="menuButton"
-type="button"
-aria-label="Open navigation menu"
-aria-expanded="false"
-aria-controls="nav">
-
-<span aria-hidden="true">☰</span>
-
+    class="menu"
+    id="menuButton"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="nav">
+    ☰
 </button>
 
-<nav
-id="nav"
-aria-label="Main navigation">
+<nav id="nav" aria-label="Main navigation">
 
 <a href="#home">Home</a>
-
 <a href="#tv">INGENIOUS TV</a>
-
 <a href="#about">About Us</a>
-
 <a href="#services">Services</a>
-
 <a href="#materials">Materials</a>
-
 <a href="#industries">Industries</a>
-
 <a href="#portfolio">Our Work</a>
-
-<a href="#products">Projects</a>
-
-<a href="#contact" class="nav-contact">Contact</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 
 </nav>
 
@@ -1077,67 +846,44 @@ aria-label="Main navigation">
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
-<div class="container hero-content">
+<div class="container">
 
-<div class="badges">
+<div class="hero-content">
 
+<div class="hero-badges">
 <span class="badge">PACKAGING</span>
-
 <span class="badge">FLEXO PRINTING</span>
-
 <span class="badge">LABELS</span>
-
 <span class="badge">3D DESIGN</span>
-
 </div>
 
 <h1>
-
-We Turn Your Product Into
-
-<span>A Powerful Brand.</span>
-
+INGENIOUS<br>
+<span>GROUPS</span> ALGERIA
 </h1>
 
 <p>
-
-At <strong>INGENIOUS GROUPS ALGERIA</strong>, we develop
-professional packaging, labeling, printing and branding solutions
-designed to give your products a strong and professional presence
-in the market.
-
+High precision packaging design, flexographic printing,
+product labels, 3D visualization and print-ready solutions.
+From design to simulation to printing.
 </p>
 
-<div class="buttons">
-
 <a
-href="#services"
-class="btn btn-red">
-
-Explore Our Services
-
+class="btn btn-red"
+href="#projects">
+Our Projects
 </a>
 
 <a
-href="#tv"
-class="btn btn-outline">
-
-Watch INGENIOUS TV
-
-</a>
-
-<a
-href="https://wa.me/213798234579"
-target="_blank"
-rel="noopener noreferrer"
-class="btn btn-outline">
-
-Contact Us on WhatsApp
-
+class="btn btn-dark"
+href="#contact">
+Contact Us
 </a>
 
 </div>
@@ -1147,182 +893,70 @@ Contact Us on WhatsApp
 </section>
 
 
-<!-- ================= INGENIOUS TV ================= -->
+<!-- =========================
+     INGENIOUS TV
+========================= -->
 
-<section
-class="ingenious-tv"
-id="tv">
+<section class="tv-section" id="tv">
 
 <div class="container">
 
 <div class="section-title">
 
-<small>INGENIOUS GROUPS ALGERIA</small>
+<span>INGENIOUS TV</span>
 
-<h2>INGENIOUS TV</h2>
+<h2>Our Videos</h2>
 
 <p>
-
-Discover our projects, packaging designs, printing technology,
-3D visualization and creative work directly inside our website.
-
+Découvrez nos projets, designs, impressions et réalisations.
 </p>
 
 </div>
 
-<div class="tv-grid">
+
+<div class="video-list">
 
 
-<!-- VIDEO 01 -->
-
-<div class="tv-card">
-
-<div class="tv-video">
-
-<iframe
-src="https://www.youtube.com/embed/PVU1hjx64U4"
-title="INGENIOUS GROUPS ALGERIA"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="tv-info">
-
-<div class="tv-label">
-FEATURED VIDEO
-</div>
-
-<h3>
-INGENIOUS GROUPS ALGERIA
-</h3>
-
-<p>
-Design • Packaging • Printing • Creative Production
-</p>
-
-</div>
-
-</div>
-
-
-<!-- VIDEO 02 -->
-
-<div class="tv-card">
-
-<div class="tv-video">
-
-<iframe
-src="https://www.youtube.com/embed/VIDEO_ID_2"
-title="INGENIOUS TV Video 2"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="tv-info">
-
-<div class="tv-label">
-PACKAGING
-</div>
-
-<h3>
-Packaging & Label Design
-</h3>
-
-<p>
-Professional packaging and label design projects.
-</p>
-
-</div>
-
-</div>
-
-
-<!-- VIDEO 03 -->
-
-<div class="tv-card">
-
-<div class="tv-video">
-
-<iframe
-src="https://www.youtube.com/embed/VIDEO_ID_3"
-title="INGENIOUS TV Video 3"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="tv-info">
-
-<div class="tv-label">
-FLEXO PRINTING
-</div>
-
-<h3>
-Flexographic Printing
-</h3>
-
-<p>
-Printing technology, labels and production solutions.
-</p>
-
-</div>
-
-</div>
-
-
-<!-- VIDEO 04 -->
-
-<div class="tv-card">
-
-<div class="tv-video">
-
-<iframe
-src="https://www.youtube.com/embed/VIDEO_ID_4"
-title="INGENIOUS TV Video 4"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="tv-info">
-
-<div class="tv-label">
-3D DESIGN
-</div>
-
-<h3>
-3D & Creative Production
-</h3>
-
-<p>
-3D visualization, product presentation and creative design.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="tv-buttons">
+<!-- VIDEO 1 -->
 
 <a
+class="video-item"
+href="https://youtu.be/PVU1hjx64U4"
+target="_blank"
+rel="noopener noreferrer">
+
+<div class="video-thumb">
+
+<img
+src="https://img.youtube.com/vi/PVU1hjx64U4/hqdefault.jpg"
+alt="INGENIOUS GROUPS ALGERIA video">
+
+<span class="play">▶</span>
+
+</div>
+
+<div class="video-info">
+
+<h3>INGENIOUS GROUPS ALGERIA</h3>
+
+<p>
+Voir la vidéo sur YouTube
+</p>
+
+</div>
+
+</a>
+
+
+<!-- CHANNEL -->
+
+<a
+class="all-videos"
 href="https://www.youtube.com/@Ingeniousgroups/videos"
 target="_blank"
-rel="noopener noreferrer"
-class="tv-youtube">
+rel="noopener noreferrer">
 
-▶ View All Videos on YouTube
+▶ Voir toutes les vidéos de INGENIOUS TV
 
 </a>
 
@@ -1333,69 +967,68 @@ class="tv-youtube">
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-<section
-class="about"
-id="about">
+<section class="about" id="about">
 
 <div class="container">
 
 <div class="section-title">
-
-<small>INGENIOUS GROUPS ALGERIA</small>
-
-<h2>About Us</h2>
-
-<p>
-Professional Packaging & Branding Solutions
-</p>
-
+<span>ABOUT US</span>
+<h2>Engineering Meets Design</h2>
+<p>Precision, creativity and production.</p>
 </div>
+
 
 <div class="about-grid">
 
 <div class="about-text">
 
-<h3>
-From <span>Concept</span> to Product
-</h3>
+<h2>
+INGENIOUS <span>GROUPS</span>
+</h2>
 
 <p>
-Ingenious Groups Algeria specializes in professional packaging,
-labeling, product design and printing solutions.
+INGENIOUS GROUPS ALGERIA combines engineering,
+graphic design, 3D visualization and advanced
+packaging production.
 </p>
 
 <p>
-We develop the visual presentation of products and prepare
-designs and production files according to the requirements of
-packaging and printing.
+Our work covers high-quality label design,
+flexographic printing, packaging development,
+3D mockups and print-ready production files.
 </p>
 
 <p>
-Our solutions cover labels, flexible packaging, boxes,
-flexographic printing, 3D mockups and print-ready production files.
+Our approach connects the entire process:
+<strong>Design → Simulation → Production</strong>.
 </p>
 
 </div>
+
 
 <div class="about-box">
 
-<h4>
-Professional Packaging Solutions
-</h4>
+<h3>Our Expertise</h3>
 
-<p>
-Labels • PP • OPP • PET • PEHD • Sleeve • IML
-</p>
+<ul>
 
-<p>
-Doypack • Flexible Packaging • Boxes • Flexo
-</p>
+<li>High Precision Graphic Design</li>
 
-<p>
-3D Mockup • Print Ready • Product Packaging
-</p>
+<li>Flexographic Label Printing</li>
+
+<li>Packaging Development</li>
+
+<li>3D Product Visualization</li>
+
+<li>Print Ready Files</li>
+
+<li>Product Branding</li>
+
+</ul>
 
 </div>
 
@@ -1406,132 +1039,142 @@ Doypack • Flexible Packaging • Boxes • Flexo
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- =========================
+     SERVICES
+========================= -->
 
-<section id="services">
+<section class="services" id="services">
 
 <div class="container">
 
 <div class="section-title">
 
-<small>OUR SERVICES</small>
+<span>SERVICES</span>
 
 <h2>What We Do</h2>
 
-<p>
-Professional solutions for packaging, printing and product branding.
-</p>
+<p>Complete packaging and printing solutions.</p>
 
 </div>
 
-<div class="services-grid">
+
+<div class="cards">
 
 
 <div class="card">
-<div class="icon">🏷</div>
+
+<div class="card-icon">🎨</div>
+
 <h3>Label Design</h3>
+
 <p>
-Professional label and sticker design tailored to your product identity and market.
+Professional label design prepared for industrial printing.
 </p>
+
 </div>
 
 
 <div class="card">
-<div class="icon">◈</div>
+
+<div class="card-icon">🏷️</div>
+
 <h3>PP Labels</h3>
+
 <p>
-Professional design and printing solutions for PP labels.
+High quality PP labels for different product applications.
 </p>
+
 </div>
 
 
 <div class="card">
-<div class="icon">▣</div>
-<h3>OPP / PET / PEHD</h3>
-<p>
-Packaging and labeling solutions using different packaging materials.
-</p>
-</div>
 
+<div class="card-icon">📦</div>
 
-<div class="card">
-<div class="icon">▤</div>
-<h3>Doypack</h3>
-<p>
-Creative Doypack and flexible packaging design solutions.
-</p>
-</div>
-
-
-<div class="card">
-<div class="icon">◫</div>
-<h3>Sleeve</h3>
-<p>
-Professional Sleeve packaging design for different products.
-</p>
-</div>
-
-
-<div class="card">
-<div class="icon">◎</div>
-<h3>IML</h3>
-<p>
-Design solutions related to In-Mold Labeling applications.
-</p>
-</div>
-
-
-<div class="card">
-<div class="icon">▦</div>
-<h3>Product Boxes</h3>
-<p>
-Custom carton and product box design for brands and products.
-</p>
-</div>
-
-
-<div class="card">
-<div class="icon">⚙</div>
-<h3>Flexographic Printing</h3>
-<p>
-Flexographic printing solutions for packaging and labeling applications.
-</p>
-</div>
-
-
-<div class="card">
-<div class="icon">✦</div>
-<h3>3D Mockup</h3>
-<p>
-Realistic 3D product visualization before production.
-</p>
-</div>
-
-
-<div class="card">
-<div class="icon">✓</div>
-<h3>Print Ready Files</h3>
-<p>
-High-resolution production files prepared for professional printing.
-</p>
-</div>
-
-
-<div class="card">
-<div class="icon">◉</div>
 <h3>Product Packaging</h3>
+
 <p>
-Complete packaging design solutions for different product categories.
+Packaging concepts, structures and visual development.
 </p>
+
 </div>
 
 
 <div class="card">
-<div class="icon">◆</div>
+
+<div class="card-icon">🖨️</div>
+
+<h3>Flexographic Printing</h3>
+
+<p>
+High precision flexographic printing for professional packaging.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🧊</div>
+
+<h3>3D Mockup</h3>
+
+<p>
+Photorealistic 3D product visualization and packaging simulation.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🚀</div>
+
+<h3>Print Ready Files</h3>
+
+<p>
+Professional files prepared for industrial production.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🧴</div>
+
+<h3>Shrink Sleeve</h3>
+
+<p>
+Shrink sleeve packaging design and production preparation.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🥫</div>
+
+<h3>Doypack</h3>
+
+<p>
+Modern flexible packaging design for multiple industries.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">✨</div>
+
 <h3>Branding</h3>
+
 <p>
-Visual branding solutions connecting your identity with your product packaging.
+Complete visual identity and product branding solutions.
 </p>
+
 </div>
 
 </div>
@@ -1541,66 +1184,65 @@ Visual branding solutions connecting your identity with your product packaging.
 </section>
 
 
-<!-- ================= MATERIALS ================= -->
+<!-- =========================
+     MATERIALS
+========================= -->
 
-<section
-class="materials"
-id="materials">
+<section class="materials" id="materials">
 
 <div class="container">
 
 <div class="section-title">
 
-<small>MATERIALS & SOLUTIONS</small>
+<span>MATERIALS</span>
 
-<h2>Materials & Packaging</h2>
+<h2>Packaging Materials</h2>
 
-<p>
-Different packaging materials and solutions for various product needs.
-</p>
+<p>Solutions for different packaging requirements.</p>
 
 </div>
 
-<div class="materials-grid">
+
+<div class="material-grid">
 
 <div class="material">
-PP
-<span>Labels & Packaging</span>
+<strong>PP</strong>
+<span>Polypropylene</span>
 </div>
 
 <div class="material">
-OPP
+<strong>OPP</strong>
+<span>Oriented Polypropylene</span>
+</div>
+
+<div class="material">
+<strong>PET</strong>
+<span>Polyester</span>
+</div>
+
+<div class="material">
+<strong>PEHD</strong>
+<span>High Density Polyethylene</span>
+</div>
+
+<div class="material">
+<strong>Paper</strong>
+<span>Paper Packaging</span>
+</div>
+
+<div class="material">
+<strong>Cardboard</strong>
+<span>Product Boxes</span>
+</div>
+
+<div class="material">
+<strong>Shrink Sleeve</strong>
+<span>Flexible Sleeve</span>
+</div>
+
+<div class="material">
+<strong>Flexible Film</strong>
 <span>Flexible Packaging</span>
-</div>
-
-<div class="material">
-PET
-<span>Packaging Solutions</span>
-</div>
-
-<div class="material">
-PEHD
-<span>Packaging</span>
-</div>
-
-<div class="material">
-SLEEVE
-<span>Product Packaging</span>
-</div>
-
-<div class="material">
-IML
-<span>In-Mold Labeling</span>
-</div>
-
-<div class="material">
-DOYPACK
-<span>Flexible Packaging</span>
-</div>
-
-<div class="material">
-CARTON
-<span>Boxes & Packaging</span>
 </div>
 
 </div>
@@ -1610,64 +1252,57 @@ CARTON
 </section>
 
 
-<!-- ================= INDUSTRIES ================= -->
+<!-- =========================
+     INDUSTRIES
+========================= -->
 
-<section id="industries">
+<section class="industries" id="industries">
 
 <div class="container">
 
 <div class="section-title">
 
-<small>INDUSTRIES</small>
+<span>INDUSTRIES</span>
 
 <h2>Industries We Serve</h2>
 
-<p>
-Packaging, branding and printing solutions for different sectors.
-</p>
+<p>Packaging solutions for modern products.</p>
 
 </div>
 
-<div class="industries-grid">
+
+<div class="industry-grid">
 
 <div class="industry">
-<strong>Food & Nutrition</strong>
-<small>Food Products</small>
+COSMETICS
 </div>
 
 <div class="industry">
-<strong>Cosmetics</strong>
-<small>Beauty & Personal Care</small>
+FOOD &amp; BEVERAGE
 </div>
 
 <div class="industry">
-<strong>Health Products</strong>
-<small>Health & Related Products</small>
+SHAMPOO &amp; PERSONAL CARE
 </div>
 
 <div class="industry">
-<strong>Industrial Products</strong>
-<small>Industrial Sector</small>
+NATURAL OILS
 </div>
 
 <div class="industry">
-<strong>Brands</strong>
-<small>Branding Solutions</small>
+HOUSEHOLD PRODUCTS
 </div>
 
 <div class="industry">
-<strong>Packaging</strong>
-<small>Packaging Solutions</small>
+INDUSTRIAL PRODUCTS
 </div>
 
 <div class="industry">
-<strong>Labels</strong>
-<small>Label Solutions</small>
+PHARMACEUTICAL
 </div>
 
 <div class="industry">
-<strong>Consumer Products</strong>
-<small>Product Packaging</small>
+BRANDING
 </div>
 
 </div>
@@ -1677,7 +1312,9 @@ Packaging, branding and printing solutions for different sectors.
 </section>
 
 
-<!-- ================= PROCESS ================= -->
+<!-- =========================
+     PROCESS
+========================= -->
 
 <section class="process">
 
@@ -1685,48 +1322,66 @@ Packaging, branding and printing solutions for different sectors.
 
 <div class="section-title">
 
-<small>OUR PROCESS</small>
+<span>PROCESS</span>
 
-<h2>How We Work</h2>
+<h2>From Design To Production</h2>
 
-<p>
-From understanding your product to design, preparation and production.
-</p>
+<p>One complete workflow.</p>
 
 </div>
+
 
 <div class="process-grid">
 
 <div class="step">
-<div class="number">01</div>
-<h3>Understand</h3>
-<p>
-We understand your product, market and visual requirements.
-</p>
-</div>
 
-<div class="step">
-<div class="number">02</div>
+<div class="step-number">01</div>
+
 <h3>Design</h3>
+
 <p>
-We develop a professional visual solution for your product.
+Creative packaging and label design.
 </p>
+
 </div>
 
-<div class="step">
-<div class="number">03</div>
-<h3>Print Ready</h3>
-<p>
-We prepare high-resolution production files for printing.
-</p>
-</div>
 
 <div class="step">
-<div class="number">04</div>
-<h3>Production</h3>
+
+<div class="step-number">02</div>
+
+<h3>Simulation</h3>
+
 <p>
-The approved design moves toward printing and production.
+3D mockups and realistic product visualization.
 </p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">03</div>
+
+<h3>Prepress</h3>
+
+<p>
+Professional print-ready file preparation.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">04</div>
+
+<h3>Printing</h3>
+
+<p>
+High precision flexographic production.
+</p>
+
 </div>
 
 </div>
@@ -1736,464 +1391,42 @@ The approved design moves toward printing and production.
 </section>
 
 
-<!-- ================= PORTFOLIO ================= -->
+<!-- =========================
+     PROJECTS
+========================= -->
 
-<section
-id="portfolio"
-class="behance-portfolio">
+<section class="projects" id="projects">
 
 <div class="container">
 
 <div class="section-title">
 
-<small>BEHANCE PORTFOLIO</small>
+<span>PROJECTS</span>
 
-<h2>Selected Projects</h2>
+<h2>Our Packaging &amp; Printing Projects</h2>
 
-<p>
-Explore selected work from Ingenious Groups Algeria.
-Each project opens its original Behance presentation.
-</p>
+<p>Selected packaging and label projects.</p>
 
 </div>
 
-<div class="behance-grid">
 
+<div class="product-grid">
 
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/254806349/-PS6-"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/267693254806349.Y3JvcCw1MTQ1LDQwMjQsMCwxMTQ2.jpg"
-alt="نكشف لكم علبة PS6 أول مرة"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>Packaging Concept</span>
-
-<h3>
-نكشف لكم علبة PS6 أول مرة
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/254429829/_"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/150847254429829.Y3JvcCwzNjM3LDI4NDUsMTg5LDA.jpg"
-alt="شاهد كيف نكسر المعادلة في الأسواق"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>Branding & Marketing</span>
-
-<h3>
-شاهد كيف نكسر المعادلة في الأسواق
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/253689695/EDITION-LIMITEE"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/0fe7db253689695.Y3JvcCwzMDA2LDIzNTEsMCwxNDcz.jpg"
-alt="ÉDITION LIMITÉE"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>Packaging & Branding</span>
-
-<h3>
-ÉDITION LIMITÉE
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/252918289/FIND-YOUR-WAY-WITH-US-PRINTING-PP-ETIQUETTES"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/1290df252918289.Y3JvcCwxMDI0LDgwMCwwLDA.jpg"
-alt="FIND YOUR WAY WITH US - PRINTING PP ÉTIQUETTES"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>PP Labels & Printing</span>
-
-<h3>
-FIND YOUR WAY WITH US - PRINTING PP ÉTIQUETTES
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/249036441/-PP"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/a94e07249036441.Y3JvcCw0NjI1LDM2MTcsMTc4NiwxNDk5.jpg"
-alt="تقنيات طباعة متقدمة PP"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>PP Printing</span>
-
-<h3>
-تقنيات طباعة متقدمة PP
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/248780933/_"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/bd210f248780933.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png"
-alt="نصل بكم لصناعة الأفلام حيث ننطلق من الجزائر"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>Creative Visual Design</span>
-
-<h3>
-نصل بكم لصناعة الأفلام حيث ننطلق من الجزائر
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/248195547/designs-emballage-en-carton"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/ae6198248195547.Y3JvcCw1NDE3LDQyMzcsMCw1Mw.jpg"
-alt="designs emballage en carton"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>Carton Packaging</span>
-
-<h3>
-designs emballage en carton
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/ingineosedesign/projects"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/776ee8246801585.Y3JvcCwxMTAzLDg2MiwxNDcsMA.jpg"
-alt="الطباعة الفليكسوغرافية الخاصة بكل منتوجاتكم"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>Flexographic Printing</span>
-
-<h3>
-الطباعة الفليكسوغرافية الخاصة بكل منتوجاتكم
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/245439651/_"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/1c8d71245439651.Y3JvcCwyNTc3LDIwMTYsNTA0LDA.jpg"
-alt="هنا، يتحول التصميم إلى حقيقة ملموسة"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>3D Product Design</span>
-
-<h3>
-هنا، يتحول التصميم إلى حقيقة ملموسة
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/242917735/-Doypack-"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/138b53242917735.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg"
-alt="تصميم وطباعة أغلفة Doypack بأحدث التقنيات العالمية"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>Doypack & Flexible Packaging</span>
-
-<h3>
-تصميم وطباعة أغلفة Doypack بأحدث التقنيات العالمية
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/242917409/We-Make-The-Furute-for-you"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/7defd5242917409.Y3JvcCw3MzYsNTc1LDI2NiwxNTM.jpg"
-alt="We Make The Furute for you"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>Packaging Design</span>
-
-<h3>
-We Make The Furute for you
-</h3>
-
-</div>
-
-</a>
-
-
-<a
-class="behance-project"
-href="https://www.behance.net/gallery/240424211/_"
-target="_blank"
-rel="noopener noreferrer">
-
-<div class="behance-image-wrap">
-
-<img
-src="https://mir-s3-cdn-cf.behance.net/projects/404/4fbbf0240424211.Y3JvcCw1MDM1LDM5MzksMTAzNCww.png"
-alt="حيث تتحول الأفكار إلى بصمة لا تُمحى"
-loading="lazy">
-
-<div class="behance-overlay">
-<span>VIEW ON BEHANCE ↗</span>
-</div>
-
-</div>
-
-<div class="behance-project-info">
-
-<span>Cosmetic Packaging</span>
-
-<h3>
-حيث تتحول الأفكار إلى بصمة لا تُمحى
-</h3>
-
-</div>
-
-</a>
-
-</div>
-
-<div class="behance-more">
-
-<a
-href="https://www.behance.net/ingineosedesign/projects"
-target="_blank"
-rel="noopener noreferrer"
-class="btn btn-red">
-
-View All Projects on Behance ↗
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= PRODUCTS ================= -->
-
-<section
-class="products"
-id="products">
-
-<div class="container">
-
-<div class="section-title">
-
-<small>OUR PROJECTS</small>
-
-<h2>Packaging & Printing Projects</h2>
-
-<p>
-Explore some of our packaging, label and printing projects.
-</p>
-
-</div>
-
-<div class="products-grid">
 
 <div class="product-card">
 
 <img
 src="dove-label.png"
-alt="Dove Label Design"
+alt="Dove Label"
 loading="lazy">
 
+<div class="product-card-content">
+
 <h3>Dove Label</h3>
+
+<p>Packaging &amp; Label Design</p>
+
+</div>
 
 </div>
 
@@ -2202,10 +1435,16 @@ loading="lazy">
 
 <img
 src="freedom-label.png"
-alt="Freedom Label Design"
+alt="Freedom Label"
 loading="lazy">
 
+<div class="product-card-content">
+
 <h3>Freedom Label</h3>
+
+<p>Label Design &amp; Printing</p>
+
+</div>
 
 </div>
 
@@ -2214,10 +1453,16 @@ loading="lazy">
 
 <img
 src="mirou-label.png"
-alt="Mirou Label Design"
+alt="Mirou Label"
 loading="lazy">
 
+<div class="product-card-content">
+
 <h3>Mirou Label</h3>
+
+<p>Packaging &amp; Printing</p>
+
+</div>
 
 </div>
 
@@ -2226,12 +1471,19 @@ loading="lazy">
 
 <img
 src="pp-packaging.png"
-alt="PP Packaging Design"
+alt="PP Packaging"
 loading="lazy">
+
+<div class="product-card-content">
 
 <h3>PP Packaging</h3>
 
+<p>Flexible Packaging</p>
+
 </div>
+
+</div>
+
 
 </div>
 
@@ -2240,149 +1492,327 @@ loading="lazy">
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =========================
+     BEHANCE PORTFOLIO
+========================= -->
 
-<section
-class="contact"
-id="contact">
+<section class="portfolio" id="portfolio">
 
 <div class="container">
 
 <div class="section-title">
 
-<small>CONTACT US</small>
+<span>OUR WORK</span>
+
+<h2>Behance Portfolio</h2>
+
+<p>Explore our latest design projects.</p>
+
+</div>
+
+
+<div class="behance-grid">
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/254806349/-PS6-"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/267693254806349.Y3JvcCw1MTQ1LDQwMjQsMCwxMTQ2.jpg"
+alt="PS6 Packaging Design"
+loading="lazy">
+
+<div>
+<h3>PS6</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/254429829/_"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/150847254429829.Y3JvcCwzNjM3LDI4NDUsMTg5LDA.jpg"
+alt="Packaging Project"
+loading="lazy">
+
+<div>
+<h3>Packaging Project</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/253689695/EDITION-LIMITEE"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/0fe7db253689695.Y3JvcCwzMDA2LDIzNTEsMCwxNDcz.jpg"
+alt="Edition Limitee"
+loading="lazy">
+
+<div>
+<h3>EDITION LIMITEE</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/252918289/FIND-YOUR-WAY-WITH-US-PRINTING-PP-ETIQUETTES"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/1290df252918289.Y3JvcCwxMDI0LDgwMCwwLDA.jpg"
+alt="PP Labels"
+loading="lazy">
+
+<div>
+<h3>PP Étiquettes</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/249036441/-PP"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/a94e07249036441.Y3JvcCw0NjI1LDM2MTcsMTc4NiwxNDk5.jpg"
+alt="PP Packaging"
+loading="lazy">
+
+<div>
+<h3>PP Packaging</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/248780933/_"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/bd210f248780933.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png"
+alt="Packaging Design"
+loading="lazy">
+
+<div>
+<h3>Packaging Design</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/248195547/designs-emballage-en-carton"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/ae6198248195547.Y3JvcCw1NDE3LDQyMzcsMCw1Mw.jpg"
+alt="Carton Packaging"
+loading="lazy">
+
+<div>
+<h3>Carton Packaging</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/ingineosedesign/projects"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/776ee8246801585.Y3JvcCwxMTAzLDg2MiwxNDcsMA.jpg"
+alt="INGENIOUS Design"
+loading="lazy">
+
+<div>
+<h3>INGENIOUS Design</h3>
+<p>View projects on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/245439651/_"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/1c8d71245439651.Y3JvcCwyNTc3LDIwMTYsNTA0LDA.jpg"
+alt="Packaging Project"
+loading="lazy">
+
+<div>
+<h3>Packaging Project</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/242917735/-Doypack-"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/138b53242917735.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg"
+alt="Doypack"
+loading="lazy">
+
+<div>
+<h3>Doypack</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/242917409/We-Make-The-Furute-for-you"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/7defd5242917409.Y3JvcCw3MzYsNTc1LDI2NiwxNTM.jpg"
+alt="We Make The Future"
+loading="lazy">
+
+<div>
+<h3>We Make The Future</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+<a
+class="behance-card"
+href="https://www.behance.net/gallery/240424211/_"
+target="_blank"
+rel="noopener noreferrer">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/4fbbf0240424211.Y3JvcCw1MDM1LDM5MzksMTAzNCww.png"
+alt="INGENIOUS Project"
+loading="lazy">
+
+<div>
+<h3>INGENIOUS Project</h3>
+<p>View project on Behance</p>
+</div>
+
+</a>
+
+
+</div>
+
+
+<div style="text-align:center;margin-top:40px;">
+
+<a
+class="btn btn-red"
+href="https://www.behance.net/ingineosedesign/projects"
+target="_blank"
+rel="noopener noreferrer">
+
+View All Behance Projects
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="contact-box">
 
 <h2>Let's Work Together</h2>
 
 <p>
-Contact Ingenious Groups Algeria for your next packaging,
-labeling, printing or branding project.
+Have a packaging, label or printing project?
+Contact INGENIOUS GROUPS ALGERIA.
 </p>
 
-</div>
 
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<h3>Contact Information</h3>
-
-
-<div class="contact-item">
-
-<div class="contact-icon">📞</div>
-
-<div>
-
-<span>Phone & WhatsApp</span>
-
-<strong>+213 798 23 45 79</strong>
-
-</div>
-
-</div>
-
-
-<div class="contact-item">
-
-<div class="contact-icon">✉</div>
-
-<div>
-
-<span>Email</span>
-
-<strong>ingenious.24contact@gmail.com</strong>
-
-</div>
-
-</div>
-
-
-<div class="contact-item">
-
-<div class="contact-icon">📍</div>
-
-<div>
-
-<span>Location</span>
-
-<strong>Alger Centre, Algeria</strong>
-
-</div>
-
-</div>
-
+<div class="contact-links">
 
 <a
+class="btn btn-red"
 href="https://wa.me/213798234579"
 target="_blank"
-rel="noopener noreferrer"
-class="whatsapp">
+rel="noopener noreferrer">
 
-💬 Contact Us on WhatsApp
+WhatsApp
 
 </a>
 
-</div>
-
-
-<div class="contact-card">
-
-<h3>
-INGENIOUS GROUPS ALGERIA
-</h3>
-
-<p style="color:#aaa;margin-bottom:20px;">
-
-Professional Packaging & Branding Solutions
-
-</p>
-
-<p style="color:#999;">
-
-Labels • PP • OPP • PET • PEHD • Sleeve • IML
-
-</p>
-
-<p style="color:#999;">
-
-Doypack • Flexible Packaging • Boxes • Flexo Printing
-
-</p>
-
-<p style="color:#999;">
-
-3D Mockup • Print Ready • Product Packaging
-
-</p>
-
-
-<div style="margin-top:25px;">
 
 <a
+class="btn btn-dark"
+href="mailto:ingenious.24contact@gmail.com">
+
+Email Us
+
+</a>
+
+
+<a
+class="btn btn-dark"
 href="https://www.facebook.com/ing2424/"
 target="_blank"
-rel="noopener noreferrer"
-class="btn btn-outline">
+rel="noopener noreferrer">
 
 Facebook
 
 </a>
-
-
-<a
-href="https://www.behance.net/ingineosedesign"
-target="_blank"
-rel="noopener noreferrer"
-class="btn btn-outline"
-style="margin-left:8px;">
-
-Behance
-
-</a>
-
-</div>
 
 </div>
 
@@ -2393,27 +1823,18 @@ Behance
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
 <div class="container">
 
-<strong>
-
-INGENIOUS <span>GROUPS</span> ALGERIA
-
-</strong>
-
 <p>
-Professional Packaging & Branding Solutions
-</p>
-
-<p>
-
 © <span id="year"></span>
-Ingenious Groups Algeria — All Rights Reserved
-
+<strong>INGENIOUS GROUPS ALGERIA</strong>.
+All Rights Reserved.
 </p>
 
 </div>
@@ -2421,22 +1842,25 @@ Ingenious Groups Algeria — All Rights Reserved
 </footer>
 
 
-<!-- ================= FLOATING WHATSAPP ================= -->
+<!-- =========================
+     WHATSAPP
+========================= -->
 
 <a
+class="whatsapp"
 href="https://wa.me/213798234579"
 target="_blank"
 rel="noopener noreferrer"
-class="floating-whatsapp"
-title="Contact us on WhatsApp"
-aria-label="Contact us on WhatsApp">
+aria-label="Contact INGENIOUS GROUPS ALGERIA on WhatsApp">
 
-💬
+☎
 
 </a>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
@@ -2444,11 +1868,27 @@ const menuButton = document.getElementById("menuButton");
 const nav = document.getElementById("nav");
 
 
-/* OPEN / CLOSE MENU */
+function closeMenu(){
+
+    nav.classList.remove("active");
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    menuButton.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+    );
+
+}
+
 
 function toggleMenu(){
 
-    const isOpen = nav.classList.toggle("active");
+    const isOpen =
+        nav.classList.toggle("active");
 
     menuButton.setAttribute(
         "aria-expanded",
@@ -2465,38 +1905,22 @@ function toggleMenu(){
 }
 
 
-/* MENU BUTTON */
-
 menuButton.addEventListener(
     "click",
     toggleMenu
 );
 
 
-/* CLOSE MENU AFTER CLICKING A LINK */
+document.querySelectorAll("#nav a")
+.forEach(function(link){
 
-document.querySelectorAll("#nav a").forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-        nav.classList.remove("active");
-
-        menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        menuButton.setAttribute(
-            "aria-label",
-            "Open navigation menu"
-        );
-
-    });
+    link.addEventListener(
+        "click",
+        closeMenu
+    );
 
 });
 
-
-/* CLOSE MENU WITH ESCAPE */
 
 document.addEventListener(
     "keydown",
@@ -2507,17 +1931,7 @@ document.addEventListener(
             nav.classList.contains("active")
         ){
 
-            nav.classList.remove("active");
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuButton.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
+            closeMenu();
 
             menuButton.focus();
 
@@ -2526,8 +1940,6 @@ document.addEventListener(
     }
 );
 
-
-/* CLOSE MENU WHEN CLICKING OUTSIDE */
 
 document.addEventListener(
     "click",
@@ -2542,17 +1954,7 @@ document.addEventListener(
             nav.classList.contains("active")
         ){
 
-            nav.classList.remove("active");
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuButton.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
+            closeMenu();
 
         }
 
@@ -2560,10 +1962,8 @@ document.addEventListener(
 );
 
 
-/* CURRENT YEAR */
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+document.getElementById("year")
+.textContent = new Date().getFullYear();
 
 </script>
 
