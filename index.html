@@ -1,2189 +1,1620 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
 
-    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<title>INGENIOUS GROUPS ALGERIA | Packaging & Printing</title>
 
-    <title>
-        INGENIOUS GROUPS ALGERIA | Packaging, Flexo Printing & 3D Design
-    </title>
+<meta name="description"
+      content="INGENIOUS GROUPS ALGERIA — Premium packaging design, flexographic printing, labels, PP, OPP, PET, Doypack, Sleeve, IML and 3D visualization.">
 
-    <meta
-        name="description"
-        content="INGENIOUS GROUPS ALGERIA - Premium packaging design, flexographic printing, PP labels, Doypack, Sleeve, IML, 3D visualization and print-ready solutions."
-    >
+<meta name="theme-color" content="#050505">
 
-    <meta
-        name="keywords"
-        content="Ingenious Groups Algeria, flexo printing Algeria, packaging Algeria, PP labels, packaging design, Doypack, Sleeve, IML, 3D design, labels Algeria"
-    >
+<link rel="canonical"
+      href="https://ingenious-groups-dz.github.io/INGENIOUS-GROUPS/">
 
-    <meta name="author" content="INGENIOUS GROUPS ALGERIA">
+<style>
 
-    <meta
-        name="theme-color"
-        content="#050505"
-    >
+/* =========================================================
+   RESET
+========================================================= */
 
-    <link
-        rel="canonical"
-        href="https://ingenious-groups-dz.github.io/INGENIOUS-GROUPS/"
-    >
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <!-- Open Graph -->
-    <meta
-        property="og:title"
-        content="INGENIOUS GROUPS ALGERIA"
-    >
+html{
+    scroll-behavior:smooth;
+    background:#050505;
+}
 
-    <meta
-        property="og:description"
-        content="Premium Packaging • Flexo Printing • Labels • 3D Design"
-    >
+body{
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
 
-    <meta
-        property="og:type"
-        content="website"
-    >
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+    line-height:1.5;
+}
 
-    <meta
-        property="og:url"
-        content="https://ingenious-groups-dz.github.io/INGENIOUS-GROUPS/"
-    >
+img{
+    display:block;
+    max-width:100%;
+}
 
-    <meta
-        property="og:image"
-        content="https://ingenious-groups-dz.github.io/INGENIOUS-GROUPS/pp-packaging.png"
-    >
+a{
+    color:inherit;
+    text-decoration:none;
+}
 
-    <!-- Fonts -->
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+button{
+    font:inherit;
+}
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
-
-    <style>
-
-        /* =========================================================
-           ROOT
-        ========================================================= */
-
-        :root {
-            --red: #e50914;
-            --red-dark: #a80008;
-            --black: #050505;
-            --black-2: #090909;
-            --black-3: #111111;
-            --white: #ffffff;
-            --gray: #999999;
-            --gray-dark: #555555;
-            --line: rgba(255,255,255,.09);
-
-            --container: 1400px;
-
-            --shadow:
-                0 30px 90px rgba(0,0,0,.55);
-        }
+::selection{
+    background:#e50914;
+    color:#fff;
+}
 
 
-        /* =========================================================
-           RESET
-        ========================================================= */
+/* =========================================================
+   VARIABLES
+========================================================= */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+:root{
 
-        html {
-            scroll-behavior: smooth;
-        }
+    --red:#e50914;
+    --red-dark:#9f0008;
 
-        body {
-            background: var(--black);
-            color: var(--white);
-            font-family: "Inter", Arial, sans-serif;
-            overflow-x: hidden;
-        }
+    --black:#050505;
+    --black-2:#090909;
+    --black-3:#111;
 
-        img {
-            max-width: 100%;
-        }
+    --white:#fff;
+    --gray:#a5a5a5;
+    --gray-2:#707070;
 
-        a {
-            color: inherit;
-        }
+    --border:rgba(255,255,255,.10);
 
-        button,
-        a {
-            -webkit-tap-highlight-color: transparent;
-        }
+    --container:1380px;
+
+    --radius:22px;
+
+    --shadow:
+        0 25px 70px rgba(0,0,0,.45);
+}
 
 
-        /* =========================================================
-           LOADER
-        ========================================================= */
+/* =========================================================
+   CONTAINER
+========================================================= */
 
-        .loader {
-            position: fixed;
-            inset: 0;
-            z-index: 99999;
+.container{
+    width:min(
+        calc(100% - 48px),
+        var(--container)
+    );
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: #050505;
-
-            transition:
-                opacity .7s ease,
-                visibility .7s ease;
-        }
-
-        .loader.hide {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .loader-inner {
-            text-align: center;
-        }
-
-        .loader-logo {
-            font-size: clamp(28px, 5vw, 55px);
-            font-weight: 900;
-            letter-spacing: -2px;
-        }
-
-        .loader-logo span {
-            color: var(--red);
-        }
-
-        .loader-line {
-            width: 180px;
-            height: 2px;
-            margin: 20px auto 0;
-            overflow: hidden;
-            background: #222;
-        }
-
-        .loader-line::after {
-            content: "";
-            display: block;
-            width: 50%;
-            height: 100%;
-            background: var(--red);
-            animation: loading 1.2s infinite ease-in-out;
-        }
-
-        @keyframes loading {
-            0% {
-                transform: translateX(-100%);
-            }
-
-            100% {
-                transform: translateX(300%);
-            }
-        }
+    margin:auto;
+}
 
 
-        /* =========================================================
-           HEADER
-        ========================================================= */
+/* =========================================================
+   LOADER
+========================================================= */
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+.loader{
+    position:fixed;
+    inset:0;
+    z-index:99999;
 
-            z-index: 5000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-            border-bottom: 1px solid transparent;
+    background:#050505;
 
-            transition:
-                background .35s ease,
-                border .35s ease,
-                backdrop-filter .35s ease;
-        }
+    transition:
+        opacity .5s ease,
+        visibility .5s ease;
+}
 
-        header.scrolled {
-            background: rgba(5,5,5,.86);
-            backdrop-filter: blur(18px);
-            border-bottom-color: var(--line);
-        }
+.loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
 
-        .nav {
-            width: min(94%, var(--container));
-            height: 84px;
-            margin: auto;
+.loader-inner{
+    text-align:center;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
+.loader-logo{
+    font-size:clamp(22px,4vw,42px);
+    font-weight:900;
+    letter-spacing:3px;
+}
 
-        .logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+.loader-logo span{
+    color:var(--red);
+}
 
-            color: white;
-            text-decoration: none;
+.loader-line{
+    width:160px;
+    height:2px;
 
-            font-size: 18px;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
+    margin:18px auto 0;
 
-        .logo-mark {
-            width: 34px;
-            height: 34px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--red),
+            transparent
+        );
 
-            display: grid;
-            place-items: center;
+    animation:
+        loaderMove 1.2s infinite;
+}
 
-            background: var(--red);
+@keyframes loaderMove{
+    0%{
+        transform:translateX(-40px);
+        opacity:.2;
+    }
 
-            color: white;
+    50%{
+        opacity:1;
+    }
 
-            font-weight: 900;
+    100%{
+        transform:translateX(40px);
+        opacity:.2;
+    }
+}
 
-            clip-path: polygon(
-                50% 0%,
-                100% 25%,
-                100% 75%,
-                50% 100%,
-                0% 75%,
-                0% 25%
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+
+    z-index:5000;
+
+    background:
+        rgba(5,5,5,.70);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:.3s ease;
+}
+
+header.scrolled{
+    background:
+        rgba(5,5,5,.95);
+}
+
+.nav{
+    height:78px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:18px;
+    font-weight:900;
+    letter-spacing:1.5px;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:var(--red);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.nav-links a{
+    position:relative;
+
+    font-size:12px;
+    font-weight:700;
+
+    letter-spacing:.7px;
+
+    color:#d5d5d5;
+
+    transition:.25s ease;
+}
+
+.nav-links a::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    background:var(--red);
+
+    transition:.25s ease;
+}
+
+.nav-links a:hover{
+    color:#fff;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.menu-btn{
+    display:none;
+
+    width:42px;
+    height:42px;
+
+    border:1px solid var(--border);
+    border-radius:12px;
+
+    background:#0c0c0c;
+
+    color:#fff;
+
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    padding:
+        130px 0
+        80px;
+
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+    width:650px;
+    height:650px;
+
+    top:-220px;
+    right:-180px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(229,9,20,.22),
+            transparent 68%
+        );
+
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    width:min(
+        850px,
+        100%
+    );
+}
+
+.hero-kicker{
+    display:inline-flex;
+
+    padding:8px 13px;
+
+    border:
+        1px solid
+        rgba(229,9,20,.45);
+
+    border-radius:50px;
+
+    color:#ff6a71;
+
+    font-size:10px;
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:
+        clamp(
+            46px,
+            8vw,
+            105px
+        );
+
+    line-height:.92;
+
+    letter-spacing:-4px;
+
+    font-weight:950;
+}
+
+.hero h1 span{
+    color:var(--red);
+}
+
+.hero p{
+    max-width:680px;
+
+    margin-top:30px;
+
+    color:#aaa;
+
+    font-size:
+        clamp(
+            15px,
+            2vw,
+            19px
+        );
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-height:48px;
+
+    padding:0 22px;
+
+    border-radius:12px;
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-red{
+    background:var(--red);
+}
+
+.btn-red:hover{
+    background:#ff1824;
+}
+
+.btn-dark{
+    background:#101010;
+
+    border:
+        1px solid
+        var(--border);
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+section{
+    position:relative;
+
+    padding:
+        100px 0;
+}
+
+.section-head{
+    display:flex;
+
+    align-items:flex-end;
+    justify-content:space-between;
+
+    gap:30px;
+
+    margin-bottom:40px;
+}
+
+.section-kicker{
+    display:block;
+
+    color:var(--red);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+}
+
+.section-head h2{
+    font-size:
+        clamp(
+            35px,
+            5vw,
+            65px
+        );
+
+    line-height:1;
+
+    letter-spacing:-2px;
+}
+
+.section-head h2 span{
+    color:var(--red);
+}
+
+.section-head p{
+    color:#888;
+
+    max-width:650px;
+
+    margin-top:15px;
+
+    font-size:14px;
+}
+
+
+/* =========================================================
+   PROJECT WALL
+========================================================= */
+
+.project-wall{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:14px;
+}
+
+.project-card{
+    position:relative;
+
+    min-height:240px;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:#101010;
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+}
+
+.project-card.large{
+    grid-column:span 2;
+}
+
+.project-card img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform .6s ease;
+}
+
+.project-card:hover img{
+    transform:scale(1.06);
+}
+
+.project-card::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.8),
+            transparent 55%
+        );
+}
+
+.project-label{
+    position:absolute;
+
+    z-index:2;
+
+    left:18px;
+    right:18px;
+    bottom:17px;
+}
+
+.project-label small{
+    color:#ff6a71;
+
+    font-size:9px;
+    font-weight:800;
+
+    letter-spacing:1.5px;
+}
+
+.project-label h3{
+    font-size:17px;
+
+    margin-top:4px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:14px;
+}
+
+.service-card{
+    padding:28px;
+
+    min-height:190px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111,
+            #080808
+        );
+
+    transition:.3s ease;
+}
+
+.service-card:hover{
+    border-color:
+        rgba(229,9,20,.5);
+
+    transform:translateY(-5px);
+}
+
+.service-number{
+    color:var(--red);
+
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:1px;
+}
+
+.service-card h3{
+    margin-top:25px;
+
+    font-size:20px;
+}
+
+.service-card p{
+    margin-top:10px;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   BEHANCE
+========================================================= */
+
+.behance-section{
+    background:
+        linear-gradient(
+            180deg,
+            #050505,
+            #090909,
+            #050505
+        );
+}
+
+.behance-main-btn{
+    display:inline-flex;
+
+    align-items:center;
+    gap:12px;
+
+    padding:13px 18px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    border-radius:12px;
+
+    font-size:11px;
+    font-weight:800;
+
+    white-space:nowrap;
+
+    transition:.25s ease;
+}
+
+.behance-main-btn:hover{
+    border-color:var(--red);
+    background:#111;
+}
+
+.behance-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    grid-auto-rows:270px;
+
+    gap:14px;
+}
+
+.behance-card{
+    position:relative;
+
+    overflow:hidden;
+
+    min-width:0;
+
+    border-radius:18px;
+
+    background:#111;
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    isolation:isolate;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease;
+}
+
+.behance-card.tall{
+    grid-row:span 2;
+}
+
+.behance-card.wide{
+    grid-column:span 2;
+}
+
+.behance-card:hover{
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(229,9,20,.45);
+}
+
+.behance-card img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform .55s ease;
+}
+
+.behance-card:hover img{
+    transform:scale(1.055);
+}
+
+.behance-card::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    z-index:1;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.9),
+            rgba(0,0,0,.08) 70%
+        );
+}
+
+.behance-overlay{
+    position:absolute;
+
+    z-index:2;
+
+    left:20px;
+    right:20px;
+    bottom:18px;
+}
+
+.behance-overlay span{
+    display:block;
+
+    color:#ff5b63;
+
+    font-size:8px;
+    font-weight:900;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:7px;
+}
+
+.behance-overlay h3{
+    font-size:17px;
+
+    line-height:1.2;
+
+    margin-bottom:6px;
+}
+
+.behance-overlay small{
+    color:#aaa;
+
+    font-size:9px;
+    font-weight:700;
+
+    letter-spacing:.7px;
+}
+
+.behance-bottom{
+    margin-top:28px;
+}
+
+.behance-profile-btn{
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px 20px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    background:#0c0c0c;
+
+    border-radius:18px;
+
+    transition:.3s ease;
+}
+
+.behance-profile-btn:hover{
+    border-color:
+        rgba(229,9,20,.5);
+
+    transform:translateY(-3px);
+}
+
+.behance-logo{
+    width:45px;
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:#1769ff;
+
+    font-weight:900;
+
+    font-size:20px;
+}
+
+.behance-profile-btn div{
+    flex:1;
+}
+
+.behance-profile-btn strong{
+    display:block;
+
+    font-size:13px;
+}
+
+.behance-profile-btn small{
+    display:block;
+
+    color:#777;
+
+    margin-top:3px;
+
+    font-size:9px;
+
+    letter-spacing:.7px;
+}
+
+.behance-profile-btn .arrow{
+    font-size:20px;
+}
+
+
+/* =========================================================
+   MATERIALS
+========================================================= */
+
+.materials{
+    display:grid;
+
+    grid-template-columns:
+        repeat(6,1fr);
+
+    gap:12px;
+}
+
+.material{
+    padding:20px 12px;
+
+    text-align:center;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:15px;
+
+    background:#0d0d0d;
+
+    color:#aaa;
+
+    font-size:12px;
+    font-weight:800;
+
+    transition:.25s ease;
+}
+
+.material:hover{
+    color:#fff;
+
+    border-color:
+        rgba(229,9,20,.5);
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:14px;
+}
+
+.process-card{
+    position:relative;
+
+    padding:28px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:20px;
+
+    background:#0b0b0b;
+}
+
+.process-card .number{
+    font-size:38px;
+
+    font-weight:900;
+
+    color:
+        rgba(229,9,20,.25);
+}
+
+.process-card h3{
+    margin-top:15px;
+
+    font-size:18px;
+}
+
+.process-card p{
+    margin-top:8px;
+
+    color:#777;
+
+    font-size:12px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+    padding:
+        80px 30px;
+
+    border:
+        1px solid
+        rgba(229,9,20,.25);
+
+    border-radius:28px;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(229,9,20,.18),
+            transparent 35%
+        ),
+        #0b0b0b;
+
+    text-align:center;
+}
+
+.cta h2{
+    font-size:
+        clamp(
+            34px,
+            6vw,
+            70px
+        );
+
+    line-height:1;
+
+    letter-spacing:-2px;
+}
+
+.cta h2 span{
+    color:var(--red);
+}
+
+.cta p{
+    max-width:650px;
+
+    margin:20px auto 0;
+
+    color:#888;
+}
+
+.cta-buttons{
+    display:flex;
+
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:30px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:
+        50px 0 30px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.07);
+}
+
+.footer-grid{
+    display:grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap:40px;
+}
+
+.footer-brand h3{
+    font-size:22px;
+}
+
+.footer-brand h3 span{
+    color:var(--red);
+}
+
+.footer-brand p{
+    max-width:450px;
+
+    margin-top:12px;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+.footer-col h4{
+    font-size:11px;
+
+    color:#fff;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+}
+
+.footer-col a{
+    display:block;
+
+    color:#777;
+
+    font-size:12px;
+
+    margin:8px 0;
+
+    transition:.2s ease;
+}
+
+.footer-col a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-top:40px;
+    padding-top:20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.06);
+
+    color:#555;
+
+    font-size:10px;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    z-index:4000;
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#25d366;
+
+    box-shadow:
+        0 10px 30px
+        rgba(37,211,102,.25);
+
+    transition:.25s ease;
+}
+
+.whatsapp:hover{
+    transform:
+        translateY(-4px)
+        scale(1.05);
+}
+
+.whatsapp svg{
+    width:27px;
+    height:27px;
+
+    fill:#fff;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        gap:17px;
+    }
+
+    .project-wall{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .services-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .process-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .materials{
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+
+    .behance-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        grid-auto-rows:230px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+@media(max-width:760px){
+
+    .container{
+        width:
+            calc(100% - 28px);
+    }
+
+    section{
+        padding:
+            70px 0;
+    }
+
+    .nav{
+        height:68px;
+    }
+
+    .logo{
+        font-size:14px;
+        letter-spacing:1px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+
+        top:68px;
+        left:14px;
+        right:14px;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+
+        padding:8px;
+
+        border:
+            1px solid
+            rgba(255,255,255,.08);
+
+        border-radius:16px;
+
+        background:
+            rgba(8,8,8,.97);
+
+        box-shadow:
+            0 20px 50px
+            rgba(0,0,0,.6);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:14px;
+
+        border-radius:10px;
+
+        font-size:11px;
+    }
+
+    .nav-links a:hover{
+        background:#111;
+    }
+
+    .nav-links a::after{
+        display:none;
+    }
+
+
+    /* HERO */
+
+    .hero{
+        min-height:
+            auto;
+
+        padding:
+            145px 0
+            80px;
+    }
+
+    .hero h1{
+        font-size:
+            clamp(
+                48px,
+                16vw,
+                78px
             );
-        }
 
-        .logo span {
-            color: var(--red);
-        }
+        letter-spacing:-3px;
+    }
 
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
+    .hero p{
+        font-size:14px;
 
-        nav a {
-            position: relative;
+        margin-top:24px;
+    }
 
-            color: #aaa;
+    .hero-buttons{
+        margin-top:26px;
+    }
 
-            text-decoration: none;
+    .btn{
+        width:100%;
+    }
 
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
 
-            transition: color .25s ease;
-        }
+    /* SECTION */
 
-        nav a::after {
-            content: "";
+    .section-head{
+        display:block;
 
-            position: absolute;
-            left: 0;
-            bottom: -8px;
+        margin-bottom:25px;
+    }
 
-            width: 0;
-            height: 2px;
+    .section-head h2{
+        font-size:39px;
+    }
 
-            background: var(--red);
+    .section-head p{
+        font-size:13px;
+    }
 
-            transition: width .25s ease;
-        }
+    .behance-main-btn{
+        margin-top:20px;
 
-        nav a:hover {
-            color: white;
-        }
+        width:100%;
 
-        nav a:hover::after {
-            width: 100%;
-        }
+        justify-content:center;
+    }
 
-        .nav-contact {
-            padding: 11px 17px;
 
-            background: var(--red);
+    /* PROJECTS */
 
-            color: white !important;
-        }
+    .project-wall{
+        grid-template-columns:
+            1fr;
 
-        .nav-contact::after {
-            display: none;
-        }
+        gap:10px;
+    }
 
-        .menu-btn {
-            display: none;
+    .project-card{
+        min-height:230px;
+    }
 
-            width: 44px;
-            height: 44px;
+    .project-card.large{
+        grid-column:auto;
+    }
 
-            border: 1px solid var(--line);
 
-            background: rgba(255,255,255,.03);
+    /* SERVICES */
 
-            color: white;
+    .services-grid{
+        grid-template-columns:
+            1fr;
 
-            cursor: pointer;
-        }
+        gap:10px;
+    }
 
+    .service-card{
+        min-height:150px;
 
-        /* =========================================================
-           MOBILE MENU
-        ========================================================= */
+        padding:22px;
+    }
 
-        .mobile-menu {
-            position: fixed;
-            inset: 84px 0 auto 0;
 
-            z-index: 4900;
+    /* BEHANCE */
 
-            padding: 25px;
+    .behance-grid{
+        grid-template-columns:
+            1fr 1fr;
 
-            background: rgba(5,5,5,.97);
-            border-bottom: 1px solid var(--line);
+        grid-auto-rows:
+            190px;
 
-            display: none;
-        }
+        gap:8px;
+    }
 
-        .mobile-menu.open {
-            display: block;
-        }
+    .behance-card{
+        border-radius:13px;
+    }
 
-        .mobile-menu a {
-            display: block;
+    .behance-card.tall{
+        grid-row:span 2;
+    }
 
-            padding: 16px 0;
+    .behance-card.wide{
+        grid-column:span 2;
+    }
 
-            color: #aaa;
+    .behance-overlay{
+        left:11px;
+        right:11px;
+        bottom:11px;
+    }
 
-            text-decoration: none;
+    .behance-overlay span{
+        font-size:7px;
 
-            border-bottom: 1px solid var(--line);
+        margin-bottom:4px;
+    }
 
-            font-weight: 700;
-            font-size: 13px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+    .behance-overlay h3{
+        font-size:12px;
 
-        .mobile-menu a:hover {
-            color: var(--red);
-        }
+        line-height:1.15;
 
+        margin-bottom:3px;
+    }
 
-        /* =========================================================
-           HERO
-        ========================================================= */
+    .behance-overlay small{
+        font-size:7px;
+    }
 
-        .hero {
-            position: relative;
+    .behance-profile-btn{
+        padding:14px;
 
-            min-height: 100vh;
+        gap:11px;
+    }
 
-            display: flex;
-            align-items: center;
+    .behance-logo{
+        width:38px;
+        height:38px;
 
-            overflow: hidden;
+        font-size:17px;
+    }
 
-            background:
-                radial-gradient(
-                    circle at 80% 35%,
-                    rgba(229,9,20,.16),
-                    transparent 30%
-                ),
-                #050505;
-        }
+    .behance-profile-btn strong{
+        font-size:11px;
+    }
 
-        .hero::before {
-            content: "";
+    .behance-profile-btn small{
+        font-size:7px;
+    }
 
-            position: absolute;
-            inset: 0;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(5,5,5,.98) 0%,
-                    rgba(5,5,5,.84) 42%,
-                    rgba(5,5,5,.20) 100%
-                );
+    /* MATERIALS */
 
-            z-index: 1;
-        }
+    .materials{
+        grid-template-columns:
+            repeat(2,1fr);
 
-        .hero-grid {
-            position: absolute;
-            inset: 0;
+        gap:8px;
+    }
 
-            opacity: .18;
+    .material{
+        padding:17px 8px;
 
-            background-image:
-                linear-gradient(
-                    rgba(255,255,255,.04) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(255,255,255,.04) 1px,
-                    transparent 1px
-                );
+        font-size:10px;
+    }
 
-            background-size: 70px 70px;
-        }
 
-        .hero-inner {
-            position: relative;
-            z-index: 3;
+    /* PROCESS */
 
-            width: min(94%, var(--container));
-            margin: auto;
+    .process-grid{
+        grid-template-columns:
+            1fr;
 
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+        gap:10px;
+    }
 
-            align-items: center;
 
-            gap: 50px;
+    /* CTA */
 
-            padding-top: 80px;
-        }
+    .cta{
+        padding:
+            55px 20px;
 
-        .hero-content {
-            max-width: 720px;
-        }
+        border-radius:20px;
+    }
 
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+    .cta h2{
+        font-size:40px;
+    }
 
-            margin-bottom: 25px;
+    .cta p{
+        font-size:13px;
+    }
 
-            color: var(--red);
 
-            font-size: 11px;
-            font-weight: 900;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
+    /* FOOTER */
 
-        .eyebrow::before {
-            content: "";
+    .footer-grid{
+        grid-template-columns:
+            1fr;
 
-            width: 30px;
-            height: 2px;
+        gap:30px;
+    }
 
-            background: var(--red);
-        }
+    .footer-bottom{
+        flex-direction:column;
 
-        .hero h1 {
-            font-size: clamp(52px, 7vw, 110px);
-            line-height: .87;
+        gap:8px;
+    }
 
-            letter-spacing: -6px;
+    .whatsapp{
+        width:50px;
+        height:50px;
 
-            font-weight: 900;
-        }
+        right:15px;
+        bottom:15px;
+    }
 
-        .hero h1 span {
-            display: block;
-            color: var(--red);
-        }
+}
 
-        .hero-description {
-            max-width: 620px;
 
-            margin: 30px 0;
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
 
-            color: #aaa;
+@media(max-width:390px){
 
-            font-size: 16px;
-            line-height: 1.8;
-        }
+    .container{
+        width:
+            calc(100% - 22px);
+    }
 
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+    .hero h1{
+        font-size:45px;
+    }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
+    .behance-grid{
+        grid-auto-rows:
+            165px;
 
-            min-height: 50px;
+        gap:6px;
+    }
 
-            padding: 0 22px;
+    .behance-overlay h3{
+        font-size:10px;
+    }
 
-            text-decoration: none;
+    .behance-overlay small{
+        display:none;
+    }
 
-            border: 1px solid transparent;
+}
 
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
 
-            transition:
-                transform .3s ease,
-                background .3s ease,
-                border .3s ease;
-        }
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 
-        .btn:hover {
-            transform: translateY(-4px);
-        }
+@media(prefers-reduced-motion:reduce){
 
-        .btn-red {
-            background: var(--red);
-            color: white;
-        }
+    *,
+    *::before,
+    *::after{
+        scroll-behavior:auto !important;
 
-        .btn-red:hover {
-            background: #ff111d;
-        }
+        animation-duration:
+            .01ms !important;
 
-        .btn-outline {
-            border-color: rgba(255,255,255,.18);
-            background: rgba(255,255,255,.03);
-            color: white;
-        }
+        animation-iteration-count:
+            1 !important;
 
-        .btn-outline:hover {
-            border-color: var(--red);
-        }
+        transition-duration:
+            .01ms !important;
+    }
 
-        .hero-visual {
-            position: relative;
+}
 
-            min-height: 560px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-orbit {
-            position: absolute;
-
-            width: min(550px, 80vw);
-            aspect-ratio: 1;
-
-            border: 1px solid rgba(229,9,20,.25);
-            border-radius: 50%;
-
-            animation: orbit 18s linear infinite;
-        }
-
-        .hero-orbit::before,
-        .hero-orbit::after {
-            content: "";
-
-            position: absolute;
-
-            width: 9px;
-            height: 9px;
-
-            border-radius: 50%;
-
-            background: var(--red);
-
-            box-shadow: 0 0 30px var(--red);
-        }
-
-        .hero-orbit::before {
-            top: 20px;
-            left: 30%;
-        }
-
-        .hero-orbit::after {
-            bottom: 50px;
-            right: 15%;
-        }
-
-        @keyframes orbit {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .hero-product {
-            position: relative;
-            z-index: 3;
-
-            width: min(620px, 90%);
-
-            filter:
-                drop-shadow(0 40px 50px rgba(0,0,0,.8))
-                drop-shadow(0 0 40px rgba(229,9,20,.10));
-
-            transform:
-                perspective(1000px)
-                rotateY(-8deg)
-                rotateX(3deg);
-
-            transition: transform .5s ease;
-        }
-
-        .hero-product:hover {
-            transform:
-                perspective(1000px)
-                rotateY(5deg)
-                rotateX(-2deg)
-                scale(1.025);
-        }
-
-        .hero-badges {
-            position: absolute;
-
-            bottom: 30px;
-            left: 0;
-            right: 0;
-
-            z-index: 5;
-
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .badge {
-            padding: 9px 12px;
-
-            border: 1px solid rgba(255,255,255,.10);
-
-            background: rgba(255,255,255,.035);
-
-            color: #bbb;
-
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-        }
-
-
-        /* =========================================================
-           GENERAL SECTIONS
-        ========================================================= */
-
-        section {
-            scroll-margin-top: 90px;
-        }
-
-        .section {
-            width: min(94%, var(--container));
-            margin: auto;
-
-            padding: 120px 0;
-        }
-
-        .section-title {
-            margin-bottom: 55px;
-        }
-
-        .section-kicker {
-            display: inline-block;
-
-            margin-bottom: 13px;
-
-            color: var(--red);
-
-            font-size: 10px;
-            font-weight: 900;
-            letter-spacing: 4px;
-        }
-
-        .section-title h2 {
-            font-size: clamp(42px, 6vw, 80px);
-            line-height: .9;
-
-            letter-spacing: -4px;
-
-            font-weight: 900;
-        }
-
-        .section-title h2 span {
-            color: var(--red);
-        }
-
-        .section-title p {
-            max-width: 650px;
-
-            margin-top: 20px;
-
-            color: #888;
-
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-
-        /* =========================================================
-           WORK WALL
-        ========================================================= */
-
-        .work-wall {
-            background: #080808;
-        }
-
-        .work-grid {
-            display: grid;
-
-            grid-template-columns:
-                1.2fr
-                .8fr
-                .8fr;
-
-            grid-auto-rows: 290px;
-
-            gap: 14px;
-        }
-
-        .work-card {
-            position: relative;
-
-            overflow: hidden;
-
-            border: 1px solid var(--line);
-
-            background: #111;
-
-            text-decoration: none;
-
-            transition:
-                transform .4s ease,
-                border .4s ease;
-        }
-
-        .work-card.large {
-            grid-row: span 2;
-        }
-
-        .work-card img {
-            width: 100%;
-            height: 100%;
-
-            display: block;
-
-            object-fit: cover;
-
-            transition:
-                transform .7s ease,
-                filter .5s ease;
-        }
-
-        .work-card::after {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(0,0,0,.9),
-                    transparent 65%
-                );
-        }
-
-        .work-card:hover {
-            transform: translateY(-7px);
-
-            border-color: var(--red);
-
-            box-shadow: var(--shadow);
-        }
-
-        .work-card:hover img {
-            transform: scale(1.07);
-            filter: saturate(1.15);
-        }
-
-        .work-info {
-            position: absolute;
-
-            z-index: 2;
-
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
-        }
-
-        .work-info span {
-            color: var(--red);
-
-            font-size: 9px;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
-
-        .work-info h3 {
-            margin-top: 7px;
-
-            font-size: 19px;
-            font-weight: 800;
-        }
-
-
-        /* =========================================================
-           PRODUCTS
-        ========================================================= */
-
-        .products {
-            background: #050505;
-        }
-
-        .product-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 16px;
-        }
-
-        .product-card {
-            position: relative;
-
-            overflow: hidden;
-
-            min-height: 360px;
-
-            border: 1px solid var(--line);
-
-            background: #0d0d0d;
-
-            text-decoration: none;
-
-            transition:
-                transform .4s ease,
-                border .4s ease;
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
-            transition: transform .7s ease;
-        }
-
-        .product-card::after {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(0,0,0,.95),
-                    transparent 70%
-                );
-        }
-
-        .product-card:hover {
-            transform:
-                perspective(900px)
-                rotateX(2deg)
-                rotateY(-2deg)
-                translateY(-7px);
-
-            border-color: var(--red);
-        }
-
-        .product-card:hover img {
-            transform: scale(1.08);
-        }
-
-        .product-info {
-            position: absolute;
-
-            z-index: 3;
-
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
-        }
-
-        .product-info small {
-            color: var(--red);
-
-            font-size: 9px;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
-
-        .product-info h3 {
-            margin-top: 7px;
-
-            font-size: 22px;
-        }
-
-
-        /* =========================================================
-           INGENIOUS TV
-        ========================================================= */
-
-        .tv-section {
-            background:
-                radial-gradient(
-                    circle at 50% 0,
-                    rgba(229,9,20,.10),
-                    transparent 35%
-                ),
-                #080808;
-        }
-
-        .tv-main {
-            display: grid;
-
-            grid-template-columns: 1.4fr .6fr;
-
-            gap: 20px;
-        }
-
-        .tv-player {
-            position: relative;
-
-            overflow: hidden;
-
-            aspect-ratio: 16 / 9;
-
-            border: 1px solid var(--line);
-
-            background: #000;
-        }
-
-        .tv-player iframe {
-            width: 100%;
-            height: 100%;
-
-            border: 0;
-        }
-
-        .tv-side {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .tv-card {
-            display: grid;
-
-            grid-template-columns: 120px 1fr;
-
-            min-height: 105px;
-
-            overflow: hidden;
-
-            border: 1px solid var(--line);
-
-            background: #0d0d0d;
-
-            text-decoration: none;
-
-            transition: .3s ease;
-        }
-
-        .tv-card img {
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-        }
-
-        .tv-card-content {
-            padding: 15px;
-        }
-
-        .tv-card-content span {
-            color: var(--red);
-
-            font-size: 8px;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
-
-        .tv-card-content h3 {
-            margin-top: 8px;
-
-            font-size: 12px;
-            line-height: 1.4;
-        }
-
-        .tv-card:hover {
-            transform: translateX(-5px);
-            border-color: var(--red);
-        }
-
-
-        /* =========================================================
-           SERVICES
-        ========================================================= */
-
-        .services-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 14px;
-        }
-
-        .service {
-            position: relative;
-
-            min-height: 230px;
-
-            padding: 28px;
-
-            overflow: hidden;
-
-            border: 1px solid var(--line);
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,.045),
-                    rgba(255,255,255,.01)
-                );
-
-            transition:
-                transform .4s ease,
-                border .4s ease;
-        }
-
-        .service::before {
-            content: "";
-
-            position: absolute;
-
-            top: 0;
-            left: 0;
-
-            width: 4px;
-            height: 0;
-
-            background: var(--red);
-
-            transition: height .4s ease;
-        }
-
-        .service:hover {
-            transform: translateY(-8px);
-
-            border-color: rgba(229,9,20,.5);
-        }
-
-        .service:hover::before {
-            height: 100%;
-        }
-
-        .service-number {
-            color: #333;
-
-            font-size: 45px;
-            font-weight: 900;
-        }
-
-        .service h3 {
-            margin-top: 20px;
-
-            font-size: 18px;
-        }
-
-        .service p {
-            margin-top: 12px;
-
-            color: #777;
-
-            font-size: 12px;
-            line-height: 1.7;
-        }
-
-
-        /* =========================================================
-           MATERIALS
-        ========================================================= */
-
-        .materials {
-            background: #080808;
-        }
-
-        .materials-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(6, 1fr);
-
-            gap: 10px;
-        }
-
-        .material {
-            min-height: 160px;
-
-            display: flex;
-            flex-direction: column;
-
-            justify-content: flex-end;
-
-            padding: 20px;
-
-            border: 1px solid var(--line);
-
-            background:
-                radial-gradient(
-                    circle at top right,
-                    rgba(229,9,20,.14),
-                    transparent 50%
-                ),
-                #101010;
-
-            transition: .35s ease;
-        }
-
-        .material:hover {
-            border-color: var(--red);
-            transform: translateY(-5px);
-        }
-
-        .material strong {
-            font-size: 16px;
-        }
-
-        .material span {
-            margin-top: 7px;
-
-            color: #666;
-
-            font-size: 9px;
-            letter-spacing: 1px;
-        }
-
-
-        /* =========================================================
-           PROCESS
-        ========================================================= */
-
-        .process-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 0;
-        }
-
-        .process {
-            position: relative;
-
-            padding: 35px 25px;
-
-            border-top: 1px solid var(--line);
-
-            border-bottom: 1px solid var(--line);
-        }
-
-        .process + .process {
-            border-left: 1px solid var(--line);
-        }
-
-        .process-number {
-            color: var(--red);
-
-            font-size: 12px;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
-
-        .process h3 {
-            margin-top: 30px;
-
-            font-size: 22px;
-        }
-
-        .process p {
-            margin-top: 12px;
-
-            color: #777;
-
-            font-size: 12px;
-            line-height: 1.7;
-        }
-
-
-        /* =========================================================
-           REAL BEHANCE PROJECTS
-        ========================================================= */
-
-        .behance-section {
-            position: relative;
-
-            padding: 120px 5%;
-
-            overflow: hidden;
-
-            background:
-                radial-gradient(
-                    circle at 20% 20%,
-                    rgba(229,9,20,.10),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 80% 80%,
-                    rgba(255,255,255,.04),
-                    transparent 25%
-                ),
-                #050505;
-        }
-
-        .behance-section::before {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            background-image:
-                linear-gradient(
-                    rgba(255,255,255,.025) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(255,255,255,.025) 1px,
-                    transparent 1px
-                );
-
-            background-size: 50px 50px;
-
-            pointer-events: none;
-        }
-
-        .section-head {
-            position: relative;
-            z-index: 2;
-
-            width: min(100%, var(--container));
-
-            margin: 0 auto 55px;
-
-            display: flex;
-
-            justify-content: space-between;
-            align-items: flex-end;
-
-            gap: 30px;
-        }
-
-        .section-head h2 {
-            margin: 0;
-
-            color: white;
-
-            font-size: clamp(42px, 6vw, 82px);
-
-            line-height: .9;
-
-            font-weight: 900;
-
-            letter-spacing: -3px;
-        }
-
-        .section-head h2 span {
-            color: var(--red);
-        }
-
-        .section-head p {
-            max-width: 620px;
-
-            margin-top: 22px;
-
-            color: #888;
-
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        .behance-main-btn {
-            flex-shrink: 0;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 15px;
-
-            padding: 17px 23px;
-
-            color: #fff;
-
-            text-decoration: none;
-
-            border: 1px solid rgba(255,255,255,.16);
-
-            background: rgba(255,255,255,.04);
-
-            backdrop-filter: blur(15px);
-
-            transition: .35s ease;
-        }
-
-        .behance-main-btn span {
-            color: var(--red);
-
-            font-size: 20px;
-        }
-
-        .behance-main-btn:hover {
-            border-color: var(--red);
-
-            background: var(--red);
-
-            transform: translateY(-4px);
-        }
-
-        .behance-main-btn:hover span {
-            color: white;
-        }
-
-        .behance-grid {
-            position: relative;
-            z-index: 2;
-
-            width: min(100%, var(--container));
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            grid-auto-rows: 250px;
-
-            gap: 15px;
-        }
-
-        .behance-card {
-            position: relative;
-
-            min-height: 250px;
-
-            overflow: hidden;
-
-            background: #111;
-
-            border: 1px solid rgba(255,255,255,.07);
-
-            text-decoration: none;
-
-            transform-style: preserve-3d;
-
-            transition:
-                transform .45s cubic-bezier(.2,.8,.2,1),
-                border-color .35s ease,
-                box-shadow .35s ease;
-        }
-
-        .behance-card.tall {
-            grid-row: span 2;
-        }
-
-        .behance-card.wide {
-            grid-column: span 2;
-        }
-
-        .behance-card img {
-            width: 100%;
-            height: 100%;
-
-            display: block;
-
-            object-fit: cover;
-
-            filter: saturate(.9);
-
-            transition:
-                transform .7s cubic-bezier(.2,.8,.2,1),
-                filter .5s ease;
-        }
-
-        .behance-card::after {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(0,0,0,.95) 0%,
-                    rgba(0,0,0,.55) 35%,
-                    transparent 70%
-                );
-
-            opacity: .85;
-
-            transition: .4s ease;
-        }
-
-        .behance-card:hover {
-            z-index: 5;
-
-            transform:
-                translateY(-8px)
-                scale(1.015);
-
-            border-color: rgba(229,9,20,.75);
-
-            box-shadow:
-                0 25px 70px rgba(0,0,0,.65),
-                0 0 35px rgba(229,9,20,.12);
-        }
-
-        .behance-card:hover img {
-            transform: scale(1.08);
-
-            filter: saturate(1.15);
-        }
-
-        .behance-overlay {
-            position: absolute;
-
-            z-index: 3;
-
-            left: 0;
-            right: 0;
-            bottom: 0;
-
-            padding: 25px;
-
-            transform: translateZ(20px);
-        }
-
-        .behance-overlay span {
-            display: block;
-
-            margin-bottom: 8px;
-
-            color: var(--red);
-
-            font-size: 9px;
-
-            font-weight: 800;
-
-            letter-spacing: 2px;
-        }
-
-        .behance-overlay h3 {
-            margin: 0;
-
-            color: #fff;
-
-            font-size: 18px;
-
-            line-height: 1.25;
-
-            font-weight: 800;
-        }
-
-        .behance-overlay small {
-            display: block;
-
-            margin-top: 8px;
-
-            color: #aaa;
-
-            font-size: 9px;
-
-            letter-spacing: 1.5px;
-        }
-
-        .behance-bottom {
-            position: relative;
-
-            z-index: 3;
-
-            width: min(100%, var(--container));
-
-            margin: 50px auto 0;
-
-            display: flex;
-
-            justify-content: center;
-        }
-
-        .behance-profile-btn {
-            display: flex;
-
-            align-items: center;
-
-            gap: 18px;
-
-            width: min(600px, 100%);
-
-            padding: 20px 25px;
-
-            color: #fff;
-
-            text-decoration: none;
-
-            border: 1px solid rgba(255,255,255,.12);
-
-            background: rgba(255,255,255,.035);
-
-            backdrop-filter: blur(20px);
-
-            transition: .4s ease;
-        }
-
-        .behance-profile-btn:hover {
-            border-color: var(--red);
-
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 20px 60px rgba(229,9,20,.12);
-        }
-
-        .behance-logo {
-            width: 50px;
-            height: 50px;
-
-            display: grid;
-
-            place-items: center;
-
-            background: #1769ff;
-
-            color: #fff;
-
-            font-size: 17px;
-
-            font-weight: 900;
-        }
-
-        .behance-profile-btn div {
-            flex: 1;
-        }
-
-        .behance-profile-btn strong {
-            display: block;
-
-            font-size: 13px;
-
-            letter-spacing: 1px;
-        }
-
-        .behance-profile-btn small {
-            display: block;
-
-            margin-top: 6px;
-
-            color: #777;
-
-            font-size: 9px;
-
-            letter-spacing: 1.5px;
-        }
-
-        .behance-profile-btn .arrow {
-            color: var(--red);
-
-            font-size: 25px;
-        }
-
-
-        /* =========================================================
-           CONTACT
-        ========================================================= */
-
-        .contact-section {
-            position: relative;
-
-            padding: 130px 5%;
-
-            overflow: hidden;
-
-            background:
-                radial-gradient(
-                    circle at 80% 50%,
-                    rgba(229,9,20,.14),
-                    transparent 35%
-                ),
-                #070707;
-        }
-
-        .contact-inner {
-            width: min(100%, var(--container));
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                1.2fr
-                .8fr;
-
-            gap: 60px;
-
-            align-items: center;
-        }
-
-        .contact-title h2 {
-            font-size: clamp(50px, 7vw, 100px);
-
-            line-height: .85;
-
-            letter-spacing: -5px;
-
-            font-weight: 900;
-        }
-
-        .contact-title h2 span {
-            color: var(--red);
-        }
-
-        .contact-title p {
-            max-width: 600px;
-
-            margin-top: 30px;
-
-            color: #888;
-
-            line-height: 1.8;
-        }
-
-        .contact-buttons {
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 10px;
-        }
-
-        .contact-link {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            padding: 20px;
-
-            border: 1px solid var(--line);
-
-            background: rgba(255,255,255,.025);
-
-            color: white;
-
-            text-decoration: none;
-
-            transition: .3s ease;
-        }
-
-        .contact-link span {
-            color: #777;
-
-            font-size: 11px;
-        }
-
-        .contact-link:hover {
-            padding-left: 27px;
-
-            border-color: var(--red);
-
-            background: rgba(229,9,20,.08);
-        }
-
-        .contact-link strong {
-            font-size: 13px;
-        }
-
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        footer {
-            padding: 45px 5% 30px;
-
-            border-top: 1px solid var(--line);
-
-            background: #030303;
-        }
-
-        .footer-inner {
-            width: min(100%, var(--container));
-
-            margin: auto;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            gap: 30px;
-        }
-
-        .footer-brand {
-            font-size: 14px;
-
-            font-weight: 900;
-
-            letter-spacing: 1px;
-        }
-
-        .footer-brand span {
-            color: var(--red);
-        }
-
-        .footer-social {
-            display: flex;
-
-            gap: 10px;
-        }
-
-        .social {
-            width: 42px;
-            height: 42px;
-
-            display: grid;
-
-            place-items: center;
-
-            border: 1px solid var(--line);
-
-            color: #aaa;
-
-            text-decoration: none;
-
-            font-size: 11px;
-            font-weight: 800;
-
-            transition: .3s ease;
-        }
-
-        .social:hover {
-            color: white;
-
-            border-color: var(--red);
-
-            background: var(--red);
-
-            transform: translateY(-4px);
-        }
-
-        .copyright {
-            margin-top: 30px;
-
-            text-align: center;
-
-            color: #444;
-
-            font-size: 9px;
-
-            letter-spacing: 1px;
-        }
-
-
-        /* =========================================================
-           WHATSAPP
-        ========================================================= */
-
-        .whatsapp {
-            position: fixed;
-
-            right: 22px;
-            bottom: 22px;
-
-            z-index: 6000;
-
-            width: 58px;
-            height: 58px;
-
-            display: grid;
-
-            place-items: center;
-
-            border-radius: 50%;
-
-            background: #25d366;
-
-            color: white;
-
-            text-decoration: none;
-
-            box-shadow:
-                0 12px 35px rgba(0,0,0,.5);
-
-            transition: .3s ease;
-        }
-
-        .whatsapp:hover {
-            transform:
-                translateY(-5px)
-                scale(1.05);
-        }
-
-        .whatsapp svg {
-            width: 28px;
-            height: 28px;
-
-            fill: white;
-        }
-
-
-        /* =========================================================
-           REVEAL
-        ========================================================= */
-
-        .reveal {
-            opacity: 0;
-
-            transform: translateY(30px);
-
-            transition:
-                opacity .8s ease,
-                transform .8s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-
-            transform: translateY(0);
-        }
-
-
-        /* =========================================================
-           RESPONSIVE
-        ========================================================= */
-
-        @media (max-width: 1150px) {
-
-            nav {
-                display: none;
-            }
-
-            .menu-btn {
-                display: grid;
-                place-items: center;
-            }
-
-            .hero-inner {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-content {
-                padding-top: 50px;
-            }
-
-            .hero-visual {
-                min-height: 450px;
-            }
-
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .materials-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .tv-main {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-inner {
-                grid-template-columns: 1fr;
-            }
-        }
-
-
-        @media (max-width: 1000px) {
-
-            .work-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .work-card.large {
-                grid-row: span 2;
-            }
-
-            .behance-grid {
-                grid-template-columns: repeat(2, 1fr);
-                grid-auto-rows: 240px;
-            }
-
-            .behance-card.wide {
-                grid-column: span 2;
-            }
-
-            .behance-card.tall {
-                grid-row: span 2;
-            }
-
-            .section-head {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-        }
-
-
-        @media (max-width: 650px) {
-
-            .nav {
-                height: 72px;
-            }
-
-            .mobile-menu {
-                inset: 72px 0 auto 0;
-            }
-
-            .hero {
-                min-height: auto;
-            }
-
-            .hero-inner {
-                padding-top: 140px;
-                padding-bottom: 70px;
-            }
-
-            .hero h1 {
-                font-size: 54px;
-                letter-spacing: -3px;
-            }
-
-            .hero-description {
-                font-size: 14px;
-            }
-
-            .hero-visual {
-                min-height: 350px;
-            }
-
-            .hero-product {
-                width: 95%;
-            }
-
-            .hero-orbit {
-                width: 330px;
-            }
-
-            .hero-badges {
-                position: relative;
-
-                bottom: auto;
-
-                margin-top: 25px;
-            }
-
-            .section {
-                padding: 80px 0;
-            }
-
-            .section-title h2 {
-                font-size: 47px;
-
-                letter-spacing: -2px;
-            }
-
-            .work-grid {
-                grid-template-columns: 1fr;
-                grid-auto-rows: 280px;
-            }
-
-            .work-card.large {
-                grid-row: span 1;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .product-card {
-                min-height: 340px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .materials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .process {
-                border-left: 0 !important;
-            }
-
-            .tv-card {
-                grid-template-columns: 100px 1fr;
-            }
-
-            .behance-section {
-                padding: 80px 20px;
-            }
-
-            .section-head h2 {
-                font-size: 46px;
-
-                letter-spacing: -2px;
-            }
-
-            .section-head p {
-                font-size: 13px;
-            }
-
-            .behance-main-btn {
-                width: 100%;
-
-                justify-content: center;
-            }
-
-            .behance-grid {
-                grid-template-columns: 1fr;
-
-                grid-auto-rows: 300px;
-
-                gap: 12px;
-            }
-
-            .behance-card,
-            .behance-card.wide,
-            .behance-card.tall {
-                grid-column: span 1;
-
-                grid-row: span 1;
-
-                min-height: 300px;
-            }
-
-            .behance-overlay {
-                padding: 20px;
-            }
-
-            .behance-overlay h3 {
-                font-size: 17px;
-            }
-
-            .behance-profile-btn {
-                width: 100%;
-
-                padding: 16px;
-            }
-
-            .behance-logo {
-                width: 42px;
-                height: 42px;
-            }
-
-            .behance-profile-btn strong {
-                font-size: 11px;
-            }
-
-            .behance-profile-btn small {
-                font-size: 8px;
-            }
-
-            .contact-section {
-                padding: 80px 20px;
-            }
-
-            .contact-title h2 {
-                font-size: 55px;
-
-                letter-spacing: -3px;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-
-                text-align: center;
-            }
-
-            .whatsapp {
-                width: 54px;
-                height: 54px;
-
-                right: 15px;
-                bottom: 15px;
-            }
-        }
-
-
-        @media (prefers-reduced-motion: reduce) {
-
-            html {
-                scroll-behavior: auto;
-            }
-
-            *,
-            *::before,
-            *::after {
-                animation-duration: .01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: .01ms !important;
-            }
-        }
-
-    </style>
-
+</style>
 </head>
 
 
 <body>
 
 
-<!-- =========================================================
+<!-- ======================================================
      LOADER
-========================================================= -->
+====================================================== -->
 
 <div class="loader" id="loader">
 
     <div class="loader-inner">
 
         <div class="loader-logo">
-            INGENIOUS<span>.</span>
+            INGENIOUS <span>GROUPS</span>
         </div>
 
         <div class="loader-line"></div>
@@ -2193,571 +1624,220 @@
 </div>
 
 
-<!-- =========================================================
+<!-- ======================================================
      HEADER
-========================================================= -->
+====================================================== -->
 
 <header id="header">
 
-    <div class="nav">
+    <div class="container nav">
 
-        <a
-            href="#home"
-            class="logo"
-        >
-            <span class="logo-mark">I</span>
-
-            INGENIOUS
-            <span>GROUPS</span>
+        <a href="#home" class="logo">
+            INGENIOUS <span>GROUPS</span>
         </a>
-
-
-        <nav>
-
-            <a href="#home">Home</a>
-
-            <a href="#about">About</a>
-
-            <a href="#services">Services</a>
-
-            <a href="#materials">Materials</a>
-
-            <a href="#work">Our Work</a>
-
-            <a href="#behance">Behance</a>
-
-            <a href="#contact" class="nav-contact">
-                Contact
-            </a>
-
-        </nav>
-
 
         <button
             class="menu-btn"
             id="menuBtn"
             aria-label="Open menu"
+            aria-expanded="false"
         >
             ☰
         </button>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home">HOME</a>
+            <a href="#work">OUR WORK</a>
+            <a href="#services">SERVICES</a>
+            <a href="#materials">MATERIALS</a>
+            <a href="#behance">BEHANCE</a>
+            <a href="#contact">CONTACT</a>
+
+        </nav>
 
     </div>
 
 </header>
 
 
-<!-- =========================================================
-     MOBILE MENU
-========================================================= -->
-
-<div class="mobile-menu" id="mobileMenu">
-
-    <a href="#home">Home</a>
-
-    <a href="#about">About</a>
-
-    <a href="#services">Services</a>
-
-    <a href="#materials">Materials</a>
-
-    <a href="#work">Our Work</a>
-
-    <a href="#behance">Behance</a>
-
-    <a href="#contact">Contact</a>
-
-</div>
-
-
-<!-- =========================================================
+<!-- ======================================================
      HERO
-========================================================= -->
+====================================================== -->
 
 <main id="home">
 
 <section class="hero">
 
-    <div class="hero-grid"></div>
+    <div class="container">
 
+        <div class="hero-content">
 
-    <div class="hero-inner">
-
-        <div class="hero-content reveal">
-
-            <div class="eyebrow">
-                PACKAGING • FLEXO • 3D
-            </div>
-
+            <span class="hero-kicker">
+                PACKAGING • FLEXO • 3D DESIGN
+            </span>
 
             <h1>
-
-                DESIGN
-
-                <span>
-                    TO PRINT.
-                </span>
-
+                DESIGN<br>
+                <span>PRINT</span><br>
+                CREATE.
             </h1>
 
-
-            <p class="hero-description">
-
-                INGENIOUS GROUPS ALGERIA combines
-                high-precision graphic design,
-                3D visualization, packaging development
-                and professional flexographic printing.
-
-                From the first concept to simulation,
-                production and final printing.
-
+            <p>
+                INGENIOUS GROUPS ALGERIA combines high-precision
+                packaging design, flexographic printing and 3D
+                visualization to transform products into powerful
+                visual identities.
             </p>
-
 
             <div class="hero-buttons">
 
                 <a
-                    href="#work"
+                    href="#behance"
                     class="btn btn-red"
                 >
-                    Explore Our Work
-                    →
+                    VIEW OUR REAL WORK
                 </a>
 
                 <a
-                    href="#contact"
-                    class="btn btn-outline"
+                    href="https://wa.me/213798234579"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-dark"
                 >
-                    Start A Project
+                    CONTACT US
                 </a>
 
             </div>
 
         </div>
 
-
-        <div class="hero-visual reveal">
-
-            <div class="hero-orbit"></div>
-
-
-            <img
-                src="pp-packaging.png"
-                alt="INGENIOUS PP Packaging"
-                class="hero-product"
-            >
-
-
-            <div class="hero-badges">
-
-                <span class="badge">
-                    PACKAGING
-                </span>
-
-                <span class="badge">
-                    FLEXO PRINTING
-                </span>
-
-                <span class="badge">
-                    LABELS
-                </span>
-
-                <span class="badge">
-                    3D DESIGN
-                </span>
-
-            </div>
-
-        </div>
-
     </div>
 
 </section>
 
 
-<!-- =========================================================
-     ABOUT
-========================================================= -->
+<!-- ======================================================
+     OUR WORK
+====================================================== -->
 
-<section
-    class="section"
-    id="about"
->
+<section id="work">
 
-    <div class="section-title reveal">
+    <div class="container">
 
-        <span class="section-kicker">
-            ABOUT INGENIOUS
-        </span>
+        <div class="section-head">
 
-        <h2>
-            FROM IDEA
-            <span>TO REALITY.</span>
-        </h2>
+            <div>
 
-        <p>
-            We develop packaging concepts,
-            visual identities and production-ready
-            printing solutions designed to make
-            products stand out in the real market.
-        </p>
+                <span class="section-kicker">
+                    SELECTED WORK
+                </span>
 
-    </div>
+                <h2>
+                    OUR <span>WORK</span>
+                </h2>
 
+                <p>
+                    Packaging, labels, flexographic printing
+                    and visual production.
+                </p>
 
-    <div class="services-grid">
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                01
             </div>
 
-            <h3>
-                High Precision Design
-            </h3>
-
-            <p>
-                Professional packaging and label
-                design prepared for real industrial
-                production.
-            </p>
-
         </div>
 
 
-        <div class="service reveal">
+        <div class="project-wall">
 
-            <div class="service-number">
-                02
-            </div>
-
-            <h3>
-                3D Visualization
-            </h3>
-
-            <p>
-                Realistic product visualization,
-                3D mockups, Cinema 4D and Unreal
-                Engine workflows.
-            </p>
-
-        </div>
-
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                03
-            </div>
-
-            <h3>
-                Print Preparation
-            </h3>
-
-            <p>
-                Production-ready files developed
-                according to the technical needs
-                of professional printing.
-            </p>
-
-        </div>
-
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                04
-            </div>
-
-            <h3>
-                Flexographic Printing
-            </h3>
-
-            <p>
-                Packaging and label solutions
-                developed for modern flexographic
-                production.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     VISUAL WORK
-========================================================= -->
-
-<section
-    class="work-wall"
-    id="work"
->
-
-    <div class="section">
-
-        <div class="section-title reveal">
-
-            <span class="section-kicker">
-                SELECTED WORK
-            </span>
-
-            <h2>
-                VISUAL
-                <span>WORK.</span>
-            </h2>
-
-            <p>
-                A selection of packaging and printing
-                work developed by INGENIOUS GROUPS ALGERIA.
-            </p>
-
-        </div>
-
-
-        <div class="work-grid">
-
-            <a
-                href="#products"
-                class="work-card large reveal"
-            >
+            <a class="project-card large"
+               href="#behance">
 
                 <img
                     src="pp-packaging.png"
                     alt="PP Packaging"
                     loading="lazy"
+                    decoding="async"
                 >
 
-                <div class="work-info">
+                <div class="project-label">
 
-                    <span>
+                    <small>
+                        FLEXO PACKAGING
+                    </small>
+
+                    <h3>
+                        PP Packaging
+                    </h3>
+
+                </div>
+
+            </a>
+
+
+            <a class="project-card"
+               href="#behance">
+
+                <img
+                    src="dove-label.png"
+                    alt="Dove Label"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+                <div class="project-label">
+
+                    <small>
+                        LABEL DESIGN
+                    </small>
+
+                    <h3>
+                        Premium Labels
+                    </h3>
+
+                </div>
+
+            </a>
+
+
+            <a class="project-card"
+               href="#behance">
+
+                <img
+                    src="freedom-label.png"
+                    alt="Freedom Label"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+                <div class="project-label">
+
+                    <small>
+                        FLEXO LABEL
+                    </small>
+
+                    <h3>
+                        Product Identity
+                    </h3>
+
+                </div>
+
+            </a>
+
+
+            <a class="project-card"
+               href="#behance">
+
+                <img
+                    src="mirou-label.png"
+                    alt="Mirou Label"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+                <div class="project-label">
+
+                    <small>
                         PACKAGING
-                    </span>
-
-                    <h3>
-                        PP Packaging
-                    </h3>
-
-                </div>
-
-            </a>
-
-
-            <a
-                href="#products"
-                class="work-card reveal"
-            >
-
-                <img
-                    src="dove-label.png"
-                    alt="Dove Label"
-                    loading="lazy"
-                >
-
-                <div class="work-info">
-
-                    <span>
-                        LABEL DESIGN
-                    </span>
-
-                    <h3>
-                        Dove Label
-                    </h3>
-
-                </div>
-
-            </a>
-
-
-            <a
-                href="#products"
-                class="work-card reveal"
-            >
-
-                <img
-                    src="freedom-label.png"
-                    alt="Freedom Label"
-                    loading="lazy"
-                >
-
-                <div class="work-info">
-
-                    <span>
-                        FLEXO LABEL
-                    </span>
-
-                    <h3>
-                        Freedom Label
-                    </h3>
-
-                </div>
-
-            </a>
-
-
-            <a
-                href="#products"
-                class="work-card reveal"
-            >
-
-                <img
-                    src="mirou-label.png"
-                    alt="Mirou Label"
-                    loading="lazy"
-                >
-
-                <div class="work-info">
-
-                    <span>
-                        PRODUCT LABEL
-                    </span>
-
-                    <h3>
-                        Mirou Label
-                    </h3>
-
-                </div>
-
-            </a>
-
-
-            <a
-                href="#behance"
-                class="work-card reveal"
-            >
-
-                <img
-                    src="https://mir-s3-cdn-cf.behance.net/projects/404/a94e07249036441.Y3JvcCw0NjI1LDM2MTcsMTc4NiwxNDk5.jpg"
-                    alt="PP Etiquettes"
-                    loading="lazy"
-                >
-
-                <div class="work-info">
-
-                    <span>
-                        BEHANCE
-                    </span>
-
-                    <h3>
-                        PP Étiquettes
-                    </h3>
-
-                </div>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     LOCAL PROJECTS
-========================================================= -->
-
-<section
-    class="products"
-    id="products"
->
-
-    <div class="section">
-
-        <div class="section-title reveal">
-
-            <span class="section-kicker">
-                OUR PACKAGING PROJECTS
-            </span>
-
-            <h2>
-                PACKAGING
-                <span>PROJECTS.</span>
-            </h2>
-
-            <p>
-                Selected packaging and label concepts
-                created for professional presentation
-                and production.
-            </p>
-
-        </div>
-
-
-        <div class="product-grid">
-
-
-            <a
-                href="dove-label.png"
-                target="_blank"
-                class="product-card reveal"
-            >
-
-                <img
-                    src="dove-label.png"
-                    alt="Dove Label"
-                    loading="lazy"
-                >
-
-                <div class="product-info">
-
-                    <small>
-                        LABEL DESIGN
-                    </small>
-
-                    <h3>
-                        Dove Label
-                    </h3>
-
-                </div>
-
-            </a>
-
-
-            <a
-                href="freedom-label.png"
-                target="_blank"
-                class="product-card reveal"
-            >
-
-                <img
-                    src="freedom-label.png"
-                    alt="Freedom Label"
-                    loading="lazy"
-                >
-
-                <div class="product-info">
-
-                    <small>
-                        FLEXO LABEL
-                    </small>
-
-                    <h3>
-                        Freedom Label
-                    </h3>
-
-                </div>
-
-            </a>
-
-
-            <a
-                href="mirou-label.png"
-                target="_blank"
-                class="product-card reveal"
-            >
-
-                <img
-                    src="mirou-label.png"
-                    alt="Mirou Label"
-                    loading="lazy"
-                >
-
-                <div class="product-info">
-
-                    <small>
-                        PRODUCT LABEL
                     </small>
 
                     <h3>
@@ -2768,34 +1848,6 @@
 
             </a>
 
-
-            <a
-                href="pp-packaging.png"
-                target="_blank"
-                class="product-card reveal"
-            >
-
-                <img
-                    src="pp-packaging.png"
-                    alt="PP Packaging"
-                    loading="lazy"
-                >
-
-                <div class="product-info">
-
-                    <small>
-                        PP PACKAGING
-                    </small>
-
-                    <h3>
-                        PP Packaging
-                    </h3>
-
-                </div>
-
-            </a>
-
-
         </div>
 
     </div>
@@ -2803,569 +1855,148 @@
 </section>
 
 
-<!-- =========================================================
-     INGENIOUS TV
-========================================================= -->
-
-<section
-    class="tv-section"
-    id="tv"
->
-
-    <div class="section">
-
-        <div class="section-title reveal">
-
-            <span class="section-kicker">
-                INGENIOUS TV
-            </span>
-
-            <h2>
-                WATCH
-                <span>OUR WORK.</span>
-            </h2>
-
-            <p>
-                Explore our latest visual work,
-                packaging concepts and production content
-                on YouTube.
-            </p>
-
-        </div>
-
-
-        <div class="tv-main">
-
-            <div class="tv-player reveal">
-
-                <iframe
-                    src="https://www.youtube.com/embed/PVU1hjx64U4"
-                    title="INGENIOUS GROUPS ALGERIA"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                ></iframe>
-
-            </div>
-
-
-            <div class="tv-side">
-
-
-                <a
-                    href="https://www.youtube.com/@Ingeniousgroups/videos"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="tv-card reveal"
-                >
-
-                    <img
-                        src="https://img.youtube.com/vi/PVU1hjx64U4/maxresdefault.jpg"
-                        alt="INGENIOUS TV"
-                        loading="lazy"
-                    >
-
-                    <div class="tv-card-content">
-
-                        <span>
-                            FEATURED VIDEO
-                        </span>
-
-                        <h3>
-                            Watch INGENIOUS GROUPS ALGERIA
-                        </h3>
-
-                    </div>
-
-                </a>
-
-
-                <a
-                    href="https://www.youtube.com/@Ingeniousgroups/videos"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="tv-card reveal"
-                >
-
-                    <img
-                        src="https://mir-s3-cdn-cf.behance.net/projects/404/138b53242917735.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg"
-                        alt="INGENIOUS Design"
-                        loading="lazy"
-                    >
-
-                    <div class="tv-card-content">
-
-                        <span>
-                            MORE VIDEOS
-                        </span>
-
-                        <h3>
-                            Discover our latest projects
-                        </h3>
-
-                    </div>
-
-                </a>
-
-
-                <a
-                    href="https://www.youtube.com/@Ingeniousgroups/videos"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="tv-card reveal"
-                >
-
-                    <img
-                        src="https://mir-s3-cdn-cf.behance.net/projects/404/776ee8246801585.Y3JvcCwxMTAzLDg2MiwxNDcsMA.jpg"
-                        alt="Packaging Projects"
-                        loading="lazy"
-                    >
-
-                    <div class="tv-card-content">
-
-                        <span>
-                            CHANNEL
-                        </span>
-
-                        <h3>
-                            Explore INGENIOUS TV
-                        </h3>
-
-                    </div>
-
-                </a>
-
-
-                <a
-                    href="https://www.youtube.com/@Ingeniousgroups/videos"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-red"
-                >
-                    VIEW YOUTUBE CHANNEL →
-                </a>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
+<!-- ======================================================
      SERVICES
-========================================================= -->
+====================================================== -->
 
-<section
-    class="section"
-    id="services"
->
+<section id="services">
 
-    <div class="section-title reveal">
+    <div class="container">
 
-        <span class="section-kicker">
-            WHAT WE DO
-        </span>
+        <div class="section-head">
 
-        <h2>
-            OUR
-            <span>SERVICES.</span>
-        </h2>
+            <div>
 
-    </div>
+                <span class="section-kicker">
+                    WHAT WE DO
+                </span>
 
+                <h2>
+                    OUR <span>SERVICES</span>
+                </h2>
 
-    <div class="services-grid">
-
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                01
             </div>
-
-            <h3>
-                Label Design
-            </h3>
-
-            <p>
-                Professional label concepts prepared
-                for industrial production.
-            </p>
 
         </div>
 
 
-        <div class="service reveal">
+        <div class="services-grid">
 
-            <div class="service-number">
-                02
+            <div class="service-card">
+
+                <span class="service-number">
+                    01
+                </span>
+
+                <h3>
+                    Label Design
+                </h3>
+
+                <p>
+                    High-quality label design for
+                    professional products.
+                </p>
+
             </div>
 
-            <h3>
-                PP Labels
-            </h3>
 
-            <p>
-                PP label design and production solutions.
-            </p>
+            <div class="service-card">
 
-        </div>
+                <span class="service-number">
+                    02
+                </span>
 
+                <h3>
+                    Flexographic Printing
+                </h3>
 
-        <div class="service reveal">
+                <p>
+                    Professional flexo printing
+                    for packaging and labels.
+                </p>
 
-            <div class="service-number">
-                03
             </div>
 
-            <h3>
-                OPP / PET / PEHD
-            </h3>
 
-            <p>
-                Packaging solutions for multiple
-                industrial materials.
-            </p>
+            <div class="service-card">
 
-        </div>
+                <span class="service-number">
+                    03
+                </span>
 
+                <h3>
+                    3D Visualization
+                </h3>
 
-        <div class="service reveal">
+                <p>
+                    Cinema 4D and 3D product
+                    visualization.
+                </p>
 
-            <div class="service-number">
-                04
             </div>
 
-            <h3>
-                Doypack
-            </h3>
 
-            <p>
-                Modern flexible packaging design
-                and production preparation.
-            </p>
+            <div class="service-card">
 
-        </div>
+                <span class="service-number">
+                    04
+                </span>
 
+                <h3>
+                    Print Ready Files
+                </h3>
 
-        <div class="service reveal">
+                <p>
+                    Production-ready artwork
+                    prepared for printing.
+                </p>
 
-            <div class="service-number">
-                05
             </div>
 
-            <h3>
-                Sleeve
-            </h3>
-
-            <p>
-                High-impact sleeve packaging
-                concepts and visual development.
-            </p>
-
         </div>
-
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                06
-            </div>
-
-            <h3>
-                IML
-            </h3>
-
-            <p>
-                In-mold label solutions for
-                modern packaging.
-            </p>
-
-        </div>
-
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                07
-            </div>
-
-            <h3>
-                Product Boxes
-            </h3>
-
-            <p>
-                Packaging boxes with professional
-                visual and print preparation.
-            </p>
-
-        </div>
-
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                08
-            </div>
-
-            <h3>
-                3D Mockup
-            </h3>
-
-            <p>
-                Realistic 3D presentation before
-                production.
-            </p>
-
-        </div>
-
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                09
-            </div>
-
-            <h3>
-                Print Ready Files
-            </h3>
-
-            <p>
-                Accurate production files prepared
-                for professional printing.
-            </p>
-
-        </div>
-
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                10
-            </div>
-
-            <h3>
-                Product Packaging
-            </h3>
-
-            <p>
-                Complete visual packaging development
-                from concept to final artwork.
-            </p>
-
-        </div>
-
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                11
-            </div>
-
-            <h3>
-                Branding
-            </h3>
-
-            <p>
-                Visual identity and packaging systems
-                designed around your product.
-            </p>
-
-        </div>
-
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                12
-            </div>
-
-            <h3>
-                Flexographic Printing
-            </h3>
-
-            <p>
-                Professional flexographic printing
-                workflows for packaging and labels.
-            </p>
-
-        </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- ======================================================
      MATERIALS
-========================================================= -->
+====================================================== -->
 
-<section
-    class="materials"
-    id="materials"
->
+<section id="materials">
 
-    <div class="section">
+    <div class="container">
 
-        <div class="section-title reveal">
+        <div class="section-head">
 
-            <span class="section-kicker">
-                MATERIALS
-            </span>
+            <div>
 
-            <h2>
-                BUILT FOR
-                <span>PRINT.</span>
-            </h2>
+                <span class="section-kicker">
+                    MATERIALS
+                </span>
+
+                <h2>
+                    PRINTING <span>MATERIALS</span>
+                </h2>
+
+            </div>
 
         </div>
 
 
-        <div class="materials-grid">
+        <div class="materials">
 
-
-            <div class="material reveal">
-                <strong>PP</strong>
-                <span>POLYPROPYLENE</span>
-            </div>
-
-
-            <div class="material reveal">
-                <strong>OPP</strong>
-                <span>PACKAGING FILM</span>
-            </div>
-
-
-            <div class="material reveal">
-                <strong>PET</strong>
-                <span>POLYESTER</span>
-            </div>
-
-
-            <div class="material reveal">
-                <strong>PEHD</strong>
-                <span>HIGH DENSITY PE</span>
-            </div>
-
-
-            <div class="material reveal">
-                <strong>PAPER</strong>
-                <span>CARTON / BOXES</span>
-            </div>
-
-
-            <div class="material reveal">
-                <strong>FILM</strong>
-                <span>FLEXIBLE PACKAGING</span>
-            </div>
-
+            <div class="material">PP</div>
+            <div class="material">OPP</div>
+            <div class="material">PET</div>
+            <div class="material">PEHD</div>
+            <div class="material">SLEEVE</div>
+            <div class="material">DOYPACK</div>
+            <div class="material">IML</div>
+            <div class="material">CARTON</div>
 
         </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     PROCESS
-========================================================= -->
-
-<section class="section">
-
-    <div class="section-title reveal">
-
-        <span class="section-kicker">
-            OUR PROCESS
-        </span>
-
-        <h2>
-            DESIGN.
-            <span>SIMULATE. PRINT.</span>
-        </h2>
-
-    </div>
-
-
-    <div class="process-grid">
-
-
-        <div class="process reveal">
-
-            <span class="process-number">
-                01 / DESIGN
-            </span>
-
-            <h3>
-                Concept
-            </h3>
-
-            <p>
-                We develop the visual concept,
-                packaging structure and graphic
-                direction.
-            </p>
-
-        </div>
-
-
-        <div class="process reveal">
-
-            <span class="process-number">
-                02 / 3D
-            </span>
-
-            <h3>
-                Simulation
-            </h3>
-
-            <p>
-                The packaging is visualized
-                realistically before production.
-            </p>
-
-        </div>
-
-
-        <div class="process reveal">
-
-            <span class="process-number">
-                03 / PREPRESS
-            </span>
-
-            <h3>
-                Production
-            </h3>
-
-            <p>
-                Artwork and technical files are
-                prepared for printing.
-            </p>
-
-        </div>
-
-
-        <div class="process reveal">
-
-            <span class="process-number">
-                04 / PRINT
-            </span>
-
-            <h3>
-                Final Result
-            </h3>
-
-            <p>
-                The approved design becomes a
-                real printed product.
-            </p>
-
-        </div>
-
 
     </div>
 
@@ -3376,848 +2007,666 @@
      REAL BEHANCE PROJECTS
 ========================================================= -->
 
-<section
-    class="behance-section"
-    id="behance"
->
+<section class="behance-section" id="behance">
 
-    <div class="section-head">
+    <div class="container">
 
-        <div>
+        <div class="section-head">
 
-            <span class="section-kicker">
-                OUR REAL WORK
-            </span>
+            <div>
 
-            <h2>
-                BEHANCE
-                <span>PROJECTS</span>
-            </h2>
+                <span class="section-kicker">
+                    OUR REAL WORK
+                </span>
 
-            <p>
-                A selection of real projects published
-                by INGENIOUS GROUPS ALGERIA on Behance.
-            </p>
+                <h2>
+                    BEHANCE <span>PROJECTS</span>
+                </h2>
+
+                <p>
+                    Real projects published by
+                    INGENIOUS GROUPS ALGERIA on Behance.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="behance-main-btn"
+            >
+                VIEW ALL ON BEHANCE
+                <span>↗</span>
+            </a>
 
         </div>
 
 
-        <a
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="behance-main-btn"
-        >
+        <!-- =================================================
+             REAL PROJECTS
+        ================================================== -->
 
-            VIEW ALL ON BEHANCE
-
-            <span>
-                ↗
-            </span>
-
-        </a>
-
-    </div>
+        <div class="behance-grid">
 
 
-    <div class="behance-grid">
+            <!-- 01 -->
 
-
-        <!-- 01 -->
-
-        <a
-            class="behance-card tall"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/267693254806349.Y3JvcCw1MTQ1LDQwMjQsMCwxMTQ2.jpg"
-                alt="نكشف لكم علبة PS6 أول مرة"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card tall"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/267693254806349.Y3JvcCw1MTQ1LDQwMjQsMCwxMTQ2.jpg"
+                    alt="نكشف لكم علبة PS6 أول مرة"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 01
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    نكشف لكم علبة PS6 أول مرة
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 01
+                    </span>
 
-                <small>
-                    PACKAGING / CONCEPT
-                </small>
+                    <h3>
+                        نكشف لكم علبة PS6 أول مرة
+                    </h3>
 
-            </div>
+                    <small>
+                        PACKAGING / CONCEPT
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 02 -->
+            <!-- 02 -->
 
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/150847254429829.Y3JvcCwzNjM3LDI4NDUsMTg5LDA.jpg"
-                alt="شاهد كيف نكسر المعادلة في الأسواق"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/150847254429829.Y3JvcCwzNjM3LDI4NDUsMTg5LDA.jpg"
+                    alt="شاهد كيف نكسر المعادلة في الأسواق"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 02
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    شاهد كيف نكسر المعادلة في الأسواق
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 02
+                    </span>
 
-                <small>
-                    BRANDING / PACKAGING
-                </small>
+                    <h3>
+                        شاهد كيف نكسر المعادلة في الأسواق
+                    </h3>
 
-            </div>
+                    <small>
+                        BRANDING / PACKAGING
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 03 -->
+            <!-- 03 -->
 
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/0fe7db253689695.Y3JvcCwzMDA2LDIzNTEsMCwxNDcz.jpg"
-                alt="ÉDITION LIMITÉE"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/0fe7db253689695.Y3JvcCwzMDA2LDIzNTEsMCwxNDcz.jpg"
+                    alt="ÉDITION LIMITÉE"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 03
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    ÉDITION LIMITÉE
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 03
+                    </span>
 
-                <small>
-                    PREMIUM DESIGN
-                </small>
+                    <h3>
+                        ÉDITION LIMITÉE
+                    </h3>
 
-            </div>
+                    <small>
+                        PREMIUM DESIGN
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 04 -->
+            <!-- 04 -->
 
-        <a
-            class="behance-card wide"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/a94e07249036441.Y3JvcCw0NjI1LDM2MTcsMTc4NiwxNDk5.jpg"
-                alt="FIND YOUR WAY WITH US - PRINTING PP ÉTIQUETTES"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card wide"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/a94e07249036441.Y3JvcCw0NjI1LDM2MTcsMTc4NiwxNDk5.jpg"
+                    alt="FIND YOUR WAY WITH US - PRINTING PP ÉTIQUETTES"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 04
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    FIND YOUR WAY WITH US
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 04
+                    </span>
 
-                <small>
-                    PRINTING PP ÉTIQUETTES
-                </small>
+                    <h3>
+                        FIND YOUR WAY WITH US
+                    </h3>
 
-            </div>
+                    <small>
+                        PRINTING PP ÉTIQUETTES
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 05 -->
+            <!-- 05 -->
 
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/bd210f248780933.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png"
-                alt="تقنيات طباعة متقدمة PP"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/bd210f248780933.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png"
+                    alt="تقنيات طباعة متقدمة PP"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 05
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    تقنيات طباعة متقدمة PP
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 05
+                    </span>
 
-                <small>
-                    PP / FLEXO PRINTING
-                </small>
+                    <h3>
+                        تقنيات طباعة متقدمة PP
+                    </h3>
 
-            </div>
+                    <small>
+                        PP / FLEXO PRINTING
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 06 -->
+            <!-- 06 -->
 
-        <a
-            class="behance-card tall"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/ae6198248195547.Y3JvcCw1NDE3LDQyMzcsMCw1Mw.jpg"
-                alt="نصل بكم لصناعة الأفلام حيث ننطلق من الجزائر"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card tall"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/ae6198248195547.Y3JvcCw1NDE3LDQyMzcsMCw1Mw.jpg"
+                    alt="نصل بكم لصناعة الأفلام حيث ننطلق من الجزائر"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 06
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    نصل بكم لصناعة الأفلام
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 06
+                    </span>
 
-                <small>
-                    3D / CINEMA / PRODUCTION
-                </small>
+                    <h3>
+                        نصل بكم لصناعة الأفلام
+                    </h3>
 
-            </div>
+                    <small>
+                        3D / CINEMA / PRODUCTION
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 07 -->
+            <!-- 07 -->
 
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/776ee8246801585.Y3JvcCwxMTAzLDg2MiwxNDcsMA.jpg"
-                alt="designs emballage en carton"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/776ee8246801585.Y3JvcCwxMTAzLDg2MiwxNDcsMA.jpg"
+                    alt="designs emballage en carton"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 07
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    Designs Emballage en Carton
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 07
+                    </span>
 
-                <small>
-                    CARTON PACKAGING
-                </small>
+                    <h3>
+                        Designs Emballage en Carton
+                    </h3>
 
-            </div>
+                    <small>
+                        CARTON PACKAGING
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 08 -->
+            <!-- 08 -->
 
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/1c8d71245439651.Y3JvcCwyNTc3LDIwMTYsNTA0LDA.jpg"
-                alt="الطباعة الفليكسوغرافية الخاصة بكل منتوجاتكم"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/1c8d71245439651.Y3JvcCwyNTc3LDIwMTYsNTA0LDA.jpg"
+                    alt="الطباعة الفليكسوغرافية الخاصة بكل منتوجاتكم"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 08
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    الطباعة الفليكسوغرافية
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 08
+                    </span>
 
-                <small>
-                    FLEXOGRAPHIC PRINTING
-                </small>
+                    <h3>
+                        الطباعة الفليكسوغرافية
+                    </h3>
 
-            </div>
+                    <small>
+                        FLEXOGRAPHIC PRINTING
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 09 -->
+            <!-- 09 -->
 
-        <a
-            class="behance-card wide"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/138b53242917735.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg"
-                alt="هنا، يتحول التصميم إلى حقيقة ملموسة"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card wide"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/138b53242917735.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg"
+                    alt="هنا، يتحول التصميم إلى حقيقة ملموسة"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 09
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    هنا، يتحول التصميم إلى حقيقة ملموسة
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 09
+                    </span>
 
-                <small>
-                    DESIGN TO REALITY
-                </small>
+                    <h3>
+                        هنا، يتحول التصميم إلى حقيقة ملموسة
+                    </h3>
 
-            </div>
+                    <small>
+                        DESIGN TO REALITY
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 10 -->
+            <!-- 10 -->
 
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/7defd5242917409.Y3JvcCw3MzYsNTc1LDI2NiwxNTM.jpg"
-                alt="تصميم وطباعة أغلفة Doypack"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/7defd5242917409.Y3JvcCw3MzYsNTc1LDI2NiwxNTM.jpg"
+                    alt="تصميم وطباعة أغلفة Doypack"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 10
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    تصميم وطباعة أغلفة Doypack
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 10
+                    </span>
 
-                <small>
-                    DOYPACK / PACKAGING
-                </small>
+                    <h3>
+                        تصميم وطباعة أغلفة Doypack
+                    </h3>
 
-            </div>
+                    <small>
+                        DOYPACK / PACKAGING
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 11 -->
+            <!-- 11 -->
 
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/4fbbf0240424211.Y3JvcCw1MDM1LDM5MzksMTAzNCww.png"
-                alt="We Make The Future For You"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/4fbbf0240424211.Y3JvcCw1MDM1LDM5MzksMTAzNCww.png"
+                    alt="We Make The Furute for you"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 11
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    We Make The Future For You
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 11
+                    </span>
 
-                <small>
-                    CREATIVE DIRECTION
-                </small>
+                    <h3>
+                        We Make The Future For You
+                    </h3>
 
-            </div>
+                    <small>
+                        CREATIVE DIRECTION
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
 
 
-        <!-- 12 -->
+            <!-- 12 -->
 
-        <a
-            class="behance-card tall"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/719e79179683543.Y3JvcCwzMjM4LDI1MzMsNjY1LDA.png"
-                alt="أحدث الأعمال في مجال التصميم ثلاثية الأبعاد"
-                loading="lazy"
-                decoding="async"
+            <a
+                class="behance-card tall"
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
             >
 
-            <div class="behance-overlay">
+                <img
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/719e79179683543.Y3JvcCwzMjM4LDI1MzMsNjY1LDA.png"
+                    alt="أحدث الأعمال في مجال التصميم ثلاثية الأبعاد"
+                    loading="lazy"
+                    decoding="async"
+                >
 
-                <span>
-                    BEHANCE PROJECT 12
-                </span>
+                <div class="behance-overlay">
 
-                <h3>
-                    3D Design
-                </h3>
+                    <span>
+                        BEHANCE PROJECT 12
+                    </span>
 
-                <small>
-                    3D / VISUALIZATION
-                </small>
+                    <h3>
+                        3D Design
+                    </h3>
 
-            </div>
+                    <small>
+                        3D / VISUALIZATION
+                    </small>
 
-        </a>
+                </div>
+
+            </a>
+
+        </div>
 
 
-        <!-- 13 -->
+        <!-- PROFILE BUTTON -->
 
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <div class="behance-bottom">
 
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/e2a061232104551.Y3JvcCwzODQ1LDMwMDgsNzUyLDA.jpg"
-                alt="Flexo Emballage print professionnel in Algeria"
-                loading="lazy"
-                decoding="async"
+            <a
+                href="https://www.behance.net/ingineosedesign/projects"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="behance-profile-btn"
             >
 
-            <div class="behance-overlay">
-
-                <span>
-                    BEHANCE PROJECT 13
+                <span class="behance-logo">
+                    Bē
                 </span>
 
-                <h3>
-                    Flexo Emballage Print Professionnel
-                </h3>
+                <div>
 
-                <small>
-                    FLEXO / ALGERIA
-                </small>
+                    <strong>
+                        INGENIOUS GROUPS ALGERIA
+                    </strong>
 
-            </div>
+                    <small>
+                        EXPLORE ALL OUR PROJECTS ON BEHANCE
+                    </small>
 
-        </a>
+                </div>
 
-
-        <!-- 14 -->
-
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/899990227637753.Y3JvcCwzODczLDMwMzAsNzU3LDA.jpg"
-                alt="أغلفة المنتجات الفاخرة"
-                loading="lazy"
-                decoding="async"
-            >
-
-            <div class="behance-overlay">
-
-                <span>
-                    BEHANCE PROJECT 14
+                <span class="arrow">
+                    ↗
                 </span>
 
-                <h3>
-                    أغلفة المنتجات الفاخرة
-                </h3>
+            </a>
 
-                <small>
-                    PREMIUM PACKAGING
-                </small>
-
-            </div>
-
-        </a>
-
-
-        <!-- 15 -->
-
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/4b7a6d224955475.Y3JvcCw0NDE1LDM0NTMsMCwxNDUz.jpg"
-                alt="Santé & Pharmacies"
-                loading="lazy"
-                decoding="async"
-            >
-
-            <div class="behance-overlay">
-
-                <span>
-                    BEHANCE PROJECT 15
-                </span>
-
-                <h3>
-                    Santé & Pharmacies
-                </h3>
-
-                <small>
-                    PACKAGING / HEALTH
-                </small>
-
-            </div>
-
-        </a>
-
-
-        <!-- 16 -->
-
-        <a
-            class="behance-card wide"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/364319224939987.Y3JvcCwxNDI1MCwxMTE0NiwwLDUyOQ.jpg"
-                alt="أول ما يراه عميلك هو التغليف والملصقات"
-                loading="lazy"
-                decoding="async"
-            >
-
-            <div class="behance-overlay">
-
-                <span>
-                    BEHANCE PROJECT 16
-                </span>
-
-                <h3>
-                    التغليف والملصقات
-                </h3>
-
-                <small>
-                    LABELS / PACKAGING
-                </small>
-
-            </div>
-
-        </a>
-
-
-        <!-- 17 -->
-
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/316778224576195.Y3JvcCwzMDAxLDIzNDgsNzEzLDA.jpg"
-                alt="الطباعة ابتداء من 5000 ملصق فليكسو"
-                loading="lazy"
-                decoding="async"
-            >
-
-            <div class="behance-overlay">
-
-                <span>
-                    BEHANCE PROJECT 17
-                </span>
-
-                <h3>
-                    5000+ Flexo Labels
-                </h3>
-
-                <small>
-                    EUROPEAN SPECIFICATIONS
-                </small>
-
-            </div>
-
-        </a>
-
-
-        <!-- 18 -->
-
-        <a
-            class="behance-card"
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <img
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/1d2278224516725.Y3JvcCwyNjgxLDIwOTcsMCwzMDQ1.jpg"
-                alt="الكميات الضخمة تصنع التاريخ"
-                loading="lazy"
-                decoding="async"
-            >
-
-            <div class="behance-overlay">
-
-                <span>
-                    BEHANCE PROJECT 18
-                </span>
-
-                <h3>
-                    الكميات الضخمة تصنع التاريخ
-                </h3>
-
-                <small>
-                    INDUSTRIAL PRINTING
-                </small>
-
-            </div>
-
-        </a>
-
-
-    </div>
-
-
-    <div class="behance-bottom">
-
-        <a
-            href="https://www.behance.net/ingineosedesign/projects"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="behance-profile-btn"
-        >
-
-            <span class="behance-logo">
-                Bē
-            </span>
-
-            <div>
-
-                <strong>
-                    INGENIOUS GROUPS ALGERIA
-                </strong>
-
-                <small>
-                    EXPLORE ALL OUR PROJECTS ON BEHANCE
-                </small>
-
-            </div>
-
-            <span class="arrow">
-                ↗
-            </span>
-
-        </a>
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- =========================================================
-     CONTACT
-========================================================= -->
+<!-- ======================================================
+     PROCESS
+====================================================== -->
 
-<section
-    class="contact-section"
-    id="contact"
->
+<section>
 
-    <div class="contact-inner">
+    <div class="container">
 
+        <div class="section-head">
 
-        <div class="contact-title reveal">
+            <div>
 
-            <span class="section-kicker">
-                LET'S WORK TOGETHER
-            </span>
+                <span class="section-kicker">
+                    OUR PROCESS
+                </span>
 
-            <h2>
-                YOUR
-                <span>PROJECT.</span>
-            </h2>
+                <h2>
+                    FROM IDEA <span>TO PRINT</span>
+                </h2>
 
-            <p>
-                Packaging design, labels,
-                flexographic printing,
-                3D visualization or a complete
-                product packaging solution.
-
-                Let's turn your idea into something
-                real.
-            </p>
+            </div>
 
         </div>
 
 
-        <div class="contact-buttons reveal">
+        <div class="process-grid">
+
+            <div class="process-card">
+
+                <div class="number">
+                    01
+                </div>
+
+                <h3>
+                    Concept
+                </h3>
+
+                <p>
+                    Understanding the product,
+                    market and visual identity.
+                </p>
+
+            </div>
 
 
-            <a
-                href="https://wa.me/213798234579"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-link"
-            >
+            <div class="process-card">
 
-                <strong>
-                    WhatsApp
-                </strong>
+                <div class="number">
+                    02
+                </div>
 
-                <span>
-                    +213 798 234 579 →
-                </span>
+                <h3>
+                    Design
+                </h3>
 
-            </a>
+                <p>
+                    Professional packaging and
+                    label design.
+                </p>
 
-
-            <a
-                href="mailto:ingenious.24contact@gmail.com"
-                class="contact-link"
-            >
-
-                <strong>
-                    Email
-                </strong>
-
-                <span>
-                    ingenious.24contact@gmail.com →
-                </span>
-
-            </a>
+            </div>
 
 
-            <a
-                href="https://www.behance.net/ingineosedesign"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-link"
-            >
+            <div class="process-card">
 
-                <strong>
-                    Behance
-                </strong>
+                <div class="number">
+                    03
+                </div>
 
-                <span>
-                    View Portfolio →
-                </span>
+                <h3>
+                    Simulation
+                </h3>
 
-            </a>
+                <p>
+                    3D visualization and realistic
+                    packaging presentation.
+                </p>
 
-
-            <a
-                href="https://www.youtube.com/@Ingeniousgroups/videos"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-link"
-            >
-
-                <strong>
-                    YouTube
-                </strong>
-
-                <span>
-                    INGENIOUS TV →
-                </span>
-
-            </a>
+            </div>
 
 
-            <a
-                href="https://www.facebook.com/ing2424/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-link"
-            >
+            <div class="process-card">
 
-                <strong>
-                    Facebook
-                </strong>
+                <div class="number">
+                    04
+                </div>
 
-                <span>
-                    INGENIOUS GROUPS →
-                </span>
+                <h3>
+                    Production
+                </h3>
 
-            </a>
+                <p>
+                    Print-ready preparation and
+                    professional production.
+                </p>
 
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACT
+====================================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="cta">
+
+            <h2>
+                LET'S CREATE
+                <span>YOUR NEXT</span>
+                PRODUCT.
+            </h2>
+
+            <p>
+                Packaging design, labels, flexographic
+                printing and 3D visualization.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a
+                    href="https://wa.me/213798234579"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-red"
+                >
+                    WHATSAPP
+                </a>
+
+                <a
+                    href="mailto:ingenious.24contact@gmail.com"
+                    class="btn btn-dark"
+                >
+                    EMAIL US
+                </a>
+
+                <a
+                    href="https://www.behance.net/ingineosedesign/projects"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-dark"
+                >
+                    BEHANCE
+                </a>
+
+            </div>
 
         </div>
 
@@ -4228,90 +2677,109 @@
 </main>
 
 
-<!-- =========================================================
+<!-- ======================================================
      FOOTER
-========================================================= -->
+====================================================== -->
 
 <footer>
 
-    <div class="footer-inner">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <h3>
+                    INGENIOUS
+                    <span>GROUPS</span>
+                </h3>
+
+                <p>
+                    Packaging design, flexographic printing,
+                    labels and 3D visualization from Algeria.
+                </p>
+
+            </div>
 
 
-        <div class="footer-brand">
+            <div class="footer-col">
 
-            INGENIOUS
+                <h4>
+                    NAVIGATION
+                </h4>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#work">
+                    Our Work
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#behance">
+                    Behance
+                </a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>
+                    CONTACT
+                </h4>
+
+                <a
+                    href="https://wa.me/213798234579"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp
+                </a>
+
+                <a
+                    href="mailto:ingenious.24contact@gmail.com"
+                >
+                    Email
+                </a>
+
+                <a
+                    href="https://www.facebook.com/ing2424/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
             <span>
-                GROUPS ALGERIA
+                © 2026 INGENIOUS GROUPS ALGERIA
+            </span>
+
+            <span>
+                DESIGN • PRINT • CREATE
             </span>
 
         </div>
-
-
-        <div class="footer-social">
-
-
-            <a
-                href="https://www.behance.net/ingineosedesign"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social"
-                aria-label="Behance"
-            >
-                Be
-            </a>
-
-
-            <a
-                href="https://www.youtube.com/@Ingeniousgroups/videos"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social"
-                aria-label="YouTube"
-            >
-                YT
-            </a>
-
-
-            <a
-                href="https://www.facebook.com/ing2424/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social"
-                aria-label="Facebook"
-            >
-                f
-            </a>
-
-
-            <a
-                href="https://wa.me/213798234579"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social"
-                aria-label="WhatsApp"
-            >
-                WA
-            </a>
-
-
-        </div>
-
-    </div>
-
-
-    <div class="copyright">
-
-        © 2026 INGENIOUS GROUPS ALGERIA.
-        ALL RIGHTS RESERVED.
 
     </div>
 
 </footer>
 
 
-<!-- =========================================================
-     WHATSAPP FLOATING BUTTON
-========================================================= -->
+<!-- ======================================================
+     WHATSAPP
+====================================================== -->
 
 <a
     href="https://wa.me/213798234579"
@@ -4325,333 +2793,152 @@
         viewBox="0 0 24 24"
         aria-hidden="true"
     >
-
-        <path d="
-            M20.52 3.48A11.82 11.82 0 0 0 12.09 0
-            C5.58 0 .29 5.29 .29 11.8
-            c0 2.08 .54 4.11 1.57 5.9L.2 24
-            l6.44-1.69a11.78 11.78 0 0 0 5.45 1.31h.01
-            c6.51 0 11.8-5.29 11.8-11.8
-            0-3.16-1.23-6.13-3.38-8.34ZM12.1 21.64
-            c-1.7 0-3.37-.46-4.82-1.33l-.35-.21
-            -3.82 1 1.02-3.72-.23-.38
-            a9.78 9.78 0 0 1-1.5-5.2
-            c0-5.4 4.4-9.8 9.81-9.8
-            2.61 0 5.06 1.02 6.91 2.87
-            a9.73 9.73 0 0 1 2.87 6.93
-            c0 5.41-4.4 9.81-9.81 9.81Zm5.38-7.35
-            c-.29-.15-1.71-.84-1.97-.94
-            -.26-.1-.45-.15-.64.15
-            -.19.29-.73.94-.89 1.13
-            -.16.19-.33.22-.61.07
-            -.29-.15-1.21-.45-2.31-1.43
-            -.85-.76-1.43-1.7-1.6-1.99
-            -.17-.29-.02-.45.13-.6
-            .13-.13.29-.33.43-.49
-            .15-.17.19-.29.29-.48
-            .1-.19.05-.36-.02-.5
-            -.07-.15-.64-1.54-.88-2.11
-            -.23-.55-.47-.48-.64-.49
-            -.16-.01-.35-.01-.54-.01
-            -.19 0-.5.07-.76.36
-            -.26.29-1  .98-1 2.39
-            0 1.41 1.03 2.77 1.17 2.96
-            .14.19 2.03 3.1 4.91 4.34
-            .69.3 1.22.48 1.64.61
-            .69.22 1.32.19 1.82.11
-            .56-.08 1.71-.7 1.95-1.38
-            .24-.68.24-1.26.17-1.38
-            -.07-.12-.26-.19-.54-.34Z
-        " />
-
+        <path d="M20.52 3.48A11.78 11.78 0 0012.08 0C5.56 0 .25 5.31.25 11.83c0 2.08.54 4.11 1.56 5.9L.15 24l6.42-1.68a11.83 11.83 0 005.51 1.4h.01c6.52 0 11.83-5.31 11.83-11.83 0-3.16-1.23-6.13-3.4-8.41zM12.09 21.7h-.01a9.85 9.85 0 01-5.02-1.38l-.36-.21-3.81 1 1.02-3.71-.23-.38a9.85 9.85 0 01-1.51-5.19C2.17 6.39 6.62 1.94 12.08 1.94c2.65 0 5.14 1.03 7.01 2.9a9.84 9.84 0 012.9 7.01c0 5.46-4.45 9.91-9.9 9.91zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.79-1.68-2.09-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.11 3.23 5.11 4.53.71.31 1.27.49 1.71.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
     </svg>
 
 </a>
 
 
-<!-- =========================================================
+<!-- ======================================================
      JAVASCRIPT
-========================================================= -->
+====================================================== -->
 
 <script>
 
-    /* =========================================================
-       LOADER
-    ========================================================= */
+/* =========================================================
+   LOADER
+========================================================= */
 
-    window.addEventListener("load", function () {
+window.addEventListener("load", function(){
 
-        const loader =
-            document.getElementById("loader");
+    const loader =
+        document.getElementById("loader");
 
-        setTimeout(function () {
+    setTimeout(function(){
 
-            loader.classList.add("hide");
+        loader.classList.add("hide");
 
-        }, 500);
+    }, 350);
+
+});
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+menuBtn.addEventListener("click", function(){
+
+    const active =
+        navLinks.classList.toggle("active");
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        active
+    );
+
+});
+
+
+/* Close menu after clicking */
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(function(link){
+
+        link.addEventListener(
+            "click",
+            function(){
+
+                navLinks.classList.remove("active");
+
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+        );
 
     });
 
 
-    /* =========================================================
-       HEADER SCROLL
-    ========================================================= */
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
 
-    const header =
-        document.getElementById("header");
+const header =
+    document.getElementById("header");
 
-    function updateHeader() {
+window.addEventListener(
+    "scroll",
+    function(){
 
-        if (window.scrollY > 40) {
+        if(window.scrollY > 30){
 
             header.classList.add("scrolled");
 
-        } else {
+        }else{
 
             header.classList.remove("scrolled");
 
         }
 
+    },
+    {
+        passive:true
     }
-
-    window.addEventListener(
-        "scroll",
-        updateHeader,
-        { passive: true }
-    );
-
-    updateHeader();
+);
 
 
-    /* =========================================================
-       MOBILE MENU
-    ========================================================= */
+/* =========================================================
+   IMAGE ERROR PROTECTION
+========================================================= */
 
-    const menuBtn =
-        document.getElementById("menuBtn");
+document
+    .querySelectorAll("img")
+    .forEach(function(img){
 
-    const mobileMenu =
-        document.getElementById("mobileMenu");
+        img.addEventListener(
+            "error",
+            function(){
 
-
-    menuBtn.addEventListener(
-        "click",
-        function () {
-
-            mobileMenu.classList.toggle("open");
-
-            menuBtn.textContent =
-                mobileMenu.classList.contains("open")
-                ? "×"
-                : "☰";
-
-        }
-    );
-
-
-    document
-        .querySelectorAll(".mobile-menu a")
-        .forEach(function (link) {
-
-            link.addEventListener(
-                "click",
-                function () {
-
-                    mobileMenu.classList.remove("open");
-
-                    menuBtn.textContent = "☰";
-
-                }
-            );
-
-        });
-
-
-    /* =========================================================
-       REVEAL ON SCROLL
-    ========================================================= */
-
-    const revealObserver =
-        new IntersectionObserver(
-            function (entries) {
-
-                entries.forEach(function (entry) {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("visible");
-
-                        revealObserver.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: .12
-            }
-        );
-
-
-    document
-        .querySelectorAll(".reveal")
-        .forEach(function (element) {
-
-            revealObserver.observe(element);
-
-        });
-
-
-    /* =========================================================
-       HERO MOUSE PARALLAX
-    ========================================================= */
-
-    const heroProduct =
-        document.querySelector(".hero-product");
-
-
-    if (
-        heroProduct &&
-        window.matchMedia("(pointer:fine)").matches
-    ) {
-
-        document.addEventListener(
-            "mousemove",
-            function (event) {
-
-                const x =
-                    (event.clientX / window.innerWidth - .5);
-
-                const y =
-                    (event.clientY / window.innerHeight - .5);
-
-                heroProduct.style.transform =
-                    `
-                    perspective(1000px)
-                    rotateY(${x * 10 - 5}deg)
-                    rotateX(${y * -6}deg)
-                    scale(1.01)
-                    `;
+                this.style.opacity = "0";
 
             }
         );
 
-    }
+    });
 
 
-    /* =========================================================
-       BEHANCE 3D TILT
-    ========================================================= */
+/* =========================================================
+   SMART BEHANCE LINKS
+========================================================= */
 
-    const behanceCards =
-        document.querySelectorAll(".behance-card");
+document
+    .querySelectorAll(".behance-card")
+    .forEach(function(card){
 
+        card.addEventListener(
+            "click",
+            function(){
 
-    if (
-        window.matchMedia("(pointer:fine)").matches
-    ) {
-
-        behanceCards.forEach(function (card) {
-
-            card.addEventListener(
-                "mousemove",
-                function (event) {
-
-                    const rect =
-                        card.getBoundingClientRect();
-
-                    const x =
-                        event.clientX - rect.left;
-
-                    const y =
-                        event.clientY - rect.top;
-
-                    const rotateY =
-                        ((x / rect.width) - .5) * 5;
-
-                    const rotateX =
-                        ((y / rect.height) - .5) * -5;
-
-                    card.style.transform =
-                        `
-                        perspective(900px)
-                        rotateX(${rotateX}deg)
-                        rotateY(${rotateY}deg)
-                        translateY(-8px)
-                        scale(1.015)
-                        `;
-
-                }
-            );
-
-
-            card.addEventListener(
-                "mouseleave",
-                function () {
-
-                    card.style.transform = "";
-
-                }
-            );
-
-        });
-
-    }
-
-
-    /* =========================================================
-       IMAGE ERROR HANDLING
-    ========================================================= */
-
-    document
-        .querySelectorAll("img")
-        .forEach(function (image) {
-
-            image.addEventListener(
-                "error",
-                function () {
-
-                    image.style.opacity = "0";
-
-                    image.parentElement.style.background =
-                        `
-                        radial-gradient(
-                            circle at center,
-                            rgba(229,9,20,.18),
-                            #111 65%
-                        )
-                        `;
-
-                }
-            );
-
-        });
-
-
-    /* =========================================================
-       CLOSE MOBILE MENU ON ESC
-    ========================================================= */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (event.key === "Escape") {
-
-                mobileMenu.classList.remove("open");
-
-                menuBtn.textContent = "☰";
+                /* Real project images are displayed here.
+                   Clicking opens the user's Behance projects. */
 
             }
+        );
 
-        }
-    );
+    });
 
 </script>
-
 
 </body>
 </html>
