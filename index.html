@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>INGENIOUS GROUPS ALGERIA | Packaging & Printing</title>
+<title>
+INGENIOUS GROUPS ALGERIA | Advanced Flexo Printing & High Precision Design
+</title>
 
 <meta name="description"
-      content="INGENIOUS GROUPS ALGERIA — Premium packaging design, labels, flexographic printing, 3D visualization and product packaging.">
+content="INGENIOUS GROUPS ALGERIA — Advanced flexographic printing, high-precision packaging design, labels, 3D visualization and premium packaging solutions from Algeria to international markets.">
 
 <meta name="keywords"
-      content="Ingenious Groups Algeria, packaging, flexo printing, labels, PP labels, 3D design, Algeria">
+content="Ingenious Groups Algeria, flexographic printing Algeria, flexo printing, packaging design, high precision design, labels Algeria, PP labels, packaging, 3D visualization">
 
 <meta name="author"
-      content="INGENIOUS GROUPS ALGERIA">
+content="INGENIOUS GROUPS ALGERIA">
 
 <link rel="canonical"
-      href="https://ingenious-groups-dz.github.io/INGENIOUS-GROUPS/">
+href="https://ingenious-groups-dz.github.io/INGENIOUS-GROUPS/">
 
 <style>
 
 /* =========================================================
-   RESET
+   CORE
 ========================================================= */
 
 *{
@@ -39,13 +42,13 @@ html{
 body{
     background:#050505;
     color:#fff;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     overflow-x:hidden;
 }
 
 a{
-    color:inherit;
     text-decoration:none;
+    color:inherit;
 }
 
 img{
@@ -53,26 +56,19 @@ img{
     width:100%;
 }
 
-button{
-    font:inherit;
-}
-
-/* =========================================================
-   VARIABLES
-========================================================= */
-
 :root{
     --red:#e50914;
-    --red-dark:#a9000a;
-    --white:#ffffff;
-    --gray:#9a9a9a;
+    --red2:#ff202d;
+    --white:#fff;
+    --gray:#929292;
     --dark:#050505;
     --card:#0c0c0c;
-    --border:rgba(255,255,255,.10);
+    --line:rgba(255,255,255,.10);
 }
 
+
 /* =========================================================
-   SCROLL BAR
+   SCROLLBAR
 ========================================================= */
 
 ::-webkit-scrollbar{
@@ -87,33 +83,43 @@ button{
     background:var(--red);
 }
 
+
 /* =========================================================
-   CURSOR GLOW
+   CURSOR
 ========================================================= */
 
 .cursor-light{
     position:fixed;
-    width:280px;
-    height:280px;
+
+    width:300px;
+    height:300px;
+
     border-radius:50%;
+
     pointer-events:none;
-    background:radial-gradient(
-        circle,
-        rgba(229,9,20,.12),
-        transparent 65%
-    );
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(229,9,20,.12),
+            transparent 68%
+        );
+
     transform:translate(-50%,-50%);
+
     z-index:0;
 }
+
 
 /* =========================================================
    CONTAINER
 ========================================================= */
 
 .container{
-    width:min(1180px,92%);
+    width:min(1200px,92%);
     margin:auto;
 }
+
 
 /* =========================================================
    HEADER
@@ -121,14 +127,18 @@ button{
 
 header{
     position:fixed;
-    top:0;
+
     left:0;
+    top:0;
+
     width:100%;
     height:72px;
+
     z-index:1000;
 
-    background:rgba(5,5,5,.92);
-    border-bottom:1px solid var(--border);
+    background:rgba(5,5,5,.94);
+
+    border-bottom:1px solid var(--line);
 }
 
 .nav{
@@ -152,14 +162,16 @@ header{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:28px;
+    gap:25px;
 }
 
 .nav-links a{
-    font-size:12px;
-    font-weight:700;
+    font-size:11px;
+    font-weight:800;
+
     letter-spacing:1px;
-    color:#aaa;
+
+    color:#888;
 
     transition:.25s;
 }
@@ -169,22 +181,28 @@ header{
 }
 
 .nav-contact{
-    border:1px solid var(--red);
-    padding:10px 15px;
+    padding:10px 14px;
+
     color:#fff !important;
+
+    border:1px solid var(--red);
 }
 
 .menu{
     display:none;
-    width:38px;
-    height:38px;
 
-    border:1px solid var(--border);
+    width:40px;
+    height:40px;
+
     background:#0b0b0b;
+
+    border:1px solid var(--line);
+
     color:#fff;
 
     cursor:pointer;
 }
+
 
 /* =========================================================
    HERO
@@ -192,27 +210,28 @@ header{
 
 .hero{
     min-height:100vh;
-    padding-top:72px;
 
-    position:relative;
-    overflow:hidden;
+    padding-top:72px;
 
     display:flex;
     align-items:center;
 
-    background:
-        linear-gradient(
-            120deg,
-            #050505 0%,
-            #080808 50%,
-            #030303 100%
-        );
-}
+    position:relative;
 
-/* grid */
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(229,9,20,.06),
+            transparent 30%
+        ),
+        #050505;
+}
 
 .hero-grid{
     position:absolute;
+
     inset:0;
 
     background-image:
@@ -236,60 +255,56 @@ header{
         );
 }
 
-/* animated red line */
-
 .hero-line{
     position:absolute;
+
     left:0;
     top:50%;
 
     width:100%;
     height:1px;
 
-    background:linear-gradient(
-        90deg,
-        transparent,
-        var(--red),
-        transparent
-    );
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--red),
+            transparent
+        );
 
-    opacity:.7;
-
-    animation:lineMove 5s infinite;
+    animation:
+        lineMove 5s infinite;
 }
 
 @keyframes lineMove{
 
-    0%{
+    from{
         transform:translateX(-100%);
     }
 
-    100%{
+    to{
         transform:translateX(100%);
     }
 
 }
 
-/* floating circles */
-
 .orbit{
     position:absolute;
 
-    width:430px;
-    height:430px;
+    width:450px;
+    height:450px;
+
+    right:5%;
+    top:50%;
 
     border:1px solid rgba(255,255,255,.08);
-    border-radius:50%;
 
-    right:7%;
-    top:50%;
+    border-radius:50%;
 
     transform:
         translateY(-50%)
         rotateX(60deg)
         rotateZ(15deg);
-
-    transition:transform .2s linear;
 }
 
 .orbit::before{
@@ -300,29 +315,31 @@ header{
     width:14px;
     height:14px;
 
-    background:var(--red);
+    top:45px;
+    left:65px;
 
     border-radius:50%;
 
-    top:40px;
-    left:60px;
+    background:var(--red);
 
     box-shadow:
         0 0 20px var(--red),
-        0 0 60px rgba(229,9,20,.5);
+        0 0 70px rgba(229,9,20,.5);
 }
 
 .orbit2{
     position:absolute;
 
-    width:300px;
-    height:300px;
-
-    border:1px solid rgba(229,9,20,.18);
-    border-radius:50%;
+    width:310px;
+    height:310px;
 
     right:12%;
     top:50%;
+
+    border:
+        1px solid rgba(229,9,20,.20);
+
+    border-radius:50%;
 
     transform:
         translateY(-50%)
@@ -334,50 +351,46 @@ header{
     position:relative;
     z-index:3;
 
-    max-width:780px;
+    max-width:850px;
 }
 
-/* small label */
-
 .hero-label{
-    display:inline-flex;
+    display:flex;
     align-items:center;
     gap:10px;
 
     margin-bottom:25px;
 
-    font-size:11px;
-    font-weight:800;
-    letter-spacing:3px;
+    color:#888;
 
-    color:#aaa;
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:3px;
 }
 
 .hero-label::before{
     content:"";
 
-    width:30px;
+    width:35px;
     height:2px;
 
     background:var(--red);
 }
 
-/* heading */
-
 .hero h1{
-    font-size:clamp(
-        48px,
-        8vw,
-        105px
-    );
+    font-size:
+        clamp(
+            50px,
+            8vw,
+            105px
+        );
 
-    line-height:.91;
+    line-height:.90;
 
     letter-spacing:-5px;
 
     font-weight:900;
-
-    text-transform:uppercase;
 }
 
 .hero h1 span{
@@ -388,45 +401,44 @@ header{
 }
 
 .hero-welcome{
-    margin-top:28px;
+    margin-top:30px;
 
-    font-size:clamp(
-        18px,
-        2vw,
-        27px
-    );
+    font-size:
+        clamp(
+            18px,
+            2vw,
+            28px
+        );
+
+    font-weight:700;
 
     color:#ddd;
-
-    font-weight:600;
-    letter-spacing:.5px;
 }
 
 .hero-description{
+    max-width:720px;
+
     margin-top:20px;
 
-    max-width:600px;
-
-    color:#8d8d8d;
+    color:#888;
 
     font-size:15px;
-    line-height:1.8;
-}
 
-/* =========================================================
-   HERO BUTTONS
-========================================================= */
+    line-height:1.9;
+}
 
 .hero-buttons{
     margin-top:35px;
 
     display:flex;
     flex-wrap:wrap;
+
     gap:12px;
 }
 
 .btn{
     display:inline-flex;
+
     align-items:center;
     justify-content:center;
 
@@ -434,17 +446,15 @@ header{
 
     padding:0 22px;
 
-    font-size:12px;
-    font-weight:800;
+    font-size:11px;
+
+    font-weight:900;
 
     letter-spacing:1px;
 
-    border:1px solid var(--border);
+    border:1px solid var(--line);
 
-    transition:
-        transform .25s,
-        background .25s,
-        border .25s;
+    transition:.25s;
 }
 
 .btn:hover{
@@ -453,105 +463,538 @@ header{
 
 .btn-red{
     background:var(--red);
+
     border-color:var(--red);
 }
 
 .btn-red:hover{
     background:#fff;
     color:#000;
-    border-color:#fff;
 }
 
 .btn-dark{
-    background:#0c0c0c;
+    background:#0b0b0b;
 }
 
 .btn-dark:hover{
     border-color:#fff;
 }
 
-/* =========================================================
-   STATS
-========================================================= */
-
 .stats{
     margin-top:55px;
 
     display:flex;
     flex-wrap:wrap;
-    gap:40px;
+
+    gap:45px;
 }
 
 .stat strong{
     display:block;
 
-    font-size:25px;
+    font-size:27px;
     font-weight:900;
 }
 
 .stat small{
     display:block;
 
-    margin-top:4px;
+    margin-top:5px;
 
-    color:#777;
+    color:#666;
 
-    font-size:10px;
-    letter-spacing:1px;
+    font-size:9px;
+
+    letter-spacing:1.5px;
 }
 
+
 /* =========================================================
-   SECTION
+   GENERAL SECTION
 ========================================================= */
 
 section{
     position:relative;
-    padding:110px 0;
+
+    padding:120px 0;
 }
 
 .section-head{
-    margin-bottom:45px;
+    margin-bottom:55px;
 
     display:flex;
+
     justify-content:space-between;
     align-items:end;
-    gap:30px;
+
+    gap:35px;
 }
 
 .section-kicker{
+    margin-bottom:13px;
+
     color:var(--red);
 
     font-size:10px;
     font-weight:900;
 
     letter-spacing:3px;
-
-    margin-bottom:12px;
 }
 
 .section-title{
-    font-size:clamp(
-        32px,
-        5vw,
-        60px
-    );
+    font-size:
+        clamp(
+            35px,
+            5vw,
+            65px
+        );
 
-    line-height:1;
+    line-height:.95;
 
-    letter-spacing:-2px;
+    letter-spacing:-3px;
 }
 
 .section-description{
-    max-width:450px;
+    max-width:480px;
 
     color:#777;
 
     font-size:14px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.introduction{
+    background:#080808;
+}
+
+.intro-grid{
+    display:grid;
+
+    grid-template-columns:
+        1.2fr .8fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.intro-big{
+    font-size:
+        clamp(
+            32px,
+            4vw,
+            55px
+        );
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+}
+
+.intro-big span{
+    color:var(--red);
+}
+
+.intro-text{
+    margin-top:25px;
+
+    color:#858585;
+
+    font-size:15px;
+
+    line-height:1.9;
+}
+
+.intro-number{
+    border-left:
+        2px solid var(--red);
+
+    padding-left:35px;
+}
+
+.intro-number strong{
+    display:block;
+
+    font-size:
+        clamp(
+            60px,
+            8vw,
+            105px
+        );
+
+    line-height:.85;
+
+    font-weight:900;
+}
+
+.intro-number span{
+    display:block;
+
+    margin-top:15px;
+
+    color:#888;
+
+    font-size:12px;
+
+    line-height:1.6;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   INTERNATIONAL
+========================================================= */
+
+.international{
+    background:#050505;
+}
+
+.international-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:12px;
+}
+
+.country{
+    position:relative;
+
+    min-height:230px;
+
+    padding:28px;
+
+    background:#0b0b0b;
+
+    border:1px solid var(--line);
+
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.country:hover{
+    transform:translateY(-8px);
+
+    border-color:var(--red);
+}
+
+.country-number{
+    color:#555;
+
+    font-size:10px;
+    font-weight:900;
+}
+
+.country h3{
+    margin-top:55px;
+
+    font-size:24px;
+}
+
+.country p{
+    margin-top:12px;
+
+    color:#777;
+
+    font-size:12px;
+
     line-height:1.7;
 }
 
+.country::after{
+    content:"";
+
+    position:absolute;
+
+    right:-50px;
+    bottom:-50px;
+
+    width:130px;
+    height:130px;
+
+    border:
+        1px solid
+        rgba(229,9,20,.18);
+
+    border-radius:50%;
+}
+
+
 /* =========================================================
-   INTERACTIVE SERVICES
+   ARTICLE
+========================================================= */
+
+.article{
+    background:#080808;
+}
+
+.article-layout{
+    display:grid;
+
+    grid-template-columns:
+        .75fr 1.25fr;
+
+    gap:70px;
+}
+
+.article-side{
+    position:sticky;
+
+    top:110px;
+
+    height:max-content;
+}
+
+.article-side h3{
+    font-size:30px;
+
+    line-height:1.1;
+}
+
+.article-side p{
+    margin-top:20px;
+
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.article-content{
+    color:#999;
+
+    font-size:15px;
+
+    line-height:2;
+}
+
+.article-content p{
+    margin-bottom:28px;
+}
+
+.article-content strong{
+    color:#fff;
+}
+
+.article-content .red{
+    color:var(--red);
+}
+
+
+/* =========================================================
+   TECHNICAL FLEXO
+========================================================= */
+
+.technical{
+    background:#050505;
+}
+
+.tech-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:12px;
+}
+
+.tech-card{
+    min-height:290px;
+
+    padding:30px;
+
+    background:#0b0b0b;
+
+    border:1px solid var(--line);
+
+    transition:.35s;
+}
+
+.tech-card:hover{
+    transform:
+        perspective(800px)
+        rotateX(3deg)
+        rotateY(-3deg)
+        translateY(-8px);
+
+    border-color:var(--red);
+}
+
+.tech-number{
+    color:var(--red);
+
+    font-size:12px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+.tech-card h3{
+    margin-top:55px;
+
+    font-size:22px;
+}
+
+.tech-card p{
+    margin-top:15px;
+
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.tech-tag{
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:7px 10px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#aaa;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   QUALITY
+========================================================= */
+
+.quality{
+    background:#080808;
+}
+
+.quality-list{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:12px;
+}
+
+.quality-item{
+    display:grid;
+
+    grid-template-columns:65px 1fr;
+
+    gap:20px;
+
+    padding:30px;
+
+    background:#0d0d0d;
+
+    border:1px solid var(--line);
+}
+
+.quality-icon{
+    width:55px;
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:
+        1px solid
+        rgba(229,9,20,.5);
+
+    color:var(--red);
+
+    font-size:22px;
+
+    font-weight:900;
+}
+
+.quality-item h3{
+    font-size:17px;
+}
+
+.quality-item p{
+    margin-top:9px;
+
+    color:#777;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   DESIGN PRECISION
+========================================================= */
+
+.design{
+    background:#050505;
+}
+
+.design-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:12px;
+}
+
+.design-card{
+    padding:35px;
+
+    background:#0b0b0b;
+
+    border:1px solid var(--line);
+}
+
+.design-card h3{
+    font-size:21px;
+}
+
+.design-card p{
+    margin-top:15px;
+
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.design-card span{
+    display:block;
+
+    margin-bottom:30px;
+
+    color:var(--red);
+
+    font-size:30px;
+
+    font-weight:900;
+}
+
+
+/* =========================================================
+   SERVICES
 ========================================================= */
 
 .services{
@@ -568,7 +1011,7 @@ section{
 }
 
 .service{
-    min-height:250px;
+    min-height:260px;
 
     padding:30px;
 
@@ -576,13 +1019,11 @@ section{
 
     background:#0d0d0d;
 
-    border:1px solid var(--border);
+    border:1px solid var(--line);
 
     overflow:hidden;
 
-    transition:
-        transform .35s,
-        border .35s;
+    transition:.35s;
 }
 
 .service:hover{
@@ -592,31 +1033,29 @@ section{
         rotateY(-4deg)
         translateY(-8px);
 
-    border-color:
-        rgba(229,9,20,.7);
+    border-color:var(--red);
 }
 
 .service-number{
     color:#555;
 
-    font-size:11px;
-    font-weight:800;
+    font-size:10px;
 }
 
 .service-icon{
     margin-top:45px;
 
-    font-size:42px;
-
     color:var(--red);
+
+    font-size:40px;
 
     font-weight:900;
 }
 
 .service h3{
-    margin-top:25px;
+    margin-top:20px;
 
-    font-size:19px;
+    font-size:18px;
 }
 
 .service p{
@@ -624,28 +1063,14 @@ section{
 
     color:#777;
 
-    font-size:13px;
-    line-height:1.6;
+    font-size:12px;
+
+    line-height:1.7;
 }
 
-.service::after{
-    content:"";
-
-    position:absolute;
-
-    width:100px;
-    height:100px;
-
-    right:-50px;
-    bottom:-50px;
-
-    border-radius:50%;
-
-    border:1px solid rgba(229,9,20,.2);
-}
 
 /* =========================================================
-   OUR WORK
+   WORK
 ========================================================= */
 
 .work{
@@ -664,17 +1089,16 @@ section{
 .work-card{
     background:#0b0b0b;
 
-    border:1px solid var(--border);
+    border:1px solid var(--line);
 
     overflow:hidden;
 
-    transition:
-        transform .35s,
-        border .35s;
+    transition:.35s;
 }
 
 .work-card:hover{
     transform:translateY(-8px);
+
     border-color:var(--red);
 }
 
@@ -687,13 +1111,11 @@ section{
 }
 
 .work-image img{
-    width:100%;
     height:100%;
 
     object-fit:cover;
 
-    transition:
-        transform .6s;
+    transition:.6s;
 }
 
 .work-card:hover img{
@@ -713,8 +1135,9 @@ section{
 
     color:#666;
 
-    font-size:11px;
+    font-size:10px;
 }
+
 
 /* =========================================================
    BEHANCE
@@ -738,15 +1161,13 @@ section{
 
     overflow:hidden;
 
-    border:1px solid var(--border);
+    aspect-ratio:1/1;
 
     background:#111;
 
-    aspect-ratio:1/1;
+    border:1px solid var(--line);
 
-    transition:
-        transform .35s,
-        border .35s;
+    transition:.35s;
 }
 
 .behance-card:hover{
@@ -758,14 +1179,11 @@ section{
 }
 
 .behance-card img{
-    width:100%;
     height:100%;
 
     object-fit:cover;
 
-    transition:
-        transform .6s,
-        filter .4s;
+    transition:.6s;
 }
 
 .behance-card:hover img{
@@ -775,21 +1193,23 @@ section{
 .behance-overlay{
     position:absolute;
 
-    inset:auto 0 0 0;
+    left:0;
+    right:0;
+    bottom:0;
 
     padding:22px;
 
     background:
         linear-gradient(
             transparent,
-            rgba(0,0,0,.9)
+            rgba(0,0,0,.92)
         );
 }
 
 .behance-overlay span{
     color:#aaa;
 
-    font-size:10px;
+    font-size:9px;
 
     letter-spacing:2px;
 }
@@ -799,6 +1219,7 @@ section{
 
     font-size:15px;
 }
+
 
 /* =========================================================
    YOUTUBE
@@ -820,17 +1241,14 @@ section{
 .tv-video{
     position:relative;
 
+    aspect-ratio:16/9;
+
     overflow:hidden;
 
-    border:1px solid var(--border);
-
-    background:#0d0d0d;
-
-    aspect-ratio:16/9;
+    border:1px solid var(--line);
 }
 
 .tv-video img{
-    width:100%;
     height:100%;
 
     object-fit:cover;
@@ -839,9 +1257,7 @@ section{
         grayscale(30%)
         brightness(.65);
 
-    transition:
-        transform .6s,
-        filter .4s;
+    transition:.5s;
 }
 
 .tv-video:hover img{
@@ -860,49 +1276,49 @@ section{
 
     transform:translate(-50%,-50%);
 
-    width:72px;
-    height:72px;
-
-    border-radius:50%;
+    width:75px;
+    height:75px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
+    border-radius:50%;
+
     background:var(--red);
 
-    color:#fff;
-
-    font-size:22px;
+    font-size:23px;
 
     box-shadow:
-        0 0 0 10px rgba(229,9,20,.12),
-        0 0 40px rgba(229,9,20,.25);
+        0 0 0 10px
+        rgba(229,9,20,.12);
 }
 
 .tv-info{
-    padding:30px;
-
-    border:1px solid var(--border);
+    padding:35px;
 
     background:#0b0b0b;
+
+    border:1px solid var(--line);
 }
 
 .tv-info h3{
-    font-size:28px;
+    font-size:32px;
 
-    line-height:1.1;
+    line-height:1.05;
 }
 
 .tv-info p{
-    margin-top:18px;
+    margin-top:20px;
 
     color:#777;
 
-    font-size:14px;
+    font-size:13px;
 
     line-height:1.8;
 }
+
 
 /* =========================================================
    CONTACT
@@ -913,9 +1329,11 @@ section{
 }
 
 .contact-box{
-    padding:55px;
+    position:relative;
 
-    border:1px solid var(--border);
+    overflow:hidden;
+
+    padding:65px;
 
     background:
         linear-gradient(
@@ -924,8 +1342,7 @@ section{
             #070707
         );
 
-    position:relative;
-    overflow:hidden;
+    border:1px solid var(--line);
 }
 
 .contact-box::after{
@@ -934,14 +1351,13 @@ section{
     position:absolute;
 
     right:-40px;
-    bottom:-50px;
-
-    font-size:130px;
-    font-weight:900;
+    bottom:-55px;
 
     color:rgba(255,255,255,.025);
 
-    pointer-events:none;
+    font-size:130px;
+
+    font-weight:900;
 }
 
 .contact-content{
@@ -950,15 +1366,18 @@ section{
 }
 
 .contact-title{
-    font-size:clamp(
-        35px,
-        6vw,
-        70px
-    );
+    max-width:750px;
 
-    line-height:.95;
+    font-size:
+        clamp(
+            38px,
+            6vw,
+            75px
+        );
 
-    max-width:700px;
+    line-height:.94;
+
+    letter-spacing:-3px;
 }
 
 .contact-title span{
@@ -966,23 +1385,27 @@ section{
 }
 
 .contact-text{
+    max-width:650px;
+
     margin-top:20px;
 
     color:#777;
 
-    max-width:600px;
+    font-size:14px;
 
-    line-height:1.7;
+    line-height:1.8;
 }
 
 .contact-buttons{
     margin-top:30px;
 
     display:flex;
+
     flex-wrap:wrap;
 
     gap:12px;
 }
+
 
 /* =========================================================
    FOOTER
@@ -993,21 +1416,23 @@ footer{
 
     background:#030303;
 
-    border-top:1px solid var(--border);
+    border-top:1px solid var(--line);
 }
 
 .footer{
     display:flex;
 
-    justify-content:space-between;
     align-items:center;
+
+    justify-content:space-between;
 
     gap:20px;
 }
 
 .footer-logo{
-    font-weight:900;
     font-size:14px;
+
+    font-weight:900;
 }
 
 .footer-logo span{
@@ -1017,25 +1442,25 @@ footer{
 .footer-copy{
     color:#555;
 
-    font-size:10px;
+    font-size:9px;
 }
 
 .footer-links{
     display:flex;
+
     gap:18px;
 }
 
 .footer-links a{
     color:#777;
 
-    font-size:11px;
-
-    transition:.2s;
+    font-size:10px;
 }
 
 .footer-links a:hover{
     color:#fff;
 }
+
 
 /* =========================================================
    WHATSAPP
@@ -1050,25 +1475,22 @@ footer{
     width:52px;
     height:52px;
 
+    z-index:900;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
     border-radius:50%;
 
     background:#25D366;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
     color:#fff;
 
-    font-size:21px;
+    font-size:20px;
 
-    z-index:900;
-
-    box-shadow:
-        0 10px 35px rgba(0,0,0,.5);
-
-    transition:
-        transform .25s;
+    transition:.25s;
 }
 
 .whatsapp:hover{
@@ -1076,6 +1498,7 @@ footer{
         scale(1.08)
         translateY(-4px);
 }
+
 
 /* =========================================================
    REVEAL
@@ -1097,11 +1520,12 @@ footer{
     transform:translateY(0);
 }
 
+
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media(max-width:900px){
+@media(max-width:950px){
 
     .nav-links{
         position:absolute;
@@ -1116,11 +1540,10 @@ footer{
         display:none;
 
         flex-direction:column;
-        align-items:stretch;
 
         background:#070707;
 
-        border-bottom:1px solid var(--border);
+        border-bottom:1px solid var(--line);
     }
 
     .nav-links.active{
@@ -1128,24 +1551,51 @@ footer{
     }
 
     .nav-links a{
-        padding:14px 5px;
+        padding:13px 0;
 
         border-bottom:
-            1px solid rgba(255,255,255,.05);
+            1px solid
+            rgba(255,255,255,.05);
     }
 
     .menu{
         display:block;
     }
 
-    .orbit,
-    .orbit2{
-        right:-150px;
-        opacity:.5;
+    .orbit{
+        right:-170px;
+
+        opacity:.45;
     }
 
-    .hero h1{
-        letter-spacing:-3px;
+    .orbit2{
+        right:-100px;
+
+        opacity:.35;
+    }
+
+    .intro-grid,
+    .article-layout{
+        grid-template-columns:1fr;
+    }
+
+    .article-side{
+        position:static;
+    }
+
+    .international-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .tech-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .design-grid{
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .service-grid{
@@ -1169,6 +1619,7 @@ footer{
 
 }
 
+
 @media(max-width:600px){
 
     header{
@@ -1184,9 +1635,9 @@ footer{
     }
 
     .hero{
-        min-height:100svh;
-
         padding-top:64px;
+
+        min-height:100svh;
     }
 
     .hero h1{
@@ -1197,11 +1648,7 @@ footer{
                 70px
             );
 
-        letter-spacing:-2.5px;
-    }
-
-    .hero-welcome{
-        font-size:18px;
+        letter-spacing:-3px;
     }
 
     .hero-description{
@@ -1209,15 +1656,11 @@ footer{
     }
 
     .stats{
-        gap:22px;
-    }
-
-    .stat strong{
-        font-size:20px;
+        gap:25px;
     }
 
     section{
-        padding:75px 0;
+        padding:80px 0;
     }
 
     .section-head{
@@ -1225,10 +1668,17 @@ footer{
     }
 
     .section-description{
-        margin-top:18px;
+        margin-top:20px;
     }
 
+    .international-grid,
+    .tech-grid,
+    .design-grid,
     .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quality-list{
         grid-template-columns:1fr;
     }
 
@@ -1252,15 +1702,16 @@ footer{
     }
 
     .contact-box{
-        padding:30px 22px;
+        padding:35px 22px;
     }
 
     .contact-title{
-        font-size:42px;
+        font-size:43px;
     }
 
     .footer{
         flex-direction:column;
+
         align-items:flex-start;
     }
 
@@ -1275,18 +1726,17 @@ footer{
 
 }
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
 
 @media(prefers-reduced-motion:reduce){
 
     *,
     *::before,
     *::after{
-        scroll-behavior:auto !important;
         animation:none !important;
+
         transition:none !important;
+
+        scroll-behavior:auto !important;
     }
 
 }
@@ -1294,11 +1744,9 @@ footer{
 </style>
 </head>
 
+
 <body>
 
-<!-- =====================================================
-     CURSOR LIGHT
-===================================================== -->
 
 <div class="cursor-light" id="cursorLight"></div>
 
@@ -1309,40 +1757,45 @@ footer{
 
 <header>
 
-    <div class="container nav">
+<div class="container nav">
 
-        <a href="#home" class="logo">
-            INGENIOUS <span>GROUPS</span>
-        </a>
+<a href="#home" class="logo">
+INGENIOUS <span>GROUPS</span>
+</a>
 
-        <nav class="nav-links" id="navLinks">
+<nav class="nav-links" id="navLinks">
 
-            <a href="#home">HOME</a>
+<a href="#home">HOME</a>
 
-            <a href="#services">SERVICES</a>
+<a href="#about">ABOUT</a>
 
-            <a href="#work">OUR WORK</a>
+<a href="#international">EXPERTISE</a>
 
-            <a href="#behance">BEHANCE</a>
+<a href="#technology">TECHNOLOGY</a>
 
-            <a href="#youtube">INGENIOUS TV</a>
+<a href="#services">SERVICES</a>
 
-            <a href="#contact" class="nav-contact">
-                CONTACT
-            </a>
+<a href="#work">OUR WORK</a>
 
-        </nav>
+<a href="#behance">BEHANCE</a>
 
-        <button
-            class="menu"
-            id="menuButton"
-            aria-label="Open menu">
+<a href="#youtube">INGENIOUS TV</a>
 
-            ☰
+<a href="#contact" class="nav-contact">
+CONTACT
+</a>
 
-        </button>
+</nav>
 
-    </div>
+<button
+class="menu"
+id="menuButton">
+
+☰
+
+</button>
+
+</div>
 
 </header>
 
@@ -1353,101 +1806,1038 @@ footer{
 
 <section class="hero" id="home">
 
-    <div class="hero-grid"></div>
+<div class="hero-grid"></div>
 
-    <div class="hero-line"></div>
+<div class="hero-line"></div>
 
-    <div class="orbit"></div>
+<div class="orbit"></div>
 
-    <div class="orbit2"></div>
+<div class="orbit2"></div>
 
-    <div class="container">
 
-        <div class="hero-content reveal">
+<div class="container">
 
-            <div class="hero-label">
-                INGENIOUS GROUPS ALGERIA
-            </div>
+<div class="hero-content reveal">
 
-            <h1>
+<div class="hero-label">
+INGENIOUS GROUPS ALGERIA
+</div>
 
-                WELCOME TO<br>
 
-                THE WORLD OF<br>
+<h1>
 
-                <span>INGENIOUS.</span>
+WELCOME TO<br>
 
-            </h1>
+THE WORLD OF<br>
 
-            <p class="hero-welcome">
-                Where Ideas Become Reality.
-            </p>
+<span>INGENIOUS.</span>
 
-            <p class="hero-description">
+</h1>
 
-                Premium packaging design, labels,
-                flexographic printing and 3D visualization.
-                From the first idea to the final production.
 
-            </p>
+<p class="hero-welcome">
 
-            <div class="hero-buttons">
+Where Ideas Become Reality.
 
-                <a
-                    href="#work"
-                    class="btn btn-red">
+</p>
 
-                    EXPLORE OUR WORK
 
-                </a>
+<p class="hero-description">
 
-                <a
-                    href="#contact"
-                    class="btn btn-dark">
+From Algeria to international markets,
+INGENIOUS combines high-precision design,
+advanced packaging engineering and
+professional flexographic printing.
 
-                    START A PROJECT
+</p>
 
-                </a>
 
-            </div>
+<div class="hero-buttons">
 
-            <div class="stats">
+<a
+href="#technology"
+class="btn btn-red">
 
-                <div class="stat">
+DISCOVER OUR TECHNOLOGY
 
-                    <strong>12+</strong>
+</a>
 
-                    <small>
-                        YEARS EXPERIENCE
-                    </small>
+<a
+href="#work"
+class="btn btn-dark">
 
-                </div>
+EXPLORE OUR WORK
 
-                <div class="stat">
+</a>
 
-                    <strong>3D</strong>
+</div>
 
-                    <small>
-                        VISUALIZATION
-                    </small>
 
-                </div>
+<div class="stats">
 
-                <div class="stat">
+<div class="stat">
 
-                    <strong>FLEXO</strong>
+<strong>20K+</strong>
 
-                    <small>
-                        PRINTING
-                    </small>
+<small>
+PRODUCTS DESIGNED & PRINTED
+</small>
 
-                </div>
+</div>
 
-            </div>
 
-        </div>
+<div class="stat">
 
-    </div>
+<strong>12+</strong>
+
+<small>
+YEARS EXPERIENCE
+</small>
+
+</div>
+
+
+<div class="stat">
+
+<strong>3D</strong>
+
+<small>
+HIGH PRECISION VISUALIZATION
+</small>
+
+</div>
+
+
+<div class="stat">
+
+<strong>FLEXO</strong>
+
+<small>
+ADVANCED PRINTING
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="introduction" id="about">
+
+<div class="container">
+
+<div class="intro-grid">
+
+
+<div class="reveal">
+
+<div class="section-kicker">
+OUR STORY
+</div>
+
+
+<h2 class="intro-big">
+
+MORE THAN DESIGN.<br>
+
+MORE THAN PRINTING.<br>
+
+<span>A COMPLETE INDUSTRIAL VISION.</span>
+
+</h2>
+
+
+<p class="intro-text">
+
+INGENIOUS GROUPS ALGERIA brings together
+creative design, packaging engineering,
+high-resolution artwork, prepress preparation,
+3D visualization and professional printing.
+
+Our objective is simple:
+
+<strong>
+turn an idea into a technically prepared,
+visually powerful and production-ready product.
+</strong>
+
+</p>
+
+</div>
+
+
+<div class="intro-number reveal">
+
+<strong>
+20,000+
+</strong>
+
+<span>
+
+PRODUCTS DESIGNED AND PRINTED
+FOR LOCAL AND INTERNATIONAL MARKETS
+ACROSS THE WORLD.
+
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     INTERNATIONAL EXPERTISE
+===================================================== -->
+
+<section class="international" id="international">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="section-kicker">
+INTERNATIONAL EXPERIENCE
+</div>
+
+<h2 class="section-title">
+FROM ALGERIA<br>
+TO THE WORLD.
+</h2>
+
+</div>
+
+
+<p class="section-description">
+
+Our experience is connected to international
+design, packaging and printing standards,
+with knowledge and professional exposure
+covering several major markets.
+
+</p>
+
+</div>
+
+
+<div class="international-grid">
+
+
+<div class="country reveal">
+
+<div class="country-number">
+01 / INTERNATIONAL
+</div>
+
+<h3>
+USA
+</h3>
+
+<p>
+
+Exposure to advanced packaging,
+branding, visual communication and
+high-end production approaches.
+
+</p>
+
+</div>
+
+
+<div class="country reveal">
+
+<div class="country-number">
+02 / INTERNATIONAL
+</div>
+
+<h3>
+GERMANY
+</h3>
+
+<p>
+
+Precision-driven industrial culture,
+technical production discipline and
+high-quality packaging standards.
+
+</p>
+
+</div>
+
+
+<div class="country reveal">
+
+<div class="country-number">
+03 / INTERNATIONAL
+</div>
+
+<h3>
+FRANCE
+</h3>
+
+<p>
+
+Packaging creativity, premium product
+presentation, graphic design and
+professional printing practices.
+
+</p>
+
+</div>
+
+
+<div class="country reveal">
+
+<div class="country-number">
+04 / INTERNATIONAL
+</div>
+
+<h3>
+SAUDI ARABIA
+</h3>
+
+<p>
+
+Experience connected to demanding
+commercial markets and premium
+packaging requirements.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     INTERNATIONAL ARTICLE
+===================================================== -->
+
+<section class="article">
+
+<div class="container">
+
+<div class="article-layout">
+
+
+<aside class="article-side reveal">
+
+<div class="section-kicker">
+INGENIOUS PERSPECTIVE
+</div>
+
+<h3>
+
+INTERNATIONAL<br>
+EXPERIENCE.<br>
+
+<span style="color:var(--red)">
+ALGERIAN ORIGIN.
+</span>
+
+</h3>
+
+<p>
+
+A technical and creative approach
+developed in Algeria and connected
+to international standards.
+
+</p>
+
+</aside>
+
+
+<article class="article-content reveal">
+
+<p>
+
+<strong>INGENIOUS GROUPS ALGERIA</strong>
+was built around one fundamental idea:
+high-level design and professional printing
+should work together from the beginning
+of the project.
+
+Our experience extends beyond the local
+market, with professional knowledge and
+exposure related to markets including
+<strong>the United States, Germany, France
+and Saudi Arabia</strong>.
+
+</p>
+
+
+<p>
+
+Working with international references
+has reinforced our approach to precision,
+visual consistency, technical preparation
+and packaging performance.
+
+For us, international quality does not mean
+simply reproducing a visual style. It means
+understanding the technical requirements
+behind the final product.
+
+</p>
+
+
+<p>
+
+From Algeria, our team develops concepts,
+prepares artwork, builds realistic 3D
+visualizations and prepares production
+files with the objective of creating a
+smooth transition between the digital
+design and the printed product.
+
+</p>
+
+
+<p>
+
+This philosophy allows INGENIOUS to work
+with a complete production vision:
+
+<strong>
+design → simulation → prepress →
+printing → quality control.
+</strong>
+
+</p>
+
+
+<p>
+
+The result is not only a beautiful design.
+The objective is a product that remains
+technically coherent when it reaches
+industrial production.
+
+</p>
+
+
+<p>
+
+Our ambition is to continue developing
+Algerian creative and technical expertise
+while building connections with international
+packaging markets.
+
+<strong class="red">
+Designed from Algeria.
+Connected to the world.
+</strong>
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FLEXO TECHNOLOGY
+===================================================== -->
+
+<section class="technical" id="technology">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="section-kicker">
+PRINTING TECHNOLOGY
+</div>
+
+<h2 class="section-title">
+
+ADVANCED<br>
+FLEXOGRAPHY.
+
+</h2>
+
+</div>
+
+
+<p class="section-description">
+
+Professional flexographic printing requires
+more than a printing machine. It requires
+correct artwork preparation, plate control,
+ink management, substrate knowledge,
+registration and quality monitoring.
+
+</p>
+
+</div>
+
+
+<div class="tech-grid">
+
+
+<div class="tech-card reveal">
+
+<div class="tech-number">
+01 / PREPRESS
+</div>
+
+<h3>
+High Resolution Artwork
+</h3>
+
+<p>
+
+Artwork is prepared with attention to
+resolution, typography, vector structures,
+images, separations and production
+requirements.
+
+</p>
+
+<span class="tech-tag">
+HIGH PRECISION
+</span>
+
+</div>
+
+
+<div class="tech-card reveal">
+
+<div class="tech-number">
+02 / COLOR
+</div>
+
+<h3>
+Color Separation
+</h3>
+
+<p>
+
+Professional color separation and controlled
+ink preparation help maintain consistency
+between the digital design and the printed
+result.
+
+</p>
+
+<span class="tech-tag">
+CMYK / SPOT COLORS
+</span>
+
+</div>
+
+
+<div class="tech-card reveal">
+
+<div class="tech-number">
+03 / PLATES
+</div>
+
+<h3>
+Flexo Plate Preparation
+</h3>
+
+<p>
+
+Flexographic plates translate digital
+artwork into a controlled printing surface.
+Precision in plate preparation is essential
+for fine details and clean reproduction.
+
+</p>
+
+<span class="tech-tag">
+PLATE CONTROL
+</span>
+
+</div>
+
+
+<div class="tech-card reveal">
+
+<div class="tech-number">
+04 / REGISTER
+</div>
+
+<h3>
+Registration Accuracy
+</h3>
+
+<p>
+
+Precise registration between printing
+units is essential for clean graphics,
+sharp details and controlled multi-color
+packaging.
+
+</p>
+
+<span class="tech-tag">
+MULTI-COLOR CONTROL
+</span>
+
+</div>
+
+
+<div class="tech-card reveal">
+
+<div class="tech-number">
+05 / SUBSTRATE
+</div>
+
+<h3>
+Material Engineering
+</h3>
+
+<p>
+
+PP, OPP, PET, PEHD and other packaging
+materials require different technical
+approaches to achieve the desired
+visual and functional result.
+
+</p>
+
+<span class="tech-tag">
+MATERIAL KNOWLEDGE
+</span>
+
+</div>
+
+
+<div class="tech-card reveal">
+
+<div class="tech-number">
+06 / FINISH
+</div>
+
+<h3>
+Premium Visual Finish
+</h3>
+
+<p>
+
+Metallic effects, high contrast,
+transparent areas, white ink,
+fine details and controlled visual
+effects can transform packaging
+into a stronger brand experience.
+
+</p>
+
+<span class="tech-tag">
+PREMIUM EFFECTS
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     QUALITY
+===================================================== -->
+
+<section class="quality">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="section-kicker">
+QUALITY SYSTEM
+</div>
+
+<h2 class="section-title">
+QUALITY<br>
+IS ENGINEERED.
+</h2>
+
+</div>
+
+<p class="section-description">
+
+Every stage can influence the final
+appearance of a printed product.
+Our workflow focuses on controlling
+the important technical variables.
+
+</p>
+
+</div>
+
+
+<div class="quality-list">
+
+
+<div class="quality-item reveal">
+
+<div class="quality-icon">
+01
+</div>
+
+<div>
+
+<h3>
+Artwork Verification
+</h3>
+
+<p>
+
+Checking dimensions, typography,
+images, vectors, bleed, margins
+and technical requirements before
+production.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="quality-item reveal">
+
+<div class="quality-icon">
+02
+</div>
+
+<div>
+
+<h3>
+Color Consistency
+</h3>
+
+<p>
+
+Maintaining a controlled relationship
+between the approved visual concept
+and the production result.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="quality-item reveal">
+
+<div class="quality-icon">
+03
+</div>
+
+<div>
+
+<h3>
+Fine Detail Control
+</h3>
+
+<p>
+
+Attention to small typography,
+thin lines, gradients, highlights
+and complex graphic elements.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="quality-item reveal">
+
+<div class="quality-icon">
+04
+</div>
+
+<div>
+
+<h3>
+Print Registration
+</h3>
+
+<p>
+
+Controlling the alignment of printing
+units to preserve clean and precise
+multi-color graphics.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="quality-item reveal">
+
+<div class="quality-icon">
+05
+</div>
+
+<div>
+
+<h3>
+Material Compatibility
+</h3>
+
+<p>
+
+The substrate, ink and printing
+conditions must work together to
+achieve the intended result.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="quality-item reveal">
+
+<div class="quality-icon">
+06
+</div>
+
+<div>
+
+<h3>
+Final Visual Inspection
+</h3>
+
+<p>
+
+The final result should be evaluated
+as a real product, not only as a
+digital screen representation.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     HIGH PRECISION DESIGN
+===================================================== -->
+
+<section class="design">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="section-kicker">
+INGENIOUS DESIGN
+</div>
+
+<h2 class="section-title">
+HIGH PRECISION<br>
+VISUAL DESIGN.
+</h2>
+
+</div>
+
+
+<p class="section-description">
+
+A professional printed product begins
+with a technically correct digital file.
+Our design process combines aesthetics,
+engineering and production awareness.
+
+</p>
+
+</div>
+
+
+<div class="design-grid">
+
+
+<div class="design-card reveal">
+
+<span>
+01
+</span>
+
+<h3>
+Pixel-Level Detail
+</h3>
+
+<p>
+
+Images, vectors, typography and graphic
+elements are developed with attention
+to the final printing scale.
+
+</p>
+
+</div>
+
+
+<div class="design-card reveal">
+
+<span>
+02
+</span>
+
+<h3>
+3D Product Simulation
+</h3>
+
+<p>
+
+Packaging concepts can be visualized
+in realistic 3D before production,
+helping brands understand the final
+appearance of the product.
+
+</p>
+
+</div>
+
+
+<div class="design-card reveal">
+
+<span>
+03
+</span>
+
+<h3>
+Print-Ready Preparation
+</h3>
+
+<p>
+
+The design is prepared with production
+requirements in mind, creating a cleaner
+transition from creative concept to
+industrial printing.
+
+</p>
+
+</div>
+
+
+<div class="design-card reveal">
+
+<span>
+04
+</span>
+
+<h3>
+Packaging Structure
+</h3>
+
+<p>
+
+Labels, sleeves, flexible packaging
+and product boxes require technical
+understanding of dimensions and
+production limitations.
+
+</p>
+
+</div>
+
+
+<div class="design-card reveal">
+
+<span>
+05
+</span>
+
+<h3>
+Brand Consistency
+</h3>
+
+<p>
+
+Colors, typography, hierarchy and
+visual language are developed to keep
+the brand recognizable across products.
+
+</p>
+
+</div>
+
+
+<div class="design-card reveal">
+
+<span>
+06
+</span>
+
+<h3>
+Creative Engineering
+</h3>
+
+<p>
+
+Creativity becomes stronger when it
+understands the production process.
+That is where design and engineering
+meet.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1458,128 +2848,128 @@ footer{
 
 <section class="services" id="services">
 
-    <div class="container">
-
-        <div class="section-head reveal">
-
-            <div>
-
-                <div class="section-kicker">
-                    WHAT WE DO
-                </div>
-
-                <h2 class="section-title">
-                    OUR SERVICES
-                </h2>
-
-            </div>
-
-            <p class="section-description">
-
-                From creative design to industrial
-                production, INGENIOUS connects
-                design and printing in one workflow.
-
-            </p>
-
-        </div>
+<div class="container">
 
 
-        <div class="service-grid">
+<div class="section-head reveal">
 
-            <article class="service reveal">
+<div>
 
-                <div class="service-number">
-                    01
-                </div>
+<div class="section-kicker">
+WHAT WE DO
+</div>
 
-                <div class="service-icon">
-                    ◇
-                </div>
+<h2 class="section-title">
+OUR SERVICES
+</h2>
 
-                <h3>
-                    Label Design
-                </h3>
+</div>
 
-                <p>
-                    High-precision label design
-                    for modern products and brands.
-                </p>
+<p class="section-description">
 
-            </article>
+A complete workflow connecting
+creative development, technical
+preparation and printing.
 
+</p>
 
-            <article class="service reveal">
-
-                <div class="service-number">
-                    02
-                </div>
-
-                <div class="service-icon">
-                    □
-                </div>
-
-                <h3>
-                    Packaging
-                </h3>
-
-                <p>
-                    PP, OPP, PET, PEHD,
-                    Doypack, Sleeve, IML
-                    and product packaging.
-                </p>
-
-            </article>
+</div>
 
 
-            <article class="service reveal">
-
-                <div class="service-number">
-                    03
-                </div>
-
-                <div class="service-icon">
-                    +
-                </div>
-
-                <h3>
-                    Flexo Printing
-                </h3>
-
-                <p>
-                    Professional flexographic
-                    printing solutions for labels
-                    and packaging.
-                </p>
-
-            </article>
+<div class="service-grid">
 
 
-            <article class="service reveal">
+<div class="service reveal">
 
-                <div class="service-number">
-                    04
-                </div>
+<div class="service-number">
+01
+</div>
 
-                <div class="service-icon">
-                    ◉
-                </div>
+<div class="service-icon">
+◇
+</div>
 
-                <h3>
-                    3D Visualization
-                </h3>
+<h3>
+Label Design
+</h3>
 
-                <p>
-                    Product visualization,
-                    3D mockups and cinematic
-                    presentation.
-                </p>
+<p>
+High-precision label design for
+modern products and brands.
+</p>
 
-            </article>
+</div>
 
-        </div>
 
-    </div>
+<div class="service reveal">
+
+<div class="service-number">
+02
+</div>
+
+<div class="service-icon">
+□
+</div>
+
+<h3>
+Packaging
+</h3>
+
+<p>
+PP, OPP, PET, PEHD, Doypack,
+Sleeve, IML and product packaging.
+</p>
+
+</div>
+
+
+<div class="service reveal">
+
+<div class="service-number">
+03
+</div>
+
+<div class="service-icon">
++
+</div>
+
+<h3>
+Flexo Printing
+</h3>
+
+<p>
+Professional flexographic printing
+for labels and packaging.
+</p>
+
+</div>
+
+
+<div class="service reveal">
+
+<div class="service-number">
+04
+</div>
+
+<div class="service-icon">
+◉
+</div>
+
+<h3>
+3D Visualization
+</h3>
+
+<p>
+Product visualization, realistic
+mockups and cinematic presentation.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1590,144 +2980,143 @@ footer{
 
 <section class="work" id="work">
 
-    <div class="container">
-
-        <div class="section-head reveal">
-
-            <div>
-
-                <div class="section-kicker">
-                    SELECTED PROJECTS
-                </div>
-
-                <h2 class="section-title">
-                    OUR WORK
-                </h2>
-
-            </div>
-
-            <p class="section-description">
-
-                A selection of packaging and label
-                projects created by INGENIOUS.
-
-            </p>
-
-        </div>
+<div class="container">
 
 
-        <div class="work-grid">
+<div class="section-head reveal">
 
-            <a
-                href="#contact"
-                class="work-card reveal">
+<div>
 
-                <div class="work-image">
+<div class="section-kicker">
+SELECTED PROJECTS
+</div>
 
-                    <img
-                        src="dove-label.png"
-                        alt="Dove Label">
+<h2 class="section-title">
+OUR WORK
+</h2>
 
-                </div>
+</div>
 
-                <div class="work-info">
+<p class="section-description">
 
-                    <h3>
-                        Dove Label
-                    </h3>
+A selection of packaging and label
+projects created by INGENIOUS.
 
-                    <p>
-                        LABEL DESIGN
-                    </p>
+</p>
 
-                </div>
-
-            </a>
+</div>
 
 
-            <a
-                href="#contact"
-                class="work-card reveal">
-
-                <div class="work-image">
-
-                    <img
-                        src="freedom-label.png"
-                        alt="Freedom Label">
-
-                </div>
-
-                <div class="work-info">
-
-                    <h3>
-                        Freedom Label
-                    </h3>
-
-                    <p>
-                        PACKAGING DESIGN
-                    </p>
-
-                </div>
-
-            </a>
+<div class="work-grid">
 
 
-            <a
-                href="#contact"
-                class="work-card reveal">
+<a href="#contact"
+class="work-card reveal">
 
-                <div class="work-image">
+<div class="work-image">
 
-                    <img
-                        src="mirou-label.png"
-                        alt="Mirou Label">
+<img
+src="dove-label.png"
+alt="Dove Label">
 
-                </div>
+</div>
 
-                <div class="work-info">
+<div class="work-info">
 
-                    <h3>
-                        Mirou Label
-                    </h3>
+<h3>
+Dove Label
+</h3>
 
-                    <p>
-                        PRODUCT LABEL
-                    </p>
+<p>
+LABEL DESIGN
+</p>
 
-                </div>
+</div>
 
-            </a>
+</a>
 
 
-            <a
-                href="#contact"
-                class="work-card reveal">
+<a href="#contact"
+class="work-card reveal">
 
-                <div class="work-image">
+<div class="work-image">
 
-                    <img
-                        src="pp-packaging.png"
-                        alt="PP Packaging">
+<img
+src="freedom-label.png"
+alt="Freedom Label">
 
-                </div>
+</div>
 
-                <div class="work-info">
+<div class="work-info">
 
-                    <h3>
-                        PP Packaging
-                    </h3>
+<h3>
+Freedom Label
+</h3>
 
-                    <p>
-                        FLEXO PACKAGING
-                    </p>
+<p>
+PACKAGING DESIGN
+</p>
 
-                </div>
+</div>
 
-            </a>
+</a>
 
-        </div>
 
-    </div>
+<a href="#contact"
+class="work-card reveal">
+
+<div class="work-image">
+
+<img
+src="mirou-label.png"
+alt="Mirou Label">
+
+</div>
+
+<div class="work-info">
+
+<h3>
+Mirou Label
+</h3>
+
+<p>
+PRODUCT LABEL
+</p>
+
+</div>
+
+</a>
+
+
+<a href="#contact"
+class="work-card reveal">
+
+<div class="work-image">
+
+<img
+src="pp-packaging.png"
+alt="PP Packaging">
+
+</div>
+
+<div class="work-info">
+
+<h3>
+PP Packaging
+</h3>
+
+<p>
+FLEXO PACKAGING
+</p>
+
+</div>
+
+</a>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1738,300 +3127,305 @@ footer{
 
 <section class="behance" id="behance">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-head reveal">
 
-            <div>
+<div class="section-head reveal">
 
-                <div class="section-kicker">
-                    DESIGN PORTFOLIO
-                </div>
+<div>
 
-                <h2 class="section-title">
-                    BEHANCE
-                </h2>
+<div class="section-kicker">
+REAL PROJECTS
+</div>
 
-            </div>
+<h2 class="section-title">
+BEHANCE
+</h2>
 
-            <p class="section-description">
+</div>
 
-                Discover real INGENIOUS GROUPS
-                projects and visual experiments.
+<p class="section-description">
 
-            </p>
+Explore real INGENIOUS projects,
+packaging concepts, printing,
+3D design and visual experiments.
 
-        </div>
+</p>
 
+</div>
 
-        <div class="behance-grid">
 
+<div class="behance-grid">
 
-            <a
-                class="behance-card reveal"
-                href="https://www.behance.net/ingineosedesign/projects"
-                target="_blank"
-                rel="noopener">
 
-                <img
-                    src="https://mir-s3-cdn-cf.behance.net/projects/404/267693254806349.Y3JvcCw1MTQ1LDQwMjQsMCwxMTQ2.jpg"
-                    alt="Ingenious Behance Project">
+<a
+class="behance-card reveal"
+href="https://www.behance.net/ingineosedesign/projects"
+target="_blank"
+rel="noopener">
 
-                <div class="behance-overlay">
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/267693254806349.Y3JvcCw1MTQ1LDQwMjQsMCwxMTQ2.jpg"
+alt="Ingenious Behance Project">
 
-                    <span>
-                        BEHANCE PROJECT
-                    </span>
+<div class="behance-overlay">
 
-                    <h3>
-                        INGENIOUS DESIGN
-                    </h3>
+<span>
+BEHANCE
+</span>
 
-                </div>
+<h3>
+INGENIOUS DESIGN
+</h3>
 
-            </a>
+</div>
 
+</a>
 
-            <a
-                class="behance-card reveal"
-                href="https://www.behance.net/ingineosedesign/projects"
-                target="_blank"
-                rel="noopener">
 
-                <img
-                    src="https://mir-s3-cdn-cf.behance.net/projects/404/150847254429829.Y3JvcCwzNjM3LDI4NDUsMTg5LDA.jpg"
-                    alt="Ingenious Packaging Project">
+<a
+class="behance-card reveal"
+href="https://www.behance.net/ingineosedesign/projects"
+target="_blank"
+rel="noopener">
 
-                <div class="behance-overlay">
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/150847254429829.Y3JvcCwzNjM3LDI4NDUsMTg5LDA.jpg"
+alt="Ingenious Packaging Project">
 
-                    <span>
-                        PACKAGING
-                    </span>
+<div class="behance-overlay">
 
-                    <h3>
-                        CREATIVE PACKAGING
-                    </h3>
+<span>
+PACKAGING
+</span>
 
-                </div>
+<h3>
+CREATIVE PACKAGING
+</h3>
 
-            </a>
+</div>
 
+</a>
 
-            <a
-                class="behance-card reveal"
-                href="https://www.behance.net/ingineosedesign/projects"
-                target="_blank"
-                rel="noopener">
 
-                <img
-                    src="https://mir-s3-cdn-cf.behance.net/projects/404/0fe7db253689695.Y3JvcCwzMDA2LDIzNTEsMCwxNDcz.jpg"
-                    alt="Ingenious Limited Edition">
+<a
+class="behance-card reveal"
+href="https://www.behance.net/ingineosedesign/projects"
+target="_blank"
+rel="noopener">
 
-                <div class="behance-overlay">
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/0fe7db253689695.Y3JvcCwzMDA2LDIzNTEsMCwxNDcz.jpg"
+alt="Limited Edition">
 
-                    <span>
-                        DESIGN
-                    </span>
+<div class="behance-overlay">
 
-                    <h3>
-                        ÉDITION LIMITÉE
-                    </h3>
+<span>
+DESIGN
+</span>
 
-                </div>
+<h3>
+ÉDITION LIMITÉE
+</h3>
 
-            </a>
+</div>
 
+</a>
 
-            <a
-                class="behance-card reveal"
-                href="https://www.behance.net/ingineosedesign/projects"
-                target="_blank"
-                rel="noopener">
 
-                <img
-                    src="https://mir-s3-cdn-cf.behance.net/projects/404/a94e07249036441.Y3JvcCw0NjI1LDM2MTcsMTc4NiwxNDk5.jpg"
-                    alt="PP Labels Project">
+<a
+class="behance-card reveal"
+href="https://www.behance.net/ingineosedesign/projects"
+target="_blank"
+rel="noopener">
 
-                <div class="behance-overlay">
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/a94e07249036441.Y3JvcCw0NjI1LDM2MTcsMTc4NiwxNDk5.jpg"
+alt="PP Labels">
 
-                    <span>
-                        FLEXO
-                    </span>
+<div class="behance-overlay">
 
-                    <h3>
-                        PRINTING PP LABELS
-                    </h3>
+<span>
+FLEXO
+</span>
 
-                </div>
+<h3>
+PRINTING PP LABELS
+</h3>
 
-            </a>
+</div>
 
+</a>
 
-            <a
-                class="behance-card reveal"
-                href="https://www.behance.net/ingineosedesign/projects"
-                target="_blank"
-                rel="noopener">
 
-                <img
-                    src="https://mir-s3-cdn-cf.behance.net/projects/404/bd210f248780933.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png"
-                    alt="Advanced PP Printing">
+<a
+class="behance-card reveal"
+href="https://www.behance.net/ingineosedesign/projects"
+target="_blank"
+rel="noopener">
 
-                <div class="behance-overlay">
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/bd210f248780933.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png"
+alt="Advanced PP Printing">
 
-                    <span>
-                        PRINTING
-                    </span>
+<div class="behance-overlay">
 
-                    <h3>
-                        ADVANCED PP
-                    </h3>
+<span>
+PRINTING
+</span>
 
-                </div>
+<h3>
+ADVANCED PP
+</h3>
 
-            </a>
+</div>
 
+</a>
 
-            <a
-                class="behance-card reveal"
-                href="https://www.behance.net/ingineosedesign/projects"
-                target="_blank"
-                rel="noopener">
 
-                <img
-                    src="https://mir-s3-cdn-cf.behance.net/projects/404/ae6198248195547.Y3JvcCw1NDE3LDQyMzcsMCw1Mw.jpg"
-                    alt="Ingenious 3D Project">
+<a
+class="behance-card reveal"
+href="https://www.behance.net/ingineosedesign/projects"
+target="_blank"
+rel="noopener">
 
-                <div class="behance-overlay">
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/ae6198248195547.Y3JvcCw1NDE3LDQyMzcsMCw1Mw.jpg"
+alt="3D Visual Production">
 
-                    <span>
-                        3D / CINEMA
-                    </span>
+<div class="behance-overlay">
 
-                    <h3>
-                        VISUAL PRODUCTION
-                    </h3>
+<span>
+3D / VISUAL
+</span>
 
-                </div>
+<h3>
+VISUAL PRODUCTION
+</h3>
 
-            </a>
+</div>
 
-        </div>
+</a>
 
 
-        <div
-            style="
-            margin-top:35px;
-            text-align:center;
-            "
-            class="reveal">
+</div>
 
-            <a
-                href="https://www.behance.net/ingineosedesign/projects"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-red">
 
-                VIEW ALL BEHANCE PROJECTS
+<div
+style="margin-top:35px;text-align:center"
+class="reveal">
 
-            </a>
+<a
+href="https://www.behance.net/ingineosedesign/projects"
+target="_blank"
+rel="noopener"
+class="btn btn-red">
 
-        </div>
+VIEW ALL BEHANCE PROJECTS
 
-    </div>
+</a>
+
+</div>
+
+
+</div>
 
 </section>
 
 
 <!-- =====================================================
-     INGENIOUS TV
+     YOUTUBE
 ===================================================== -->
 
 <section class="youtube" id="youtube">
 
-    <div class="container">
-
-        <div class="section-head reveal">
-
-            <div>
-
-                <div class="section-kicker">
-                    VIDEO & PRODUCTION
-                </div>
-
-                <h2 class="section-title">
-                    INGENIOUS TV
-                </h2>
-
-            </div>
-
-            <p class="section-description">
-
-                Explore the latest videos,
-                printing projects and creative
-                production from INGENIOUS.
-
-            </p>
-
-        </div>
+<div class="container">
 
 
-        <div class="tv">
+<div class="section-head reveal">
+
+<div>
+
+<div class="section-kicker">
+VIDEO PRODUCTION
+</div>
+
+<h2 class="section-title">
+INGENIOUS TV
+</h2>
+
+</div>
+
+<p class="section-description">
+
+Discover videos about our work,
+printing technology, packaging,
+design and creative production.
+
+</p>
+
+</div>
 
 
-            <a
-                href="https://www.youtube.com/@Ingeniousgroups/videos"
-                target="_blank"
-                rel="noopener"
-                class="tv-video reveal">
-
-                <img
-                    src="https://img.youtube.com/vi/PVU1hjx64U4/maxresdefault.jpg"
-                    alt="INGENIOUS TV">
-
-                <div class="play">
-                    ▶
-                </div>
-
-            </a>
+<div class="tv">
 
 
-            <div class="tv-info reveal">
+<a
+href="https://www.youtube.com/@Ingeniousgroups/videos"
+target="_blank"
+rel="noopener"
+class="tv-video reveal">
 
-                <div class="section-kicker">
-                    INGENIOUS GROUPS ALGERIA
-                </div>
+<img
+src="https://img.youtube.com/vi/PVU1hjx64U4/maxresdefault.jpg"
+alt="INGENIOUS TV">
 
-                <h3>
-                    FROM DESIGN<br>
-                    TO REALITY.
-                </h3>
+<div class="play">
+▶
+</div>
 
-                <p>
+</a>
 
-                    Discover our latest videos,
-                    packaging concepts, printing
-                    technologies, 3D visualization
-                    and creative work.
 
-                </p>
+<div class="tv-info reveal">
 
-                <a
-                    href="https://www.youtube.com/@Ingeniousgroups/videos"
-                    target="_blank"
-                    rel="noopener"
-                    class="btn btn-red"
-                    style="margin-top:25px;">
+<div class="section-kicker">
+INGENIOUS GROUPS ALGERIA
+</div>
 
-                    VISIT YOUTUBE
+<h3>
 
-                </a>
+FROM DESIGN<br>
+TO REALITY.
 
-            </div>
+</h3>
 
-        </div>
+<p>
 
-    </div>
+Our YouTube channel presents our
+creative universe, packaging,
+printing technologies, design work
+and production concepts.
+
+</p>
+
+<a
+href="https://www.youtube.com/@Ingeniousgroups/videos"
+target="_blank"
+rel="noopener"
+class="btn btn-red"
+style="margin-top:25px">
+
+VISIT YOUTUBE
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -2042,61 +3436,66 @@ footer{
 
 <section class="contact" id="contact">
 
-    <div class="container">
+<div class="container">
 
-        <div class="contact-box reveal">
 
-            <div class="contact-content">
+<div class="contact-box reveal">
 
-                <div class="section-kicker">
-                    LET'S CREATE
-                </div>
+<div class="contact-content">
 
-                <h2 class="contact-title">
+<div class="section-kicker">
+START A PROJECT
+</div>
 
-                    YOUR IDEA.<br>
+<h2 class="contact-title">
 
-                    OUR <span>INGENIOUS</span>
-                    SOLUTION.
+YOUR IDEA.<br>
 
-                </h2>
+OUR <span>INGENIOUS</span>
+SOLUTION.
 
-                <p class="contact-text">
+</h2>
 
-                    Have a packaging project,
-                    label redesign or product
-                    visualization?
+<p class="contact-text">
 
-                    Let's build it together.
+Have a packaging project,
+label redesign, flexographic
+printing requirement or 3D
+visualization project?
 
-                </p>
+Let's build it from Algeria
+for the world.
 
-                <div class="contact-buttons">
+</p>
 
-                    <a
-                        href="https://wa.me/213798234579"
-                        target="_blank"
-                        class="btn btn-red">
 
-                        WHATSAPP
+<div class="contact-buttons">
 
-                    </a>
+<a
+href="https://wa.me/213798234579"
+target="_blank"
+class="btn btn-red">
 
-                    <a
-                        href="mailto:ingenious.24contact@gmail.com"
-                        class="btn btn-dark">
+WHATSAPP
 
-                        EMAIL US
+</a>
 
-                    </a>
 
-                </div>
+<a
+href="mailto:ingenious.24contact@gmail.com"
+class="btn btn-dark">
 
-            </div>
+EMAIL US
 
-        </div>
+</a>
 
-    </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -2107,54 +3506,57 @@ footer{
 
 <footer>
 
-    <div class="container footer">
+<div class="container footer">
 
-        <div class="footer-logo">
 
-            INGENIOUS
-            <span>GROUPS ALGERIA</span>
+<div class="footer-logo">
 
-        </div>
+INGENIOUS
+<span>GROUPS ALGERIA</span>
 
-        <div class="footer-copy">
+</div>
 
-            © 2026 INGENIOUS GROUPS ALGERIA.
-            ALL RIGHTS RESERVED.
 
-        </div>
+<div class="footer-copy">
 
-        <div class="footer-links">
+© 2026 INGENIOUS GROUPS ALGERIA.
+ALL RIGHTS RESERVED.
 
-            <a
-                href="https://www.behance.net/ingineosedesign"
-                target="_blank"
-                rel="noopener">
+</div>
 
-                Behance
 
-            </a>
+<div class="footer-links">
 
-            <a
-                href="https://www.youtube.com/@Ingeniousgroups/videos"
-                target="_blank"
-                rel="noopener">
+<a
+href="https://www.behance.net/ingineosedesign"
+target="_blank"
+rel="noopener">
 
-                YouTube
+Behance
 
-            </a>
+</a>
 
-            <a
-                href="https://www.facebook.com/ing2424/"
-                target="_blank"
-                rel="noopener">
+<a
+href="https://www.youtube.com/@Ingeniousgroups/videos"
+target="_blank"
+rel="noopener">
 
-                Facebook
+YouTube
 
-            </a>
+</a>
 
-        </div>
+<a
+href="https://www.facebook.com/ing2424/"
+target="_blank"
+rel="noopener">
 
-    </div>
+Facebook
+
+</a>
+
+</div>
+
+</div>
 
 </footer>
 
@@ -2164,12 +3566,12 @@ footer{
 ===================================================== -->
 
 <a
-    href="https://wa.me/213798234579"
-    target="_blank"
-    class="whatsapp"
-    aria-label="WhatsApp">
+href="https://wa.me/213798234579"
+target="_blank"
+class="whatsapp"
+aria-label="WhatsApp">
 
-    ☎
+☎
 
 </a>
 
@@ -2185,98 +3587,92 @@ footer{
 ===================================================== */
 
 const menuButton =
-    document.getElementById("menuButton");
+document.getElementById("menuButton");
 
 const navLinks =
-    document.getElementById("navLinks");
+document.getElementById("navLinks");
 
 menuButton.addEventListener(
-    "click",
-    () => {
+"click",
+()=>{
 
-        navLinks.classList.toggle("active");
+navLinks.classList.toggle("active");
 
-    }
-);
+});
 
-
-/* close menu after clicking */
 
 document
 .querySelectorAll(".nav-links a")
-.forEach(link => {
+.forEach(link=>{
 
-    link.addEventListener(
-        "click",
-        () => {
+link.addEventListener(
+"click",
+()=>{
 
-            navLinks.classList.remove("active");
+navLinks.classList.remove("active");
 
-        }
-    );
+});
 
 });
 
 
 /* =====================================================
-   CURSOR LIGHT
+   CURSOR
 ===================================================== */
 
 const cursorLight =
-    document.getElementById("cursorLight");
+document.getElementById("cursorLight");
 
 document.addEventListener(
-    "mousemove",
-    event => {
+"mousemove",
+event=>{
 
-        cursorLight.style.left =
-            event.clientX + "px";
+cursorLight.style.left =
+event.clientX+"px";
 
-        cursorLight.style.top =
-            event.clientY + "px";
+cursorLight.style.top =
+event.clientY+"px";
 
-    }
-);
+});
 
 
 /* =====================================================
-   HERO 3D PARALLAX
+   HERO 3D MOTION
 ===================================================== */
 
 const orbit =
-    document.querySelector(".orbit");
+document.querySelector(".orbit");
 
 const orbit2 =
-    document.querySelector(".orbit2");
+document.querySelector(".orbit2");
 
 document.addEventListener(
-    "mousemove",
-    event => {
+"mousemove",
+event=>{
 
-        const x =
-            (event.clientX /
-            window.innerWidth - .5) * 2;
+const x =
+(event.clientX /
+window.innerWidth-.5)*2;
 
-        const y =
-            (event.clientY /
-            window.innerHeight - .5) * 2;
+const y =
+(event.clientY /
+window.innerHeight-.5)*2;
 
-        orbit.style.transform =
-            `
-            translateY(-50%)
-            rotateX(${60 + y * 8}deg)
-            rotateZ(${15 + x * 8}deg)
-            `;
+orbit.style.transform =
+`
+translateY(-50%)
+rotateX(${60+y*8}deg)
+rotateZ(${15+x*8}deg)
+`;
 
-        orbit2.style.transform =
-            `
-            translateY(-50%)
-            rotateX(${60 - y * 10}deg)
-            rotateZ(${-20 + x * 10}deg)
-            `;
+orbit2.style.transform =
+`
+translateY(-50%)
+rotateX(${60-y*10}deg)
+rotateZ(${-20+x*10}deg)
+`;
 
-    }
-);
+});
 
 
 /* =====================================================
@@ -2284,145 +3680,146 @@ document.addEventListener(
 ===================================================== */
 
 const revealElements =
-    document.querySelectorAll(".reveal");
+document.querySelectorAll(".reveal");
 
 const observer =
-    new IntersectionObserver(
-        entries => {
+new IntersectionObserver(
+entries=>{
 
-            entries.forEach(entry => {
+entries.forEach(entry=>{
 
-                if(entry.isIntersecting){
+if(entry.isIntersecting){
 
-                    entry.target
-                        .classList
-                        .add("visible");
+entry.target
+.classList
+.add("visible");
 
-                    observer.unobserve(
-                        entry.target
-                    );
+observer.unobserve(
+entry.target
+);
 
-                }
+}
 
-            });
+});
 
-        },
-        {
-            threshold:.12
-        }
-    );
+},
+{
+threshold:.10
+});
 
 
 revealElements.forEach(
-    element =>
-        observer.observe(element)
+element=>
+observer.observe(element)
 );
 
 
 /* =====================================================
-   3D SERVICE CARDS
+   3D CARDS
 ===================================================== */
 
 const cards =
-    document.querySelectorAll(".service");
+document.querySelectorAll(
+".service,.tech-card,.country"
+);
 
-cards.forEach(card => {
+cards.forEach(card=>{
 
-    card.addEventListener(
-        "mousemove",
-        event => {
+card.addEventListener(
+"mousemove",
+event=>{
 
-            const rect =
-                card.getBoundingClientRect();
+const rect =
+card.getBoundingClientRect();
 
-            const x =
-                event.clientX - rect.left;
+const x =
+event.clientX-rect.left;
 
-            const y =
-                event.clientY - rect.top;
+const y =
+event.clientY-rect.top;
 
-            const rotateY =
-                ((x / rect.width) - .5) * 8;
+const rotateY =
+((x/rect.width)-.5)*7;
 
-            const rotateX =
-                ((y / rect.height) - .5) * -8;
+const rotateX =
+((y/rect.height)-.5)*-7;
 
-            card.style.transform =
-                `
-                perspective(800px)
-                rotateX(${rotateX}deg)
-                rotateY(${rotateY}deg)
-                translateY(-8px)
-                `;
+card.style.transform =
+`
+perspective(800px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+translateY(-8px)
+`;
 
-        }
-    );
+});
 
-    card.addEventListener(
-        "mouseleave",
-        () => {
 
-            card.style.transform = "";
+card.addEventListener(
+"mouseleave",
+()=>{
 
-        }
-    );
+card.style.transform="";
+
+});
 
 });
 
 
 /* =====================================================
-   ACTIVE NAVIGATION
+   ACTIVE NAV
 ===================================================== */
 
 const sections =
-    document.querySelectorAll("section[id]");
+document.querySelectorAll(
+"section[id]"
+);
 
 const navigation =
-    document.querySelectorAll(
-        ".nav-links a"
-    );
+document.querySelectorAll(
+".nav-links a"
+);
 
 window.addEventListener(
-    "scroll",
-    () => {
+"scroll",
+()=>{
 
-        let current = "";
+let current="";
 
-        sections.forEach(section => {
+sections.forEach(section=>{
 
-            const sectionTop =
-                section.offsetTop - 120;
+const sectionTop =
+section.offsetTop-130;
 
-            if(
-                window.scrollY >=
-                sectionTop
-            ){
+if(
+window.scrollY>=sectionTop
+){
 
-                current =
-                    section.getAttribute("id");
+current =
+section.getAttribute("id");
 
-            }
+}
 
-        });
+});
 
-        navigation.forEach(link => {
 
-            link.style.color = "";
+navigation.forEach(link=>{
 
-            if(
-                link.getAttribute("href") ===
-                "#" + current
-            ){
+link.style.color="";
 
-                link.style.color =
-                    "#ffffff";
+if(
+link.getAttribute("href") ===
+"#"+current
+){
 
-            }
+link.style.color="#fff";
 
-        });
+}
 
-    }
-);
+});
+
+});
+
 
 </script>
 
