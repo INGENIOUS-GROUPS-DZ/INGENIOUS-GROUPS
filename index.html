@@ -66,6 +66,7 @@ img{
     --line:rgba(255,255,255,.10);
 }
 
+
 /* =========================================================
    SCROLLBAR
 ========================================================= */
@@ -82,6 +83,7 @@ img{
     background:var(--red);
 }
 
+
 /* =========================================================
    CURSOR
 ========================================================= */
@@ -92,15 +94,18 @@ img{
     height:300px;
     border-radius:50%;
     pointer-events:none;
+
     background:
         radial-gradient(
             circle,
             rgba(229,9,20,.12),
             transparent 68%
         );
+
     transform:translate(-50%,-50%);
     z-index:0;
 }
+
 
 /* =========================================================
    CONTAINER
@@ -110,6 +115,7 @@ img{
     width:min(1200px,92%);
     margin:auto;
 }
+
 
 /* =========================================================
    HEADER
@@ -122,12 +128,14 @@ header{
     width:100%;
     height:72px;
     z-index:1000;
+
     background:rgba(5,5,5,.94);
     border-bottom:1px solid var(--line);
 }
 
 .nav{
     height:72px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -177,6 +185,7 @@ header{
     cursor:pointer;
 }
 
+
 /* =========================================================
    HERO
 ========================================================= */
@@ -184,8 +193,10 @@ header{
 .hero{
     min-height:100vh;
     padding-top:72px;
+
     display:flex;
     align-items:center;
+
     position:relative;
     overflow:hidden;
 
@@ -242,7 +253,6 @@ header{
 }
 
 @keyframes lineMove{
-
     from{
         transform:translateX(-100%);
     }
@@ -250,7 +260,6 @@ header{
     to{
         transform:translateX(100%);
     }
-
 }
 
 .orbit{
@@ -271,11 +280,14 @@ header{
 
 .orbit::before{
     content:"";
+
     position:absolute;
     width:14px;
     height:14px;
+
     top:45px;
     left:65px;
+
     border-radius:50%;
     background:var(--red);
 
@@ -311,6 +323,7 @@ header{
     align-items:center;
     gap:10px;
     margin-bottom:25px;
+
     color:#888;
     font-size:11px;
     font-weight:900;
@@ -346,6 +359,7 @@ header{
 
 .hero-welcome{
     margin-top:30px;
+
     font-size:
         clamp(
             18px,
@@ -360,6 +374,7 @@ header{
 .hero-description{
     max-width:720px;
     margin-top:20px;
+
     color:#888;
     font-size:15px;
     line-height:1.9;
@@ -367,6 +382,7 @@ header{
 
 .hero-buttons{
     margin-top:35px;
+
     display:flex;
     flex-wrap:wrap;
     gap:12px;
@@ -386,6 +402,8 @@ header{
 
     border:1px solid var(--line);
     transition:.25s;
+
+    cursor:pointer;
 }
 
 .btn:hover{
@@ -412,6 +430,7 @@ header{
 
 .stats{
     margin-top:55px;
+
     display:flex;
     flex-wrap:wrap;
     gap:45px;
@@ -426,10 +445,12 @@ header{
 .stat small{
     display:block;
     margin-top:5px;
+
     color:#666;
     font-size:9px;
     letter-spacing:1.5px;
 }
+
 
 /* =========================================================
    GENERAL SECTION
@@ -442,14 +463,17 @@ section{
 
 .section-head{
     margin-bottom:55px;
+
     display:flex;
     justify-content:space-between;
     align-items:end;
+
     gap:35px;
 }
 
 .section-kicker{
     margin-bottom:13px;
+
     color:var(--red);
     font-size:10px;
     font-weight:900;
@@ -470,10 +494,12 @@ section{
 
 .section-description{
     max-width:480px;
+
     color:#777;
     font-size:14px;
     line-height:1.8;
 }
+
 
 /* =========================================================
    INTRODUCTION
@@ -521,6 +547,7 @@ section{
 
 .intro-number strong{
     display:block;
+
     font-size:
         clamp(
             60px,
@@ -535,11 +562,13 @@ section{
 .intro-number span{
     display:block;
     margin-top:15px;
+
     color:#888;
     font-size:12px;
     line-height:1.6;
     letter-spacing:1px;
 }
+
 
 /* =========================================================
    INTERNATIONAL
@@ -557,10 +586,13 @@ section{
 
 .country{
     position:relative;
+
     min-height:230px;
     padding:28px;
+
     background:#0b0b0b;
     border:1px solid var(--line);
+
     overflow:hidden;
     transition:.35s;
 }
@@ -590,14 +622,18 @@ section{
 
 .country::after{
     content:"";
+
     position:absolute;
     right:-50px;
     bottom:-50px;
+
     width:130px;
     height:130px;
+
     border:1px solid rgba(229,9,20,.18);
     border-radius:50%;
 }
+
 
 /* =========================================================
    ARTICLE
@@ -649,6 +685,7 @@ section{
     color:var(--red);
 }
 
+
 /* =========================================================
    TECHNICAL FLEXO
 ========================================================= */
@@ -666,8 +703,10 @@ section{
 .tech-card{
     min-height:290px;
     padding:30px;
+
     background:#0b0b0b;
     border:1px solid var(--line);
+
     transition:.35s;
 }
 
@@ -702,13 +741,17 @@ section{
 
 .tech-tag{
     display:inline-block;
+
     margin-top:20px;
     padding:7px 10px;
+
     border:1px solid rgba(255,255,255,.08);
     color:#aaa;
+
     font-size:9px;
     letter-spacing:1px;
 }
+
 
 /* =========================================================
    QUALITY
@@ -728,7 +771,9 @@ section{
     display:grid;
     grid-template-columns:65px 1fr;
     gap:20px;
+
     padding:30px;
+
     background:#0d0d0d;
     border:1px solid var(--line);
 }
@@ -736,6 +781,7 @@ section{
 .quality-icon{
     width:55px;
     height:55px;
+
     display:flex;
     align-items:center;
     justify-content:center;
@@ -758,8 +804,9 @@ section{
     line-height:1.7;
 }
 
+
 /* =========================================================
-   DESIGN PRECISION
+   DESIGN
 ========================================================= */
 
 .design{
@@ -797,6 +844,7 @@ section{
     font-weight:900;
 }
 
+
 /* =========================================================
    SERVICES
 ========================================================= */
@@ -815,8 +863,10 @@ section{
     min-height:260px;
     padding:30px;
     position:relative;
+
     background:#0d0d0d;
     border:1px solid var(--line);
+
     overflow:hidden;
     transition:.35s;
 }
@@ -854,6 +904,7 @@ section{
     font-size:12px;
     line-height:1.7;
 }
+
 
 /* =========================================================
    WORK
@@ -911,6 +962,7 @@ section{
     font-size:10px;
 }
 
+
 /* =========================================================
    BEHANCE
 ========================================================= */
@@ -929,8 +981,10 @@ section{
     position:relative;
     overflow:hidden;
     aspect-ratio:1/1;
+
     background:#111;
     border:1px solid var(--line);
+
     transition:.35s;
 }
 
@@ -957,6 +1011,7 @@ section{
     left:0;
     right:0;
     bottom:0;
+
     padding:22px;
 
     background:
@@ -976,6 +1031,7 @@ section{
     margin-top:7px;
     font-size:15px;
 }
+
 
 /* =========================================================
    YOUTUBE
@@ -1021,6 +1077,7 @@ section{
     position:absolute;
     left:50%;
     top:50%;
+
     transform:translate(-50%,-50%);
 
     width:75px;
@@ -1032,6 +1089,7 @@ section{
 
     border-radius:50%;
     background:var(--red);
+
     font-size:23px;
 
     box-shadow:
@@ -1057,6 +1115,293 @@ section{
     line-height:1.8;
 }
 
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.location{
+    background:#080808;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:20px;
+}
+
+.map-card{
+    min-height:500px;
+    background:#0b0b0b;
+    border:1px solid var(--line);
+    overflow:hidden;
+}
+
+.map-frame{
+    width:100%;
+    height:100%;
+    min-height:500px;
+    border:0;
+    display:block;
+    filter:grayscale(25%);
+}
+
+.address-card{
+    padding:40px;
+    background:#0b0b0b;
+    border:1px solid var(--line);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.address-label{
+    color:var(--red);
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:3px;
+}
+
+.address-title{
+    margin-top:15px;
+    font-size:36px;
+    line-height:1;
+    letter-spacing:-1px;
+}
+
+.address-text{
+    margin-top:25px;
+    color:#999;
+    font-size:15px;
+    line-height:1.9;
+}
+
+.address-line{
+    margin-top:22px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+}
+
+.address-line strong{
+    display:block;
+    font-size:11px;
+    color:#666;
+    letter-spacing:1px;
+}
+
+.address-line a{
+    display:inline-block;
+    margin-top:7px;
+    color:#fff;
+}
+
+.address-buttons{
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+
+/* =========================================================
+   PROJECT REQUEST FORM
+========================================================= */
+
+.request{
+    background:#050505;
+}
+
+.form-wrapper{
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:35px;
+    align-items:start;
+}
+
+.form-intro{
+    padding:35px;
+    background:#0b0b0b;
+    border:1px solid var(--line);
+}
+
+.form-intro h3{
+    font-size:32px;
+    line-height:1.05;
+}
+
+.form-intro p{
+    margin-top:20px;
+    color:#777;
+    font-size:13px;
+    line-height:1.9;
+}
+
+.form-intro-list{
+    margin-top:25px;
+    list-style:none;
+}
+
+.form-intro-list li{
+    padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+    color:#aaa;
+    font-size:12px;
+}
+
+.form-intro-list li::before{
+    content:"✓";
+    margin-right:10px;
+    color:var(--red);
+    font-weight:bold;
+}
+
+.project-form{
+    padding:40px;
+    background:#0b0b0b;
+    border:1px solid var(--line);
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-label{
+    display:block;
+    margin-bottom:8px;
+
+    color:#aaa;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:1.5px;
+}
+
+.form-input,
+.form-textarea,
+.form-select{
+    width:100%;
+
+    padding:15px 16px;
+
+    background:#050505;
+    border:1px solid rgba(255,255,255,.10);
+
+    color:#fff;
+    font-family:inherit;
+    font-size:13px;
+
+    outline:none;
+    transition:.25s;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus{
+    border-color:var(--red);
+}
+
+.form-textarea{
+    min-height:160px;
+    resize:vertical;
+}
+
+.form-select{
+    cursor:pointer;
+}
+
+.form-select option{
+    background:#050505;
+    color:#fff;
+}
+
+.file-box{
+    position:relative;
+
+    padding:25px;
+
+    background:#050505;
+    border:1px dashed rgba(255,255,255,.20);
+
+    transition:.25s;
+}
+
+.file-box:hover{
+    border-color:var(--red);
+}
+
+.file-input{
+    width:100%;
+    color:#999;
+    font-size:12px;
+}
+
+.file-help{
+    margin-top:10px;
+    color:#666;
+    font-size:10px;
+    line-height:1.6;
+}
+
+.file-list{
+    margin-top:12px;
+    color:#aaa;
+    font-size:11px;
+    line-height:1.8;
+}
+
+.form-check{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+
+    margin:20px 0;
+
+    color:#777;
+    font-size:11px;
+    line-height:1.6;
+}
+
+.form-check input{
+    margin-top:3px;
+    accent-color:var(--red);
+}
+
+.form-status{
+    display:none;
+
+    margin-bottom:20px;
+    padding:14px 16px;
+
+    font-size:12px;
+    line-height:1.6;
+}
+
+.form-status.error{
+    display:block;
+    background:rgba(229,9,20,.10);
+    border:1px solid rgba(229,9,20,.35);
+    color:#ff7077;
+}
+
+.form-status.success{
+    display:block;
+    background:rgba(40,180,100,.10);
+    border:1px solid rgba(40,180,100,.35);
+    color:#75e0a0;
+}
+
+.submit-button{
+    width:100%;
+    border:0;
+}
+
+
 /* =========================================================
    CONTACT
 ========================================================= */
@@ -1068,6 +1413,7 @@ section{
 .contact-box{
     position:relative;
     overflow:hidden;
+
     padding:65px;
 
     background:
@@ -1082,10 +1428,14 @@ section{
 
 .contact-box::after{
     content:"INGENIOUS";
+
     position:absolute;
+
     right:-40px;
     bottom:-55px;
+
     color:rgba(255,255,255,.025);
+
     font-size:130px;
     font-weight:900;
 }
@@ -1115,7 +1465,9 @@ section{
 
 .contact-text{
     max-width:650px;
+
     margin-top:20px;
+
     color:#777;
     font-size:14px;
     line-height:1.8;
@@ -1123,248 +1475,12 @@ section{
 
 .contact-buttons{
     margin-top:30px;
+
     display:flex;
     flex-wrap:wrap;
     gap:12px;
 }
 
-/* =========================================================
-   OFFICE + MAP
-========================================================= */
-
-.office-section{
-    margin-top:70px;
-    position:relative;
-    z-index:3;
-}
-
-.office-grid{
-    display:grid;
-    grid-template-columns:1fr 1.35fr;
-    gap:15px;
-}
-
-.office-info{
-    padding:40px;
-    background:#0b0b0b;
-    border:1px solid var(--line);
-}
-
-.office-number{
-    color:var(--red);
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:2px;
-}
-
-.office-info h3{
-    margin-top:18px;
-    font-size:34px;
-    line-height:1.05;
-}
-
-.office-info p{
-    margin-top:20px;
-    color:#777;
-    font-size:14px;
-    line-height:1.8;
-}
-
-.office-address{
-    margin-top:28px;
-    padding:20px;
-    background:#080808;
-    border-left:2px solid var(--red);
-}
-
-.office-address strong{
-    display:block;
-    font-size:14px;
-    color:#fff;
-}
-
-.office-address span{
-    display:block;
-    margin-top:8px;
-    color:#888;
-    font-size:13px;
-    line-height:1.7;
-}
-
-.office-actions{
-    margin-top:25px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.map-wrapper{
-    min-height:470px;
-    background:#111;
-    border:1px solid var(--line);
-    overflow:hidden;
-    position:relative;
-}
-
-.map-wrapper iframe{
-    width:100%;
-    height:100%;
-    min-height:470px;
-    border:0;
-    display:block;
-    filter:grayscale(20%) contrast(1.05);
-}
-
-/* =========================================================
-   PROJECT FORM
-========================================================= */
-
-.project-form-section{
-    margin-top:25px;
-    position:relative;
-    z-index:3;
-}
-
-.form-box{
-    padding:45px;
-    background:#0b0b0b;
-    border:1px solid var(--line);
-}
-
-.form-heading{
-    margin-bottom:30px;
-}
-
-.form-heading h3{
-    font-size:35px;
-    line-height:1;
-}
-
-.form-heading p{
-    margin-top:12px;
-    color:#777;
-    font-size:13px;
-    line-height:1.7;
-}
-
-.form-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:16px;
-}
-
-.form-group{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-}
-
-.form-group.full{
-    grid-column:1/-1;
-}
-
-.form-group label{
-    color:#aaa;
-    font-size:10px;
-    font-weight:900;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea{
-    width:100%;
-    background:#050505;
-    color:#fff;
-    border:1px solid rgba(255,255,255,.12);
-    outline:none;
-    padding:15px 16px;
-    font-family:Arial,Helvetica,sans-serif;
-    font-size:13px;
-    transition:.25s;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-    border-color:var(--red);
-    box-shadow:0 0 0 2px rgba(229,9,20,.08);
-}
-
-.form-group textarea{
-    min-height:170px;
-    resize:vertical;
-}
-
-.form-group select{
-    cursor:pointer;
-}
-
-.form-group select option{
-    background:#080808;
-    color:#fff;
-}
-
-.file-box{
-    padding:20px;
-    background:#050505;
-    border:1px dashed rgba(255,255,255,.18);
-    transition:.25s;
-}
-
-.file-box:hover{
-    border-color:var(--red);
-}
-
-.file-box input[type="file"]{
-    padding:10px;
-    border:0;
-    background:#0b0b0b;
-}
-
-.file-note{
-    margin-top:10px;
-    color:#666;
-    font-size:10px;
-    line-height:1.6;
-}
-
-.form-bottom{
-    margin-top:22px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.form-security{
-    color:#555;
-    font-size:10px;
-    line-height:1.6;
-    max-width:500px;
-}
-
-.form-submit{
-    min-width:210px;
-    cursor:pointer;
-}
-
-.form-success{
-    display:none;
-    margin-top:20px;
-    padding:15px 18px;
-    background:rgba(37,211,102,.08);
-    border:1px solid rgba(37,211,102,.25);
-    color:#8df0ae;
-    font-size:12px;
-    line-height:1.6;
-}
-
-.form-success.visible{
-    display:block;
-}
 
 /* =========================================================
    FOOTER
@@ -1372,6 +1488,7 @@ section{
 
 footer{
     padding:35px 0;
+
     background:#030303;
     border-top:1px solid var(--line);
 }
@@ -1411,16 +1528,20 @@ footer{
     color:#fff;
 }
 
+
 /* =========================================================
    WHATSAPP
 ========================================================= */
 
 .whatsapp{
     position:fixed;
+
     right:22px;
     bottom:22px;
+
     width:52px;
     height:52px;
+
     z-index:900;
 
     display:flex;
@@ -1428,13 +1549,13 @@ footer{
     justify-content:center;
 
     border-radius:50%;
+
     background:#25D366;
     color:#fff;
-    font-size:20px;
-    transition:.25s;
 
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.35);
+    font-size:20px;
+
+    transition:.25s;
 }
 
 .whatsapp:hover{
@@ -1443,12 +1564,49 @@ footer{
         translateY(-4px);
 }
 
+
+/* =========================================================
+   FORM SUCCESS NOTIFICATION
+========================================================= */
+
+.success-toast{
+    position:fixed;
+
+    top:90px;
+    right:20px;
+
+    z-index:2000;
+
+    max-width:380px;
+
+    padding:18px 22px;
+
+    background:#0d0d0d;
+    border:1px solid rgba(40,180,100,.5);
+
+    color:#8ff0b2;
+
+    font-size:12px;
+    line-height:1.6;
+
+    box-shadow:0 15px 50px rgba(0,0,0,.5);
+
+    transform:translateX(450px);
+    transition:.4s;
+}
+
+.success-toast.show{
+    transform:translateX(0);
+}
+
+
 /* =========================================================
    REVEAL
 ========================================================= */
 
 .reveal{
     opacity:0;
+
     transform:translateY(30px);
 
     transition:
@@ -1461,6 +1619,7 @@ footer{
     transform:translateY(0);
 }
 
+
 /* =========================================================
    MOBILE
 ========================================================= */
@@ -1469,15 +1628,19 @@ footer{
 
     .nav-links{
         position:absolute;
+
         top:72px;
         left:0;
+
         width:100%;
+
         padding:20px;
 
         display:none;
         flex-direction:column;
 
         background:#070707;
+
         border-bottom:1px solid var(--line);
     }
 
@@ -1487,6 +1650,7 @@ footer{
 
     .nav-links a{
         padding:13px 0;
+
         border-bottom:
             1px solid
             rgba(255,255,255,.05);
@@ -1507,7 +1671,9 @@ footer{
     }
 
     .intro-grid,
-    .article-layout{
+    .article-layout,
+    .location-grid,
+    .form-wrapper{
         grid-template-columns:1fr;
     }
 
@@ -1543,11 +1709,12 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .office-grid{
-        grid-template-columns:1fr;
+    .map-card,
+    .map-frame{
+        min-height:400px;
     }
-
 }
+
 
 @media(max-width:600px){
 
@@ -1635,6 +1802,23 @@ footer{
         font-size:43px;
     }
 
+    .address-card{
+        padding:28px;
+    }
+
+    .address-title{
+        font-size:30px;
+    }
+
+    .project-form{
+        padding:25px 18px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
     .footer{
         flex-direction:column;
         align-items:flex-start;
@@ -1649,40 +1833,14 @@ footer{
         bottom:16px;
     }
 
-    .office-info{
-        padding:28px 22px;
+    .success-toast{
+        left:15px;
+        right:15px;
+        top:80px;
+        max-width:none;
     }
-
-    .office-info h3{
-        font-size:29px;
-    }
-
-    .map-wrapper,
-    .map-wrapper iframe{
-        min-height:360px;
-    }
-
-    .form-box{
-        padding:28px 20px;
-    }
-
-    .form-grid{
-        grid-template-columns:1fr;
-    }
-
-    .form-group.full{
-        grid-column:auto;
-    }
-
-    .form-heading h3{
-        font-size:29px;
-    }
-
-    .form-submit{
-        width:100%;
-    }
-
 }
+
 
 @media(prefers-reduced-motion:reduce){
 
@@ -1699,9 +1857,22 @@ footer{
 </style>
 </head>
 
+
 <body>
 
+
 <div class="cursor-light" id="cursorLight"></div>
+
+
+<!-- =====================================================
+     SUCCESS MESSAGE
+===================================================== -->
+
+<div class="success-toast" id="successToast">
+    <strong>REQUEST SENT SUCCESSFULLY.</strong><br>
+    Thank you. INGENIOUS GROUPS will contact you soon.
+</div>
+
 
 <!-- =====================================================
      HEADER
@@ -1718,23 +1889,17 @@ INGENIOUS <span>GROUPS</span>
 <nav class="nav-links" id="navLinks">
 
 <a href="#home">HOME</a>
-
 <a href="#about">ABOUT</a>
-
 <a href="#international">EXPERTISE</a>
-
 <a href="#technology">TECHNOLOGY</a>
-
 <a href="#services">SERVICES</a>
-
 <a href="#work">OUR WORK</a>
-
 <a href="#behance">BEHANCE</a>
-
 <a href="#youtube">INGENIOUS TV</a>
+<a href="#location">LOCATION</a>
 
-<a href="#contact" class="nav-contact">
-CONTACT
+<a href="#request" class="nav-contact">
+REQUEST A PROJECT
 </a>
 
 </nav>
@@ -1752,6 +1917,7 @@ aria-label="Open menu">
 
 </header>
 
+
 <!-- =====================================================
      HERO
 ===================================================== -->
@@ -1759,12 +1925,10 @@ aria-label="Open menu">
 <section class="hero" id="home">
 
 <div class="hero-grid"></div>
-
 <div class="hero-line"></div>
-
 <div class="orbit"></div>
-
 <div class="orbit2"></div>
+
 
 <div class="container">
 
@@ -1773,6 +1937,7 @@ aria-label="Open menu">
 <div class="hero-label">
 INGENIOUS GROUPS ALGERIA
 </div>
+
 
 <h1>
 
@@ -1784,9 +1949,13 @@ THE WORLD OF<br>
 
 </h1>
 
+
 <p class="hero-welcome">
+
 Where Ideas Become Reality.
+
 </p>
+
 
 <p class="hero-description">
 
@@ -1796,6 +1965,7 @@ advanced packaging engineering and
 professional flexographic printing.
 
 </p>
+
 
 <div class="hero-buttons">
 
@@ -1817,46 +1987,27 @@ EXPLORE OUR WORK
 
 </div>
 
+
 <div class="stats">
 
 <div class="stat">
-
 <strong>20K+</strong>
-
-<small>
-PRODUCTS DESIGNED & PRINTED
-</small>
-
+<small>PRODUCTS DESIGNED & PRINTED</small>
 </div>
 
 <div class="stat">
-
 <strong>12+</strong>
-
-<small>
-YEARS EXPERIENCE
-</small>
-
+<small>YEARS EXPERIENCE</small>
 </div>
 
 <div class="stat">
-
 <strong>3D</strong>
-
-<small>
-HIGH PRECISION VISUALIZATION
-</small>
-
+<small>HIGH PRECISION VISUALIZATION</small>
 </div>
 
 <div class="stat">
-
 <strong>FLEXO</strong>
-
-<small>
-ADVANCED PRINTING
-</small>
-
+<small>ADVANCED PRINTING</small>
 </div>
 
 </div>
@@ -1867,6 +2018,7 @@ ADVANCED PRINTING
 
 </section>
 
+
 <!-- =====================================================
      INTRODUCTION
 ===================================================== -->
@@ -1876,6 +2028,7 @@ ADVANCED PRINTING
 <div class="container">
 
 <div class="intro-grid">
+
 
 <div class="reveal">
 
@@ -1892,6 +2045,7 @@ MORE THAN PRINTING.<br>
 <span>A COMPLETE INDUSTRIAL VISION.</span>
 
 </h2>
+
 
 <p class="intro-text">
 
@@ -1911,6 +2065,7 @@ visually powerful and production-ready product.
 
 </div>
 
+
 <div class="intro-number reveal">
 
 <strong>
@@ -1927,11 +2082,13 @@ ACROSS THE WORLD.
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      INTERNATIONAL EXPERTISE
@@ -1940,6 +2097,7 @@ ACROSS THE WORLD.
 <section class="international" id="international">
 
 <div class="container">
+
 
 <div class="section-head reveal">
 
@@ -1956,6 +2114,7 @@ TO THE WORLD.
 
 </div>
 
+
 <p class="section-description">
 
 Our experience is connected to international
@@ -1967,7 +2126,9 @@ covering several major markets.
 
 </div>
 
+
 <div class="international-grid">
+
 
 <div class="country reveal">
 
@@ -1989,6 +2150,7 @@ high-end production approaches.
 
 </div>
 
+
 <div class="country reveal">
 
 <div class="country-number">
@@ -2008,6 +2170,7 @@ high-quality packaging standards.
 </p>
 
 </div>
+
 
 <div class="country reveal">
 
@@ -2029,6 +2192,7 @@ professional printing practices.
 
 </div>
 
+
 <div class="country reveal">
 
 <div class="country-number">
@@ -2049,11 +2213,13 @@ packaging requirements.
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      INTERNATIONAL ARTICLE
@@ -2064,6 +2230,7 @@ packaging requirements.
 <div class="container">
 
 <div class="article-layout">
+
 
 <aside class="article-side reveal">
 
@@ -2092,6 +2259,7 @@ to international standards.
 
 </aside>
 
+
 <article class="article-content reveal">
 
 <p>
@@ -2110,6 +2278,7 @@ and Saudi Arabia</strong>.
 
 </p>
 
+
 <p>
 
 Working with international references
@@ -2124,6 +2293,7 @@ behind the final product.
 
 </p>
 
+
 <p>
 
 From Algeria, our team develops concepts,
@@ -2134,6 +2304,7 @@ smooth transition between the digital
 design and the printed product.
 
 </p>
+
 
 <p>
 
@@ -2147,6 +2318,7 @@ printing → quality control.
 
 </p>
 
+
 <p>
 
 The result is not only a beautiful design.
@@ -2155,6 +2327,7 @@ technically coherent when it reaches
 industrial production.
 
 </p>
+
 
 <p>
 
@@ -2178,6 +2351,7 @@ Connected to the world.
 
 </section>
 
+
 <!-- =====================================================
      FLEXO TECHNOLOGY
 ===================================================== -->
@@ -2185,6 +2359,7 @@ Connected to the world.
 <section class="technical" id="technology">
 
 <div class="container">
+
 
 <div class="section-head reveal">
 
@@ -2203,6 +2378,7 @@ FLEXOGRAPHY.
 
 </div>
 
+
 <p class="section-description">
 
 Professional flexographic printing requires
@@ -2215,7 +2391,9 @@ registration and quality monitoring.
 
 </div>
 
+
 <div class="tech-grid">
+
 
 <div class="tech-card reveal">
 
@@ -2242,6 +2420,7 @@ HIGH PRECISION
 
 </div>
 
+
 <div class="tech-card reveal">
 
 <div class="tech-number">
@@ -2266,6 +2445,7 @@ CMYK / SPOT COLORS
 </span>
 
 </div>
+
 
 <div class="tech-card reveal">
 
@@ -2292,6 +2472,7 @@ PLATE CONTROL
 
 </div>
 
+
 <div class="tech-card reveal">
 
 <div class="tech-number">
@@ -2317,6 +2498,7 @@ MULTI-COLOR CONTROL
 
 </div>
 
+
 <div class="tech-card reveal">
 
 <div class="tech-number">
@@ -2341,6 +2523,7 @@ MATERIAL KNOWLEDGE
 </span>
 
 </div>
+
 
 <div class="tech-card reveal">
 
@@ -2368,11 +2551,13 @@ PREMIUM EFFECTS
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      QUALITY
@@ -2381,6 +2566,7 @@ PREMIUM EFFECTS
 <section class="quality">
 
 <div class="container">
+
 
 <div class="section-head reveal">
 
@@ -2408,7 +2594,9 @@ the important technical variables.
 
 </div>
 
+
 <div class="quality-list">
+
 
 <div class="quality-item reveal">
 
@@ -2435,6 +2623,7 @@ production.
 
 </div>
 
+
 <div class="quality-item reveal">
 
 <div class="quality-icon">
@@ -2458,6 +2647,7 @@ and the production result.
 </div>
 
 </div>
+
 
 <div class="quality-item reveal">
 
@@ -2483,6 +2673,7 @@ and complex graphic elements.
 
 </div>
 
+
 <div class="quality-item reveal">
 
 <div class="quality-icon">
@@ -2506,6 +2697,7 @@ multi-color graphics.
 </div>
 
 </div>
+
 
 <div class="quality-item reveal">
 
@@ -2531,6 +2723,7 @@ achieve the intended result.
 
 </div>
 
+
 <div class="quality-item reveal">
 
 <div class="quality-icon">
@@ -2555,11 +2748,13 @@ digital screen representation.
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      HIGH PRECISION DESIGN
@@ -2568,6 +2763,7 @@ digital screen representation.
 <section class="design">
 
 <div class="container">
+
 
 <div class="section-head reveal">
 
@@ -2584,6 +2780,7 @@ VISUAL DESIGN.
 
 </div>
 
+
 <p class="section-description">
 
 A professional printed product begins
@@ -2595,13 +2792,13 @@ engineering and production awareness.
 
 </div>
 
+
 <div class="design-grid">
+
 
 <div class="design-card reveal">
 
-<span>
-01
-</span>
+<span>01</span>
 
 <h3>
 Pixel-Level Detail
@@ -2617,11 +2814,10 @@ to the final printing scale.
 
 </div>
 
+
 <div class="design-card reveal">
 
-<span>
-02
-</span>
+<span>02</span>
 
 <h3>
 3D Product Simulation
@@ -2638,11 +2834,10 @@ appearance of the product.
 
 </div>
 
+
 <div class="design-card reveal">
 
-<span>
-03
-</span>
+<span>03</span>
 
 <h3>
 Print-Ready Preparation
@@ -2659,11 +2854,10 @@ industrial printing.
 
 </div>
 
+
 <div class="design-card reveal">
 
-<span>
-04
-</span>
+<span>04</span>
 
 <h3>
 Packaging Structure
@@ -2680,11 +2874,10 @@ production limitations.
 
 </div>
 
+
 <div class="design-card reveal">
 
-<span>
-05
-</span>
+<span>05</span>
 
 <h3>
 Brand Consistency
@@ -2700,11 +2893,10 @@ the brand recognizable across products.
 
 </div>
 
+
 <div class="design-card reveal">
 
-<span>
-06
-</span>
+<span>06</span>
 
 <h3>
 Creative Engineering
@@ -2721,11 +2913,13 @@ meet.
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      SERVICES
@@ -2734,6 +2928,7 @@ meet.
 <section class="services" id="services">
 
 <div class="container">
+
 
 <div class="section-head reveal">
 
@@ -2759,7 +2954,9 @@ preparation and printing.
 
 </div>
 
+
 <div class="service-grid">
+
 
 <div class="service reveal">
 
@@ -2782,6 +2979,7 @@ modern products and brands.
 
 </div>
 
+
 <div class="service reveal">
 
 <div class="service-number">
@@ -2802,6 +3000,7 @@ Sleeve, IML and product packaging.
 </p>
 
 </div>
+
 
 <div class="service reveal">
 
@@ -2824,6 +3023,7 @@ for labels and packaging.
 
 </div>
 
+
 <div class="service reveal">
 
 <div class="service-number">
@@ -2845,11 +3045,13 @@ mockups and cinematic presentation.
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      OUR WORK
@@ -2858,6 +3060,7 @@ mockups and cinematic presentation.
 <section class="work" id="work">
 
 <div class="container">
+
 
 <div class="section-head reveal">
 
@@ -2882,9 +3085,11 @@ projects created by INGENIOUS.
 
 </div>
 
+
 <div class="work-grid">
 
-<a href="#contact"
+
+<a href="#request"
 class="work-card reveal">
 
 <div class="work-image">
@@ -2909,7 +3114,8 @@ LABEL DESIGN
 
 </a>
 
-<a href="#contact"
+
+<a href="#request"
 class="work-card reveal">
 
 <div class="work-image">
@@ -2934,7 +3140,8 @@ PACKAGING DESIGN
 
 </a>
 
-<a href="#contact"
+
+<a href="#request"
 class="work-card reveal">
 
 <div class="work-image">
@@ -2959,7 +3166,8 @@ PRODUCT LABEL
 
 </a>
 
-<a href="#contact"
+
+<a href="#request"
 class="work-card reveal">
 
 <div class="work-image">
@@ -2984,11 +3192,13 @@ FLEXO PACKAGING
 
 </a>
 
+
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      BEHANCE
@@ -2997,6 +3207,7 @@ FLEXO PACKAGING
 <section class="behance" id="behance">
 
 <div class="container">
+
 
 <div class="section-head reveal">
 
@@ -3022,7 +3233,9 @@ packaging concepts, printing,
 
 </div>
 
+
 <div class="behance-grid">
+
 
 <a
 class="behance-card reveal"
@@ -3048,6 +3261,7 @@ INGENIOUS DESIGN
 
 </a>
 
+
 <a
 class="behance-card reveal"
 href="https://www.behance.net/ingineosedesign/projects"
@@ -3071,6 +3285,7 @@ CREATIVE PACKAGING
 </div>
 
 </a>
+
 
 <a
 class="behance-card reveal"
@@ -3096,6 +3311,7 @@ DESIGN
 
 </a>
 
+
 <a
 class="behance-card reveal"
 href="https://www.behance.net/ingineosedesign/projects"
@@ -3119,6 +3335,7 @@ PRINTING PP LABELS
 </div>
 
 </a>
+
 
 <a
 class="behance-card reveal"
@@ -3144,6 +3361,7 @@ ADVANCED PP
 
 </a>
 
+
 <a
 class="behance-card reveal"
 href="https://www.behance.net/ingineosedesign/projects"
@@ -3168,7 +3386,9 @@ VISUAL PRODUCTION
 
 </a>
 
+
 </div>
+
 
 <div
 style="margin-top:35px;text-align:center"
@@ -3186,9 +3406,11 @@ VIEW ALL BEHANCE PROJECTS
 
 </div>
 
+
 </div>
 
 </section>
+
 
 <!-- =====================================================
      YOUTUBE
@@ -3197,6 +3419,7 @@ VIEW ALL BEHANCE PROJECTS
 <section class="youtube" id="youtube">
 
 <div class="container">
+
 
 <div class="section-head reveal">
 
@@ -3222,7 +3445,9 @@ design and creative production.
 
 </div>
 
+
 <div class="tv">
+
 
 <a
 href="https://www.youtube.com/@Ingeniousgroups/videos"
@@ -3239,6 +3464,7 @@ alt="INGENIOUS TV">
 </div>
 
 </a>
+
 
 <div class="tv-info reveal">
 
@@ -3275,19 +3501,571 @@ VISIT YOUTUBE
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- =====================================================
+     LOCATION
+===================================================== -->
+
+<section class="location" id="location">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="section-kicker">
+FIND INGENIOUS
+</div>
+
+<h2 class="section-title">
+OUR OFFICE<br>
+IN ALGIERS.
+</h2>
+
+</div>
+
+<p class="section-description">
+
+Visit INGENIOUS GROUPS at
+Colonne Voirol, El Mouradia,
+Algiers.
+
+</p>
+
+</div>
+
+
+<div class="location-grid">
+
+
+<div class="map-card reveal">
+
+<iframe
+class="map-frame"
+src="https://www.google.com/maps?q=21%20Rue%20de%20Brazza%2C%20Colonne%20Voirol%2C%20El%20Mouradia%2C%20Alger%2016000&output=embed"
+loading="lazy"
+allowfullscreen
+referrerpolicy="no-referrer-when-downgrade"
+title="Ingenious Groups Algeria Location">
+</iframe>
+
+</div>
+
+
+<div class="address-card reveal">
+
+<div class="address-label">
+INGENIOUS GROUPS ALGERIA
+</div>
+
+<h3 class="address-title">
+COLONNE VOIROL<br>
+EL MOURADIA
+</h3>
+
+<p class="address-text">
+
+Our office is located at:
+
+<br><br>
+
+<strong>
+21 Rue de Brazza,<br>
+Colonne Voirol,<br>
+El Mouradia, Alger 16000
+</strong>
+
+</p>
+
+
+<div class="address-line">
+
+<strong>
+WHATSAPP
+</strong>
+
+<a
+href="https://wa.me/213798234579"
+target="_blank"
+rel="noopener">
+
++213 798 234 579
+
+</a>
+
+</div>
+
+
+<div class="address-line">
+
+<strong>
+EMAIL
+</strong>
+
+<a
+href="mailto:ingenious.24contact@gmail.com">
+
+ingenious.24contact@gmail.com
+
+</a>
+
+</div>
+
+
+<div class="address-buttons">
+
+<a
+href="https://www.google.com/maps/dir/?api=1&destination=21%20Rue%20de%20Brazza%2C%20Colonne%20Voirol%2C%20El%20Mouradia%2C%20Alger%2016000"
+target="_blank"
+rel="noopener"
+class="btn btn-red">
+
+GET DIRECTIONS
+
+</a>
+
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=21%20Rue%20de%20Brazza%2C%20Colonne%20Voirol%2C%20El%20Mouradia%2C%20Alger%2016000"
+target="_blank"
+rel="noopener"
+class="btn btn-dark">
+
+OPEN GOOGLE MAPS
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECT REQUEST / FORMSUBMIT
+===================================================== -->
+
+<section class="request" id="request">
+
+<div class="container">
+
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="section-kicker">
+START YOUR PROJECT
+</div>
+
+<h2 class="section-title">
+SEND YOUR<br>
+PROJECT TO <span style="color:var(--red)">INGENIOUS.</span>
+</h2>
+
+</div>
+
+<p class="section-description">
+
+Tell us what you want to design,
+print or develop. You can also
+send reference images and files.
+
+</p>
+
+</div>
+
+
+<div class="form-wrapper">
+
+
+<div class="form-intro reveal">
+
+<div class="section-kicker">
+PROJECT REQUEST
+</div>
+
+<h3>
+FROM IDEA<br>
+TO REALITY.
+</h3>
+
+<p>
+
+Send us your project requirements.
+Our team can review your request
+and contact you through WhatsApp,
+phone or email.
+
+</p>
+
+<ul class="form-intro-list">
+
+<li>
+Label & Packaging Design
+</li>
+
+<li>
+Cosmetic Products
+</li>
+
+<li>
+Food Products
+</li>
+
+<li>
+Juices & Beverages
+</li>
+
+<li>
+Boxes & Carton Packaging
+</li>
+
+<li>
+Doypack & Flexible Packaging
+</li>
+
+<li>
+3D Product Visualization
+</li>
+
+<li>
+Flexographic Printing
+</li>
+
+</ul>
+
+</div>
+
+
+<!--
+=========================================================
+FORMSUBMIT FORM
+=========================================================
+-->
+
+<form
+class="project-form reveal"
+id="projectForm"
+action="https://formsubmit.co/ingenious.24contact@gmail.com"
+method="POST"
+enctype="multipart/form-data">
+
+
+<!-- FormSubmit settings -->
+
+<input
+type="hidden"
+name="_subject"
+value="NEW PROJECT REQUEST - INGENIOUS GROUPS">
+
+<input
+type="hidden"
+name="_template"
+value="table">
+
+<input
+type="hidden"
+name="_next"
+value="https://ingenious-groups-dz.github.io/INGENIOUS-GROUPS/?sent=1">
+
+<!-- Honeypot anti-spam -->
+
+<input
+type="text"
+name="_honey"
+style="display:none"
+tabindex="-1"
+autocomplete="off">
+
+
+<div
+class="form-status"
+id="formStatus">
+</div>
+
+
+<div class="form-row">
+
+
+<div class="form-group">
+
+<label
+class="form-label"
+for="name">
+
+FULL NAME *
+
+</label>
+
+<input
+class="form-input"
+type="text"
+id="name"
+name="name"
+placeholder="Your full name"
+autocomplete="name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label
+class="form-label"
+for="company">
+
+COMPANY
+
+</label>
+
+<input
+class="form-input"
+type="text"
+id="company"
+name="company"
+placeholder="Company name"
+autocomplete="organization">
+
+</div>
+
+
+</div>
+
+
+<div class="form-row">
+
+
+<div class="form-group">
+
+<label
+class="form-label"
+for="phone">
+
+PHONE / WHATSAPP *
+
+</label>
+
+<input
+class="form-input"
+type="tel"
+id="phone"
+name="phone"
+placeholder="+213 ..."
+autocomplete="tel"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label
+class="form-label"
+for="email">
+
+EMAIL *
+
+</label>
+
+<input
+class="form-input"
+type="email"
+id="email"
+name="email"
+placeholder="your@email.com"
+autocomplete="email"
+required>
+
+</div>
+
+
+</div>
+
+
+<div class="form-group">
+
+<label
+class="form-label"
+for="service">
+
+WHAT DO YOU NEED? *
+
+</label>
+
+<select
+class="form-select"
+id="service"
+name="service"
+required>
+
+<option value="">
+Select a service
+</option>
+
+<option value="Label Design">
+Label Design
+</option>
+
+<option value="Packaging Design">
+Packaging Design
+</option>
+
+<option value="Doypack / Flexible Packaging">
+Doypack / Flexible Packaging
+</option>
+
+<option value="Cosmetic Packaging">
+Cosmetic Packaging
+</option>
+
+<option value="Food Packaging">
+Food Packaging
+</option>
+
+<option value="Juice / Beverage Packaging">
+Juice / Beverage Packaging
+</option>
+
+<option value="Carton / Box Design">
+Carton / Box Design
+</option>
+
+<option value="3D Visualization">
+3D Visualization
+</option>
+
+<option value="Flexographic Printing">
+Flexographic Printing
+</option>
+
+<option value="Other">
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label
+class="form-label"
+for="message">
+
+DESCRIBE YOUR PROJECT *
+
+</label>
+
+<textarea
+class="form-textarea"
+id="message"
+name="message"
+placeholder="Tell us about your product, packaging type, dimensions, quantity, printing requirements, colors, deadline, etc."
+required></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+<label
+class="form-label"
+for="projectFiles">
+
+REFERENCE FILES / IMAGES
+
+</label>
+
+<div class="file-box">
+
+<input
+class="file-input"
+type="file"
+id="projectFiles"
+name="attachments"
+multiple
+accept="image/*,.pdf,.ai,.psd,.eps,.svg,.zip,.rar">
+
+<div class="file-help">
+
+You can select multiple files.
+Maximum total size: <strong>10 MB</strong>.
+Accepted: JPG, PNG, PDF, AI, PSD, EPS, SVG, ZIP, RAR.
+
+</div>
+
+<div
+class="file-list"
+id="fileList">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="form-check">
+
+<input
+type="checkbox"
+id="agreement"
+required>
+
+<label for="agreement">
+
+I confirm that the information provided is correct
+and I agree that INGENIOUS GROUPS may contact me
+regarding this project.
+
+</label>
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-red submit-button"
+id="submitButton">
+
+SEND PROJECT REQUEST
+
+</button>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
 <!-- =====================================================
      CONTACT
-========================================================= -->
+===================================================== -->
 
 <section class="contact" id="contact">
 
 <div class="container">
+
 
 <div class="contact-box reveal">
 
@@ -3318,17 +4096,28 @@ for the world.
 
 </p>
 
+
 <div class="contact-buttons">
+
+<a
+href="#request"
+class="btn btn-red">
+
+SEND PROJECT
+
+</a>
+
 
 <a
 href="https://wa.me/213798234579"
 target="_blank"
 rel="noopener"
-class="btn btn-red">
+class="btn btn-dark">
 
 WHATSAPP
 
 </a>
+
 
 <a
 href="mailto:ingenious.24contact@gmail.com"
@@ -3338,356 +4127,7 @@ EMAIL US
 
 </a>
 
-<a
-href="#project-request"
-class="btn btn-dark">
-
-REQUEST A PROJECT
-
-</a>
-
 </div>
-
-</div>
-
-</div>
-
-<!-- =====================================================
-     OFFICE LOCATION
-========================================================= -->
-
-<div class="office-section reveal">
-
-<div class="section-head">
-
-<div>
-
-<div class="section-kicker">
-OUR OFFICE
-</div>
-
-<h2 class="section-title">
-FIND<br>
-INGENIOUS.
-</h2>
-
-</div>
-
-<p class="section-description">
-
-Visit our office in El Mouradia,
-Algiers, or open Google Maps to
-get precise directions from your
-current location.
-
-</p>
-
-</div>
-
-<div class="office-grid">
-
-<div class="office-info">
-
-<div class="office-number">
-01 / LOCATION
-</div>
-
-<h3>
-INGENIOUS<br>
-GROUPS ALGERIA
-</h3>
-
-<p>
-Our office is located at Colonne Voirol,
-El Mouradia, Algiers.
-</p>
-
-<div class="office-address">
-
-<strong>
-OFFICE ADDRESS
-</strong>
-
-<span>
-21 Rue de Brazza,<br>
-Colonne Voirol,<br>
-El Mouradia 16000,<br>
-Alger, Algeria
-</span>
-
-</div>
-
-<div class="office-actions">
-
-<a
-href="https://www.google.com/maps/dir/?api=1&destination=21%20Rue%20de%20Brazza%2C%20Colonne%20Voirol%2C%20El%20Mouradia%2016000%2C%20Alger%2C%20Algeria"
-target="_blank"
-rel="noopener"
-class="btn btn-red">
-
-GET DIRECTIONS
-
-</a>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=21%20Rue%20de%20Brazza%2C%20Colonne%20Voirol%2C%20El%20Mouradia%2016000%2C%20Alger%2C%20Algeria"
-target="_blank"
-rel="noopener"
-class="btn btn-dark">
-
-OPEN GOOGLE MAPS
-
-</a>
-
-</div>
-
-</div>
-
-<div class="map-wrapper">
-
-<iframe
-src="https://www.google.com/maps?q=21%20Rue%20de%20Brazza%2C%20Colonne%20Voirol%2C%20El%20Mouradia%2016000%2C%20Alger%2C%20Algeria&output=embed"
-allowfullscreen=""
-loading="lazy"
-referrerpolicy="no-referrer-when-downgrade"
-title="INGENIOUS GROUPS ALGERIA Office Location">
-</iframe>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- =====================================================
-     PROJECT REQUEST FORM
-========================================================= -->
-
-<div class="project-form-section reveal" id="project-request">
-
-<div class="form-box">
-
-<div class="form-heading">
-
-<div class="section-kicker">
-PROJECT REQUEST
-</div>
-
-<h3>
-TELL US ABOUT YOUR PROJECT.
-</h3>
-
-<p>
-Send us your requirements, references and
-project details. Our team will review your
-request and contact you.
-</p>
-
-</div>
-
-<form
-id="projectForm"
-action="https://formsubmit.co/ingenious.24contact@gmail.com"
-method="POST"
-enctype="multipart/form-data">
-
-<!-- FormSubmit configuration -->
-
-<input
-type="hidden"
-name="_subject"
-value="NEW PROJECT REQUEST — INGENIOUS GROUPS ALGERIA">
-
-<input
-type="hidden"
-name="_template"
-value="table">
-
-<input
-type="hidden"
-name="_captcha"
-value="true">
-
-<input
-type="hidden"
-name="_honey"
-value="">
-
-<input
-type="hidden"
-name="_url"
-value="https://ingenious-groups-dz.github.io/INGENIOUS-GROUPS/">
-
-<div class="form-grid">
-
-<div class="form-group">
-
-<label for="fullName">
-FULL NAME *
-</label>
-
-<input
-type="text"
-id="fullName"
-name="Full Name"
-placeholder="Your first and last name"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label for="phone">
-PHONE / WHATSAPP *
-</label>
-
-<input
-type="tel"
-id="phone"
-name="Phone / WhatsApp"
-placeholder="+213 ..."
-required>
-
-</div>
-
-<div class="form-group">
-
-<label for="email">
-EMAIL *
-</label>
-
-<input
-type="email"
-id="email"
-name="Customer Email"
-placeholder="your@email.com"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label for="service">
-SERVICE REQUIRED *
-</label>
-
-<select
-id="service"
-name="Service Required"
-required>
-
-<option value="">
-Select a service
-</option>
-
-<option value="Label Design">
-Label Design
-</option>
-
-<option value="Packaging Design">
-Packaging Design
-</option>
-
-<option value="Doypack / Flexible Packaging">
-Doypack / Flexible Packaging
-</option>
-
-<option value="PP / OPP Labels">
-PP / OPP Labels
-</option>
-
-<option value="Flexographic Printing">
-Flexographic Printing
-</option>
-
-<option value="3D Visualization">
-3D Visualization
-</option>
-
-<option value="Product Packaging">
-Product Packaging
-</option>
-
-<option value="Other">
-Other
-</option>
-
-</select>
-
-</div>
-
-<div class="form-group full">
-
-<label for="projectDetails">
-PROJECT DETAILS *
-</label>
-
-<textarea
-id="projectDetails"
-name="Project Details"
-placeholder="Tell us what you need: product type, number of products, packaging format, dimensions, printing requirements, quantity, deadline, etc."
-required></textarea>
-
-</div>
-
-<div class="form-group full">
-
-<label for="references">
-UPLOAD REFERENCES / FILES
-</label>
-
-<div class="file-box">
-
-<input
-type="file"
-id="references"
-name="Project References"
-accept="image/*,.pdf,.ai,.psd,.eps,.cdr,.zip"
-multiple>
-
-<p class="file-note">
-You can upload several images or project files.
-Please keep the total attachment size within
-10MB for this form.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="form-bottom">
-
-<div class="form-security">
-
-By submitting this request, you agree that
-INGENIOUS GROUPS ALGERIA may use the
-provided contact information to respond
-to your project request.
-
-</div>
-
-<button
-type="submit"
-class="btn btn-red form-submit">
-
-SEND PROJECT REQUEST
-
-</button>
-
-</div>
-
-<div
-class="form-success"
-id="formSuccess">
-
-Your project request has been prepared successfully.
-You will receive confirmation after submission.
-
-</div>
-
-</form>
 
 </div>
 
@@ -3697,13 +4137,15 @@ You will receive confirmation after submission.
 
 </section>
 
+
 <!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer>
 
 <div class="container footer">
+
 
 <div class="footer-logo">
 
@@ -3712,12 +4154,14 @@ INGENIOUS
 
 </div>
 
+
 <div class="footer-copy">
 
 © 2026 INGENIOUS GROUPS ALGERIA.
 ALL RIGHTS RESERVED.
 
 </div>
+
 
 <div class="footer-links">
 
@@ -3754,9 +4198,10 @@ Facebook
 
 </footer>
 
+
 <!-- =====================================================
      WHATSAPP
-========================================================= -->
+===================================================== -->
 
 <a
 href="https://wa.me/213798234579"
@@ -3769,9 +4214,10 @@ aria-label="WhatsApp">
 
 </a>
 
+
 <!-- =====================================================
      JAVASCRIPT
-========================================================= -->
+===================================================== -->
 
 <script>
 
@@ -3788,10 +4234,9 @@ document.getElementById("navLinks");
 menuButton.addEventListener(
 "click",
 ()=>{
-
-navLinks.classList.toggle("active");
-
+    navLinks.classList.toggle("active");
 });
+
 
 document
 .querySelectorAll(".nav-links a")
@@ -3800,12 +4245,11 @@ document
 link.addEventListener(
 "click",
 ()=>{
-
-navLinks.classList.remove("active");
-
+    navLinks.classList.remove("active");
 });
 
 });
+
 
 /* =====================================================
    CURSOR
@@ -3825,6 +4269,7 @@ cursorLight.style.top =
 event.clientY+"px";
 
 });
+
 
 /* =====================================================
    HERO 3D MOTION
@@ -3864,6 +4309,7 @@ rotateZ(${-20+x*10}deg)
 
 });
 
+
 /* =====================================================
    SCROLL REVEAL
 ===================================================== */
@@ -3896,10 +4342,12 @@ entry.target
 threshold:.10
 });
 
+
 revealElements.forEach(
 element=>
 observer.observe(element)
 );
+
 
 /* =====================================================
    3D CARDS
@@ -3941,15 +4389,15 @@ translateY(-8px)
 
 });
 
+
 card.addEventListener(
 "mouseleave",
 ()=>{
-
-card.style.transform="";
-
+    card.style.transform="";
 });
 
 });
+
 
 /* =====================================================
    ACTIVE NAV
@@ -3987,6 +4435,7 @@ section.getAttribute("id");
 
 });
 
+
 navigation.forEach(link=>{
 
 link.style.color="";
@@ -4004,78 +4453,220 @@ link.style.color="#fff";
 
 });
 
+
 /* =====================================================
-   PROJECT FORM
+   FORMSUBMIT FILE SIZE CHECK
 ===================================================== */
+
+const fileInput =
+document.getElementById("projectFiles");
+
+const fileList =
+document.getElementById("fileList");
+
+const formStatus =
+document.getElementById("formStatus");
 
 const projectForm =
 document.getElementById("projectForm");
 
-const formSuccess =
-document.getElementById("formSuccess");
-
-projectForm.addEventListener(
-"submit",
-function(){
-
 const submitButton =
-projectForm.querySelector(
-".form-submit"
-);
+document.getElementById("submitButton");
 
-submitButton.innerHTML =
-"SENDING...";
+const MAX_FILE_SIZE =
+10 * 1024 * 1024;
 
-submitButton.style.pointerEvents =
-"none";
-
-formSuccess.classList.add(
-"visible"
-);
-
-formSuccess.innerHTML =
-"Your request is being sent to INGENIOUS GROUPS ALGERIA. Please wait...";
-
-});
-
-/* =====================================================
-   FILE SIZE CHECK
-===================================================== */
-
-const fileInput =
-document.getElementById("references");
 
 fileInput.addEventListener(
 "change",
-function(){
+()=>{
 
-let totalSize = 0;
+fileList.innerHTML="";
 
-for(
-let i=0;
-i<this.files.length;
-i++
-){
+let totalSize=0;
 
-totalSize +=
-this.files[i].size;
+const files =
+Array.from(fileInput.files);
+
+
+if(files.length===0){
+    return;
+}
+
+
+files.forEach(file=>{
+    totalSize += file.size;
+});
+
+
+if(totalSize > MAX_FILE_SIZE){
+
+formStatus.className =
+"form-status error";
+
+formStatus.innerHTML =
+"Your files are larger than 10 MB in total. Please remove some files or compress them before sending.";
+
+fileInput.value="";
+fileList.innerHTML="";
+
+return;
 
 }
 
-const maxSize =
-10 * 1024 * 1024;
 
-if(totalSize > maxSize){
+const list =
+document.createElement("div");
 
-alert(
-"The total size of the uploaded files must not exceed 10MB."
-);
+files.forEach(file=>{
 
-this.value = "";
+const item =
+document.createElement("div");
 
-}
+const sizeMB =
+(file.size /
+1024 /
+1024).toFixed(2);
+
+item.textContent =
+"• "+file.name+
+" — "+sizeMB+" MB";
+
+list.appendChild(item);
 
 });
+
+
+fileList.appendChild(list);
+
+
+const totalMB =
+(totalSize /
+1024 /
+1024).toFixed(2);
+
+
+const totalInfo =
+document.createElement("div");
+
+totalInfo.style.marginTop="8px";
+
+totalInfo.style.color="#666";
+
+totalInfo.textContent =
+"Total: "+totalMB+" MB / 10 MB";
+
+fileList.appendChild(totalInfo);
+
+});
+
+
+/* =====================================================
+   FORMSUBMIT SUBMIT VALIDATION
+===================================================== */
+
+projectForm.addEventListener(
+"submit",
+event=>{
+
+const files =
+Array.from(fileInput.files);
+
+let totalSize=0;
+
+files.forEach(file=>{
+    totalSize += file.size;
+});
+
+
+if(totalSize > MAX_FILE_SIZE){
+
+event.preventDefault();
+
+formStatus.className =
+"form-status error";
+
+formStatus.innerHTML =
+"Please keep the total attachment size below 10 MB.";
+
+formStatus.scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+});
+
+return;
+}
+
+
+/*
+   Do NOT use AJAX here.
+   Native multipart/form-data submission
+   is used so FormSubmit can receive
+   the uploaded files as attachments.
+*/
+
+submitButton.textContent =
+"SENDING...";
+
+submitButton.style.opacity=".7";
+
+submitButton.style.pointerEvents="none";
+
+});
+
+
+/* =====================================================
+   SUCCESS REDIRECT
+===================================================== */
+
+const urlParams =
+new URLSearchParams(
+window.location.search
+);
+
+if(
+urlParams.get("sent")==="1"
+){
+
+const toast =
+document.getElementById(
+"successToast"
+);
+
+toast.classList.add("show");
+
+
+setTimeout(
+()=>{
+    toast.classList.remove("show");
+},
+7000
+);
+
+
+/*
+   Remove ?sent=1 from the
+   visible browser URL.
+*/
+
+if(
+window.history &&
+window.history.replaceState
+){
+
+const cleanUrl =
+window.location.pathname +
+window.location.hash;
+
+window.history.replaceState(
+{},
+document.title,
+cleanUrl
+);
+
+}
+
+}
 
 </script>
 
