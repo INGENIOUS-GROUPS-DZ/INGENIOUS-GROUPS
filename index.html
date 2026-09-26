@@ -223,7 +223,7 @@ img{
 
 /* =========================================================
    TECHNOLOGY NEWS TICKER
-   AL ARABIYA-INSPIRED BROADCAST STYLE
+   BROADCAST / AL ARABIYA-INSPIRED STYLE
 ========================================================= */
 
 .tech-news-bar{
@@ -390,7 +390,6 @@ img{
 
     font-size:14px;
     font-weight:700;
-
 }
 
 .tech-news-item.english{
@@ -404,7 +403,6 @@ img{
 
     font-size:12px;
     font-weight:700;
-
 }
 
 .tech-news-item .news-red{
@@ -4959,7 +4957,7 @@ aria-label="WhatsApp">
 
 <!-- =====================================================
      JAVASCRIPT
-===================================================== -->
+========================================================= -->
 
 <script>
 
@@ -4997,11 +4995,14 @@ link.addEventListener(
    TECHNOLOGY NEWS TICKER
    Arabic: LEFT -> RIGHT
    English: RIGHT -> LEFT
-   Continuous alternating broadcast ticker
+   SLOW BROADCAST SPEED
 ===================================================== */
 
 const techNewsItem =
 document.getElementById("techNewsItem");
+
+const techNewsWindow =
+document.querySelector(".tech-news-window");
 
 const arabicNews =
 `🔴 تكنولوجيا NVIDIA Blackwell B200 المتقدمة — قوة حوسبة هائلة لدعم التصميم ثلاثي الأبعاد، الذكاء الاصطناعي، المحاكاة والـRendering عالي الأداء. في Ingenious Groups نستثمر في أحدث تقنيات الحوسبة والمعالجة البصرية لتطوير تصاميم فائقة التفاصيل والدقة، وتحويل الأفكار إلى صور ومشاهد ثلاثية الأبعاد احترافية جاهزة للعرض والطباعة والإعلانات، لتقديم منتجات وهوية بصرية بمستوى يليق بالشركات والعلامات التجارية المحلية والدولية الكبرى.`;
@@ -5014,20 +5015,34 @@ let tickerAnimation = null;
 
 
 /* =====================================================
+   SLOW PROFESSIONAL SPEED
+   38 PIXELS / SECOND
+===================================================== */
+
+const TICKER_SPEED =
+38;
+
+
+/* =====================================================
    START TECHNOLOGY TICKER
 ===================================================== */
 
 function startTechnologyTicker(){
 
-    if(!techNewsItem){
+    if(
+        !techNewsItem ||
+        !techNewsWindow
+    ){
         return;
     }
+
 
     const isArabic =
         tickerLanguage === "arabic";
 
 
     /* Stop previous animation */
+
     if(tickerAnimation){
 
         try{
@@ -5037,13 +5052,15 @@ function startTechnologyTicker(){
     }
 
 
-    /* Set correct language class */
+    /* Set language class */
+
     techNewsItem.className =
         "tech-news-item " +
         (isArabic ? "arabic" : "english");
 
 
     /* Set text */
+
     techNewsItem.textContent =
         isArabic
         ? arabicNews
@@ -5051,8 +5068,8 @@ function startTechnologyTicker(){
 
 
     /*
-       Wait one frame so the browser calculates
-       the real width of the new text.
+       Wait for browser layout
+       before measuring the text.
     */
 
     requestAnimationFrame(()=>{
@@ -5061,15 +5078,12 @@ function startTechnologyTicker(){
             techNewsItem.getBoundingClientRect().width;
 
         const windowWidth =
-            document
-            .querySelector(".tech-news-window")
-            .getBoundingClientRect()
-            .width;
+            techNewsWindow.getBoundingClientRect().width;
 
 
         /*
-           The item travels completely outside
-           the ticker before the next language starts.
+           Full travel distance:
+           text width + ticker window width.
         */
 
         const distance =
@@ -5077,17 +5091,14 @@ function startTechnologyTicker(){
 
 
         /*
-           Constant professional broadcast speed.
-           Increase this value for faster movement.
+           Slow readable broadcast movement.
+           38px per second.
         */
-
-        const pixelsPerSecond = 115;
-
 
         const duration =
             Math.max(
-                18,
-                distance / pixelsPerSecond
+                20,
+                distance / TICKER_SPEED
             );
 
 
@@ -5096,11 +5107,8 @@ function startTechnologyTicker(){
 
 
         /*
-           Arabic:
+           ARABIC
            LEFT -> RIGHT
-
-           Start completely outside left.
-           Finish completely outside right.
         */
 
         if(isArabic){
@@ -5115,11 +5123,8 @@ function startTechnologyTicker(){
 
 
         /*
-           English:
+           ENGLISH
            RIGHT -> LEFT
-
-           Start completely outside right.
-           Finish completely outside left.
         */
 
         else{
@@ -5134,8 +5139,15 @@ function startTechnologyTicker(){
 
 
         /*
-           Web Animations API gives us a cleaner
-           and more reliable ticker than CSS keyframes.
+           Reset position before animation.
+        */
+
+        techNewsItem.style.transform =
+            `translate3d(${startX}px,0,0)`;
+
+
+        /*
+           Web Animations API
         */
 
         tickerAnimation =
@@ -5165,8 +5177,8 @@ function startTechnologyTicker(){
 
 
         /*
-           When one language finishes,
-           automatically switch to the other.
+           When the current language finishes,
+           switch automatically.
         */
 
         tickerAnimation.onfinish =
