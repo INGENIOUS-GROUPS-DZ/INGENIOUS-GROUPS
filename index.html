@@ -49,6 +49,14 @@ href="https://ingenious-groups-dz.github.io/INGENIOUS-GROUPS/">
 <link rel="image_src"
 href="https://ingenious-groups-dz.github.io/INGENIOUS-GROUPS/home-preview.jpg">
 
+<!-- =========================================================
+     ARABIC NEWS FONT
+========================================================= -->
+
+<link
+href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap"
+rel="stylesheet">
+
 <style>
 
 /* =========================================================
@@ -215,6 +223,7 @@ img{
 
 /* =========================================================
    TECHNOLOGY NEWS TICKER
+   AL ARABIYA-INSPIRED BROADCAST STYLE
 ========================================================= */
 
 .tech-news-bar{
@@ -222,20 +231,26 @@ img{
     left:0;
     top:72px;
     width:100%;
-    height:42px;
+    height:44px;
     z-index:980;
 
     display:flex;
     align-items:center;
 
-    background:#080808;
-    border-bottom:1px solid rgba(229,9,20,.35);
-    border-top:1px solid rgba(255,255,255,.05);
+    background:
+        linear-gradient(
+            180deg,
+            #101010 0%,
+            #070707 100%
+        );
+
+    border-top:1px solid rgba(255,255,255,.06);
+    border-bottom:2px solid var(--red);
 
     overflow:hidden;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,.35);
+        0 5px 22px rgba(0,0,0,.45);
 }
 
 .tech-news-label{
@@ -245,59 +260,83 @@ img{
     flex:0 0 auto;
 
     height:100%;
-    min-width:125px;
+    min-width:128px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    padding:0 15px;
+    padding:0 16px;
 
-    background:var(--red);
+    background:
+        linear-gradient(
+            135deg,
+            #ff202d,
+            #c9000b
+        );
+
     color:#fff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     font-size:9px;
     font-weight:900;
     letter-spacing:1.5px;
 
     box-shadow:
-        8px 0 20px rgba(0,0,0,.4);
+        8px 0 22px rgba(0,0,0,.45);
+
+    white-space:nowrap;
 }
 
 .tech-news-label::before{
     content:"";
+
     width:7px;
     height:7px;
-    margin-right:7px;
+
+    margin-right:8px;
+
+    flex:0 0 7px;
 
     border-radius:50%;
+
     background:#fff;
 
     box-shadow:
-        0 0 10px rgba(255,255,255,.8);
+        0 0 10px rgba(255,255,255,.9);
 
     animation:newsBlink 1s infinite;
 }
 
 @keyframes newsBlink{
+
     0%,45%{
         opacity:1;
     }
 
     50%,100%{
-        opacity:.35;
+        opacity:.30;
     }
+
 }
 
 .tech-news-window{
     position:relative;
+
     flex:1;
+
     height:100%;
+
     overflow:hidden;
 }
 
 .tech-news-item{
     position:absolute;
+
     left:0;
     top:0;
 
@@ -311,53 +350,65 @@ img{
 
     white-space:nowrap;
 
-    color:#f4f4f4;
+    color:#f5f5f5;
 
     font-family:
+        "Tajawal",
+        "Noto Sans Arabic",
+        "Noto Kufi Arabic",
         Tahoma,
         Arial,
         Helvetica,
         sans-serif;
 
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:.15px;
+    font-size:14px;
+    font-weight:700;
+
+    line-height:1;
+
+    letter-spacing:.05px;
 
     will-change:transform;
+
+    transform:translate3d(0,0,0);
 }
 
 .tech-news-item.arabic{
+
     direction:rtl;
+
     unicode-bidi:plaintext;
-    font-weight:800;
+
+    font-family:
+        "Tajawal",
+        "Noto Sans Arabic",
+        "Noto Kufi Arabic",
+        Tahoma,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:14px;
+    font-weight:700;
+
 }
 
 .tech-news-item.english{
+
     direction:ltr;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:12px;
+    font-weight:700;
+
 }
 
 .tech-news-item .news-red{
     color:#ff3039;
-}
-
-@keyframes tickerLTR{
-    from{
-        transform:translateX(-100%);
-    }
-
-    to{
-        transform:translateX(100vw);
-    }
-}
-
-@keyframes tickerRTL{
-    from{
-        transform:translateX(100vw);
-    }
-
-    to{
-        transform:translateX(-100%);
-    }
 }
 
 
@@ -497,6 +548,7 @@ header{
 }
 
 @keyframes lineMove{
+
     from{
         transform:translateX(-100%);
     }
@@ -504,6 +556,7 @@ header{
     to{
         transform:translateX(100%);
     }
+
 }
 
 .orbit{
@@ -584,6 +637,7 @@ header{
 .hero h1{
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:
         clamp(
             50px,
@@ -730,6 +784,7 @@ section{
 .section-title{
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:
         clamp(
             35px,
@@ -768,6 +823,7 @@ section{
 .intro-big{
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:
         clamp(
             32px,
@@ -798,6 +854,7 @@ section{
 
 .intro-number strong{
     display:block;
+
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
 
@@ -863,8 +920,10 @@ section{
 
 .country h3{
     margin-top:55px;
+
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:24px;
 }
 
@@ -913,6 +972,7 @@ section{
 .article-side h3{
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:30px;
     line-height:1.1;
 }
@@ -986,8 +1046,10 @@ section{
 
 .tech-card h3{
     margin-top:55px;
+
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:22px;
 }
 
@@ -1299,8 +1361,10 @@ section{
 
 .service h3{
     margin-top:20px;
+
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:18px;
 }
 
@@ -1378,8 +1442,10 @@ section{
 
 .behance-overlay h3{
     margin-top:7px;
+
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:15px;
 }
 
@@ -1457,6 +1523,7 @@ section{
 .tv-info h3{
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:32px;
     line-height:1.05;
 }
@@ -1519,8 +1586,10 @@ section{
 
 .address-title{
     margin-top:15px;
+
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:36px;
     line-height:1;
     letter-spacing:-1px;
@@ -1584,6 +1653,7 @@ section{
 .form-intro h3{
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
+
     font-size:32px;
     line-height:1.05;
 }
@@ -1805,6 +1875,7 @@ section{
 
 .contact-title{
     max-width:750px;
+
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
 
@@ -1862,6 +1933,7 @@ footer{
 
 .footer-logo{
     font-size:14px;
+
     font-family:"Ethnocentric", Arial, Helvetica, sans-serif;
     font-weight:400;
 }
@@ -2101,6 +2173,14 @@ footer{
     }
 
     .tech-news-item{
+        font-size:11px;
+    }
+
+    .tech-news-item.arabic{
+        font-size:11px;
+    }
+
+    .tech-news-item.english{
         font-size:10px;
     }
 
@@ -4020,7 +4100,12 @@ PRINTING PP LABELS
 
 <a
 class="behance-card reveal"
-href="https://mir-s3-cdn-cf.behance.net/projects/404/bd210f248780933.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png"
+href="https://www.behance.net/ingineosedesign/projects"
+target="_blank"
+rel="noopener">
+
+<img
+src="https://mir-s3-cdn-cf.behance.net/projects/404/bd210f248780933.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png"
 alt="Advanced PP Printing">
 
 <div class="behance-overlay">
@@ -4217,10 +4302,6 @@ Algiers.
 <div class="location-grid">
 
 
-<!-- =====================================================
-     GOOGLE MAP
-===================================================== -->
-
 <div class="map-card reveal">
 
 <iframe
@@ -4234,10 +4315,6 @@ title="INGENIOUS GROUPS ALGERIA - 21 Rue de Brazza, Colonne Voirol, El Mouradia,
 
 </div>
 
-
-<!-- =====================================================
-     ADDRESS
-===================================================== -->
 
 <div class="address-card reveal">
 
@@ -4429,17 +4506,12 @@ Flexographic Printing
 </div>
 
 
-<!-- =====================================================
-     FORMSUBMIT
-===================================================== -->
-
 <form
 class="project-form reveal"
 id="projectForm"
 action="https://formsubmit.co/ingenious.24contact@gmail.com"
 method="POST"
 enctype="multipart/form-data">
-
 
 <input
 type="hidden"
@@ -4476,7 +4548,6 @@ id="formStatus">
 
 
 <div class="form-row">
-
 
 <div class="form-group">
 
@@ -4524,7 +4595,6 @@ autocomplete="organization">
 
 
 <div class="form-row">
-
 
 <div class="form-group">
 
@@ -4813,7 +4883,7 @@ EMAIL US
 
 <!-- =====================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
@@ -4873,7 +4943,7 @@ Facebook
 
 <!-- =====================================================
      WHATSAPP
-===================================================== -->
+========================================================= -->
 
 <a
 href="https://wa.me/213798234579"
@@ -4927,6 +4997,7 @@ link.addEventListener(
    TECHNOLOGY NEWS TICKER
    Arabic: LEFT -> RIGHT
    English: RIGHT -> LEFT
+   Continuous alternating broadcast ticker
 ===================================================== */
 
 const techNewsItem =
@@ -4939,7 +5010,12 @@ const englishNews =
 `🔴 Advanced NVIDIA Blackwell B200 technology — massive computing power supporting 3D design, artificial intelligence, simulation and high-performance rendering. At Ingenious Groups, we leverage advanced computing and visual processing technologies to create highly detailed and precision-driven designs, transforming ideas into professional 3D visuals and scenes ready for presentation, printing and advertising, helping companies and leading local and international brands showcase their products with exceptional visual quality.`;
 
 let tickerLanguage = "arabic";
-let tickerTimer = null;
+let tickerAnimation = null;
+
+
+/* =====================================================
+   START TECHNOLOGY TICKER
+===================================================== */
 
 function startTechnologyTicker(){
 
@@ -4947,74 +5023,174 @@ function startTechnologyTicker(){
         return;
     }
 
-    clearTimeout(tickerTimer);
-
     const isArabic =
         tickerLanguage === "arabic";
 
+
+    /* Stop previous animation */
+    if(tickerAnimation){
+
+        try{
+            tickerAnimation.cancel();
+        }catch(error){}
+
+    }
+
+
+    /* Set correct language class */
     techNewsItem.className =
         "tech-news-item " +
         (isArabic ? "arabic" : "english");
 
+
+    /* Set text */
     techNewsItem.textContent =
         isArabic
         ? arabicNews
         : englishNews;
 
-    /* Reset animation */
-    techNewsItem.style.animation = "none";
 
     /*
-       Force browser reflow so every cycle
-       starts from the correct position.
+       Wait one frame so the browser calculates
+       the real width of the new text.
     */
-    void techNewsItem.offsetWidth;
 
-    const itemWidth =
-        techNewsItem.getBoundingClientRect().width;
+    requestAnimationFrame(()=>{
 
-    const screenWidth =
-        window.innerWidth;
+        const itemWidth =
+            techNewsItem.getBoundingClientRect().width;
 
-    /*
-       Constant visual speed.
-       Higher value = faster ticker.
-    */
-    const pixelsPerSecond = 115;
+        const windowWidth =
+            document
+            .querySelector(".tech-news-window")
+            .getBoundingClientRect()
+            .width;
 
-    const distance =
-        screenWidth + itemWidth;
 
-    const duration =
-        Math.max(
-            18,
-            distance / pixelsPerSecond
-        );
+        /*
+           The item travels completely outside
+           the ticker before the next language starts.
+        */
 
-    const animationName =
-        isArabic
-        ? "tickerLTR"
-        : "tickerRTL";
+        const distance =
+            itemWidth + windowWidth;
 
-    techNewsItem.style.animation =
-        `${animationName} ${duration}s linear forwards`;
 
-    tickerTimer =
-        setTimeout(
-            ()=>{
-                tickerLanguage =
-                    isArabic
-                    ? "english"
-                    : "arabic";
+        /*
+           Constant professional broadcast speed.
+           Increase this value for faster movement.
+        */
 
-                startTechnologyTicker();
-            },
-            duration * 1000 + 100
-        );
+        const pixelsPerSecond = 115;
+
+
+        const duration =
+            Math.max(
+                18,
+                distance / pixelsPerSecond
+            );
+
+
+        let startX;
+        let endX;
+
+
+        /*
+           Arabic:
+           LEFT -> RIGHT
+
+           Start completely outside left.
+           Finish completely outside right.
+        */
+
+        if(isArabic){
+
+            startX =
+                -itemWidth;
+
+            endX =
+                windowWidth;
+
+        }
+
+
+        /*
+           English:
+           RIGHT -> LEFT
+
+           Start completely outside right.
+           Finish completely outside left.
+        */
+
+        else{
+
+            startX =
+                windowWidth;
+
+            endX =
+                -itemWidth;
+
+        }
+
+
+        /*
+           Web Animations API gives us a cleaner
+           and more reliable ticker than CSS keyframes.
+        */
+
+        tickerAnimation =
+            techNewsItem.animate(
+                [
+                    {
+                        transform:
+                        `translate3d(${startX}px,0,0)`
+                    },
+
+                    {
+                        transform:
+                        `translate3d(${endX}px,0,0)`
+                    }
+                ],
+                {
+                    duration:
+                        duration * 1000,
+
+                    easing:
+                        "linear",
+
+                    fill:
+                        "forwards"
+                }
+            );
+
+
+        /*
+           When one language finishes,
+           automatically switch to the other.
+        */
+
+        tickerAnimation.onfinish =
+        ()=>{
+
+            tickerLanguage =
+                isArabic
+                ? "english"
+                : "arabic";
+
+
+            startTechnologyTicker();
+
+        };
+
+    });
+
 }
 
 
-/* Start ticker */
+/* =====================================================
+   START TICKER AFTER PAGE LOAD
+===================================================== */
+
 window.addEventListener(
 "load",
 ()=>{
@@ -5022,24 +5198,25 @@ window.addEventListener(
 });
 
 
-/*
-   Recalculate ticker on major resize.
-*/
+/* =====================================================
+   RECALCULATE TICKER ON RESIZE
+===================================================== */
+
 let resizeTimer;
 
 window.addEventListener(
 "resize",
 ()=>{
 
-clearTimeout(resizeTimer);
+    clearTimeout(resizeTimer);
 
-resizeTimer =
-setTimeout(
-()=>{
-    startTechnologyTicker();
-},
-300
-);
+    resizeTimer =
+        setTimeout(
+            ()=>{
+                startTechnologyTicker();
+            },
+            300
+        );
 
 });
 
