@@ -164,7 +164,8 @@ img{
     --red:#e50914;
     --red2:#ff202d;
     --white:#fff;
-    --gray:#929292;
+    --gray:#a7a7a7;
+    --silver:#c0c0c0;
     --dark:#050505;
     --card:#0c0c0c;
     --line:rgba(255,255,255,.10);
@@ -231,7 +232,7 @@ img{
     left:0;
     top:72px;
     width:100%;
-    height:44px;
+    height:54px;
     z-index:980;
 
     display:flex;
@@ -245,7 +246,7 @@ img{
         );
 
     border-top:1px solid rgba(255,255,255,.06);
-    border-bottom:2px solid var(--red);
+    border-bottom:2px solid #bdbdbd;
 
     overflow:hidden;
 
@@ -361,8 +362,8 @@ img{
         Helvetica,
         sans-serif;
 
-    font-size:14px;
-    font-weight:700;
+    font-size:19px;
+    font-weight:800;
 
     line-height:1;
 
@@ -388,8 +389,8 @@ img{
         Helvetica,
         sans-serif;
 
-    font-size:14px;
-    font-weight:700;
+    font-size:19px;
+    font-weight:800;
 }
 
 .tech-news-item.english{
@@ -401,8 +402,8 @@ img{
         Helvetica,
         sans-serif;
 
-    font-size:12px;
-    font-weight:700;
+    font-size:17px;
+    font-weight:800;
 }
 
 .tech-news-item .news-red{
@@ -828,7 +829,7 @@ header{
 
 .hero{
     min-height:100vh;
-    padding-top:114px;
+    padding-top:126px;
 
     display:flex;
     align-items:center;
@@ -2503,7 +2504,7 @@ footer{
 
     .tech-news-bar{
         top:64px;
-        height:42px;
+        height:48px;
     }
 
     .tech-news-label{
@@ -2514,19 +2515,19 @@ footer{
     }
 
     .tech-news-item{
-        font-size:11px;
+        font-size:15px;
     }
 
     .tech-news-item.arabic{
-        font-size:11px;
+        font-size:15px;
     }
 
     .tech-news-item.english{
-        font-size:10px;
+        font-size:14px;
     }
 
     .hero{
-        padding-top:106px;
+        padding-top:112px;
         min-height:100svh;
     }
 
@@ -3547,13 +3548,6 @@ section{
 
 
 <body>
-
-<!-- =========================================================
-     INGENIOUS AI NEURAL NETWORK BACKGROUND
-========================================================= -->
-<canvas id="ingenious-neural-network" aria-hidden="true"></canvas>
-<div class="neural-vignette" aria-hidden="true"></div>
-
 
 <div class="industrial-loader" id="industrialLoader" aria-hidden="true">
     <div class="industrial-loader-mark">IG</div>
@@ -6577,203 +6571,6 @@ window.addEventListener("load",function(){
 });
 </script>
 
-<script>
 
-/* =========================================================
-   INGENIOUS FULL-SITE 3D NEURAL SPACE
-========================================================= */
-(function(){
-    const canvas = document.getElementById("ingenious-neural-network");
-    if(!canvas) return;
-
-    const ctx = canvas.getContext("2d", {alpha:true});
-    let W=0,H=0,dpr=1;
-    let points=[];
-    let pointer={x:-9999,y:-9999,active:false};
-    let energy=0,targetEnergy=0;
-    let scrollVelocity=0,lastScroll=window.scrollY||0,lastT=performance.now();
-
-    const isMobile=()=>window.innerWidth<700;
-    const COUNT_DESKTOP=115;
-    const COUNT_MOBILE=58;
-    const FOV=620;
-    const DEPTH=950;
-
-    function resize(){
-        dpr=Math.min(window.devicePixelRatio||1,2);
-        W=innerWidth; H=innerHeight;
-        canvas.width=W*dpr; canvas.height=H*dpr;
-        canvas.style.width=W+"px"; canvas.style.height=H+"px";
-        ctx.setTransform(dpr,0,0,dpr,0,0);
-
-        const count=isMobile()?COUNT_MOBILE:COUNT_DESKTOP;
-        points=Array.from({length:count},(_,i)=>({
-            x:(Math.random()-.5)*W*1.8,
-            y:(Math.random()-.5)*H*1.55,
-            z:Math.random()*DEPTH,
-            vx:(Math.random()-.5)*.09,
-            vy:(Math.random()-.5)*.09,
-            vz:(Math.random()-.5)*.16,
-            phase:Math.random()*Math.PI*2,
-            size:.65+Math.random()*1.25,
-            seed:Math.random()
-        }));
-    }
-
-    function activate(x,y,amount=.18){
-        pointer.x=x; pointer.y=y; pointer.active=true;
-        targetEnergy=Math.min(1,targetEnergy+amount);
-    }
-
-    addEventListener("mousemove",e=>activate(e.clientX,e.clientY,.08),{passive:true});
-
-    addEventListener("touchstart",e=>{
-        if(e.touches[0]) activate(e.touches[0].clientX,e.touches[0].clientY,.22);
-    },{passive:true});
-
-    addEventListener("touchmove",e=>{
-        if(e.touches[0]) activate(e.touches[0].clientX,e.touches[0].clientY,.13);
-    },{passive:true});
-
-    addEventListener("scroll",()=>{
-        const y=scrollY||0;
-        const delta=Math.abs(y-lastScroll);
-        targetEnergy=Math.min(1,targetEnergy+Math.min(.55,delta/55));
-        lastScroll=y;
-    },{passive:true});
-
-    addEventListener("mouseleave",()=>{
-        pointer.active=false;
-    },{passive:true});
-
-    function project(p){
-        const z=p.z+120;
-        const scale=FOV/z;
-        return {
-            x:W/2+p.x*scale,
-            y:H/2+p.y*scale,
-            scale
-        };
-    }
-
-    function animate(now){
-        const dt=Math.min(32,now-lastT);
-        lastT=now;
-
-        energy+=(targetEnergy-energy)*.065;
-        targetEnergy*=.962;
-        scrollVelocity+=(targetEnergy-scrollVelocity)*.035;
-
-        ctx.clearRect(0,0,W,H);
-
-        const t=now*.001;
-        const depthMotion=.14+energy*.85;
-
-        // Slowly rotate the virtual neural volume.
-        const rot=Math.sin(t*.075)*.12;
-        const cos=Math.cos(rot), sin=Math.sin(rot);
-
-        for(const p of points){
-            p.x+=p.vx*dt;
-            p.y+=p.vy*dt;
-            p.z+=p.vz*dt*depthMotion;
-
-            if(p.z<5) p.z=DEPTH;
-            if(p.z>DEPTH+80) p.z=5;
-
-            // Gentle neural breathing.
-            p.x += Math.sin(t*.35+p.phase)*.012*dt;
-            p.y += Math.cos(t*.31+p.phase)*.012*dt;
-        }
-
-        const projected=points.map(p=>{
-            const rx=p.x*cos-p.y*sin;
-            const ry=p.x*sin+p.y*cos;
-            const q=project({x:rx,y:ry,z:p.z});
-            return {...q,p};
-        });
-
-        // Draw deep connections first, then foreground connections.
-        for(let i=0;i<projected.length;i++){
-            for(let j=i+1;j<projected.length;j++){
-                const a=projected[i],b=projected[j];
-                const dx=a.x-b.x,dy=a.y-b.y;
-                const d=Math.hypot(dx,dy);
-
-                if(d>145 || Math.abs(a.p.z-b.p.z)>230) continue;
-
-                let influence=0;
-
-                if(pointer.active){
-                    const mx=(a.x+b.x)*.5;
-                    const my=(a.y+b.y)*.5;
-                    const pd=Math.hypot(mx-pointer.x,my-pointer.y);
-                    influence=Math.max(0,1-pd/240);
-                    influence*=influence;
-                }
-
-                const depth=(a.scale+b.scale)*.5;
-                const pulse=.5+.5*Math.sin(t*(.7+a.p.seed)+a.p.phase);
-                const active=Math.min(1,.018+influence*.82+energy*.50+pulse*.025);
-
-                ctx.beginPath();
-                ctx.moveTo(a.x,a.y);
-                ctx.lineTo(b.x,b.y);
-                ctx.lineWidth=.25+active*(.85*depth);
-                ctx.strokeStyle=`rgba(185,190,195,${.025+active*.22*depth})`;
-                ctx.stroke();
-
-                if(active>.42){
-                    ctx.beginPath();
-                    ctx.moveTo(a.x,a.y);
-                    ctx.lineTo(b.x,b.y);
-                    ctx.lineWidth=.2+active*.45;
-                    ctx.strokeStyle=`rgba(229,9,20,${(active-.42)*.15*depth})`;
-                    ctx.stroke();
-                }
-            }
-        }
-
-        // Foreground nodes and energy pulses.
-        for(const q of projected){
-            let influence=0;
-
-            if(pointer.active){
-                const d=Math.hypot(q.x-pointer.x,q.y-pointer.y);
-                influence=Math.max(0,1-d/220);
-            }
-
-            const pulse=.5+.5*Math.sin(t*(1+q.p.seed)+q.p.phase);
-            const active=Math.min(1,.025+influence*.9+energy*.55+pulse*.03);
-            const r=q.p.size+(active*2.2)*Math.max(.45,q.scale*3);
-
-            if(active>.16){
-                ctx.beginPath();
-                ctx.arc(q.x,q.y,r*5.8,0,Math.PI*2);
-                ctx.fillStyle=`rgba(205,210,215,${active*.025})`;
-                ctx.fill();
-            }
-
-            ctx.beginPath();
-            ctx.arc(q.x,q.y,r,0,Math.PI*2);
-            ctx.fillStyle=`rgba(205,210,215,${.06+active*.50})`;
-            ctx.fill();
-
-            if(active>.55){
-                ctx.beginPath();
-                ctx.arc(q.x,q.y,r*.43,0,Math.PI*2);
-                ctx.fillStyle=`rgba(229,9,20,${(active-.55)*.32})`;
-                ctx.fill();
-            }
-        }
-
-        requestAnimationFrame(animate);
-    }
-
-    resize();
-    addEventListener("resize",resize,{passive:true});
-    requestAnimationFrame(animate);
-})();
-</script>
 </body>
 </html>
