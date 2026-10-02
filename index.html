@@ -492,7 +492,7 @@ header{
     overflow:hidden;
     display:flex;
     align-items:center;
-    background:#050505;
+    
 }
 
 .hero-packaging-bg{
@@ -2975,11 +2975,592 @@ footer{
 
 }
 
+
+/* =========================================================
+   INGENIOUS INDUSTRIAL 3D VISUAL SYSTEM
+   Premium / Powerful / Manufacturing / 3D
+========================================================= */
+
+:root{
+    --red:#e50914;
+    --red2:#ff2834;
+    --black:#050505;
+    --panel:#0b0b0d;
+    --steel:#15171a;
+    --steel2:#24272b;
+    --silver:#d7d9dc;
+    --line:rgba(255,255,255,.10);
+}
+
+/* Global depth */
+body{
+    background:
+        radial-gradient(circle at 50% -10%,rgba(229,9,20,.09),transparent 35%),
+        #050505;
+    perspective:1400px;
+}
+
+section{
+    position:relative;
+    isolation:isolate;
+}
+
+section:not(.hero)::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-2;
+    pointer-events:none;
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+    background-size:70px 70px;
+    mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent);
+}
+
+section:not(.hero)::after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    z-index:-1;
+    pointer-events:none;
+    background:radial-gradient(circle,rgba(229,9,20,.11),transparent 68%);
+    filter:blur(12px);
+    top:8%;
+    right:-220px;
+}
+
+/* Header becomes industrial command bar */
+header{
+    background:rgba(4,4,5,.82)!important;
+    backdrop-filter:blur(18px) saturate(150%);
+    border-bottom:1px solid rgba(255,255,255,.09)!important;
+    box-shadow:0 12px 40px rgba(0,0,0,.35);
+}
+
+header::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-1px;
+    height:2px;
+    background:linear-gradient(90deg,transparent,var(--red),transparent);
+    opacity:.8;
+}
+
+.logo{
+    text-shadow:0 0 25px rgba(229,9,20,.20);
+}
+
+/* Buttons = machined metal */
+.btn{
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.18)!important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.18),
+        0 12px 30px rgba(0,0,0,.35);
+    transform:translateZ(0);
+    transition:.35s cubic-bezier(.2,.8,.2,1)!important;
+}
+
+.btn::before{
+    content:"";
+    position:absolute;
+    top:-80%;
+    left:-30%;
+    width:22%;
+    height:260%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.30),transparent);
+    transform:rotate(22deg);
+    transition:.7s;
+}
+
+.btn:hover{
+    transform:translateY(-4px) translateZ(12px);
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.5),
+        0 0 30px rgba(229,9,20,.18);
+}
+
+.btn:hover::before{
+    left:125%;
+}
+
+.btn-red{
+    background:linear-gradient(135deg,#ff2834 0%,#c9000a 48%,#7d0006 100%)!important;
+}
+
+/* Hero — cinematic factory atmosphere */
+.hero-packaging{
+    background:
+        radial-gradient(circle at 75% 48%,rgba(229,9,20,.18),transparent 28%),
+        #030303;
+    box-shadow:inset 0 -100px 130px rgba(0,0,0,.75);
+}
+
+.hero-packaging::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:2;
+    pointer-events:none;
+    background:
+        linear-gradient(115deg,transparent 0 38%,rgba(255,255,255,.025) 38.2%,transparent 38.5%),
+        repeating-linear-gradient(90deg,transparent 0 110px,rgba(255,255,255,.018) 111px,transparent 112px);
+    mix-blend-mode:screen;
+}
+
+.hero-packaging::after{
+    content:"INGENIOUS / INDUSTRIAL PACKAGING SYSTEM";
+    position:absolute;
+    right:28px;
+    bottom:122px;
+    z-index:5;
+    font-size:8px;
+    letter-spacing:4px;
+    color:rgba(255,255,255,.32);
+    writing-mode:vertical-rl;
+}
+
+.hero-packaging-bg{
+    filter:saturate(1.08) contrast(1.08);
+}
+
+.hero-packaging-overlay{
+    background:
+        radial-gradient(circle at 78% 50%,transparent 0,rgba(0,0,0,.12) 30%,rgba(0,0,0,.70) 78%),
+        linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.72) 30%,rgba(0,0,0,.18) 64%,rgba(0,0,0,.28) 100%),
+        linear-gradient(0deg,rgba(0,0,0,.84),transparent 40%,rgba(0,0,0,.20));
+}
+
+.hero-packaging-copy{
+    transform-style:preserve-3d;
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.45));
+}
+
+.hero-packaging-copy::after{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    left:-100px;
+    bottom:-100px;
+    border:1px solid rgba(229,9,20,.25);
+    border-radius:50%;
+    box-shadow:
+        0 0 0 35px rgba(229,9,20,.025),
+        0 0 0 70px rgba(229,9,20,.015);
+    transform:translateZ(-30px);
+    pointer-events:none;
+}
+
+.hero-packaging h1{
+    text-shadow:
+        0 2px 0 #000,
+        0 10px 35px rgba(0,0,0,.65);
+}
+
+.hero-packaging h1 span{
+    text-shadow:
+        0 0 25px rgba(229,9,20,.35),
+        0 4px 0 #650006;
+}
+
+.hero-label{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+}
+
+.hero-label::before{
+    content:"";
+    width:34px;
+    height:2px;
+    background:var(--red);
+    box-shadow:0 0 12px var(--red);
+}
+
+.hero-service-pills span{
+    background:linear-gradient(145deg,rgba(35,38,42,.78),rgba(3,3,3,.78));
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.09),
+        0 8px 20px rgba(0,0,0,.28);
+    transform:perspective(500px) rotateX(0deg);
+    transition:.3s;
+}
+
+.hero-service-pills span:hover{
+    transform:perspective(500px) rotateX(8deg) translateY(-3px);
+    border-color:rgba(229,9,20,.55);
+}
+
+.hero-packaging-badge{
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.55),
+        0 0 35px rgba(229,9,20,.16),
+        inset 0 1px 0 rgba(255,255,255,.24);
+}
+
+.hero-offer-strip{
+    backdrop-filter:blur(12px);
+    box-shadow:
+        0 22px 50px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.16);
+}
+
+.hero-offer-strip::before{
+    content:"";
+    position:absolute;
+    inset:1px;
+    pointer-events:none;
+    background:linear-gradient(110deg,transparent,rgba(255,255,255,.09),transparent);
+    transform:translateX(-100%);
+    animation:metalSweep 7s linear infinite;
+}
+
+@keyframes metalSweep{
+    0%,55%{transform:translateX(-120%)}
+    100%{transform:translateX(120%)}
+}
+
+/* Section titles */
+.section-title,
+.intro-big{
+    text-shadow:0 5px 25px rgba(0,0,0,.6);
+}
+
+.section-kicker{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+}
+
+.section-kicker::before{
+    content:"";
+    width:25px;
+    height:2px;
+    background:var(--red);
+    box-shadow:0 0 10px rgba(229,9,20,.7);
+}
+
+/* 3D industrial cards */
+.service,
+.country,
+.tech-card,
+.tv-info,
+.map-card,
+.article-side,
+.article-content{
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(145deg,rgba(28,30,33,.88),rgba(6,7,8,.96))!important;
+    border:1px solid rgba(255,255,255,.10)!important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.07),
+        inset 0 -30px 70px rgba(0,0,0,.24),
+        0 20px 50px rgba(0,0,0,.28);
+    transform-style:preserve-3d;
+    transition:
+        transform .45s cubic-bezier(.2,.8,.2,1),
+        border-color .35s,
+        box-shadow .35s;
+}
+
+.service::before,
+.country::before,
+.tech-card::before,
+.tv-info::before,
+.map-card::before,
+.article-side::before,
+.article-content::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:
+        linear-gradient(125deg,rgba(255,255,255,.07),transparent 18% 78%,rgba(229,9,20,.07));
+    opacity:.7;
+}
+
+.service::after,
+.country::after,
+.tech-card::after{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    right:-70px;
+    top:-70px;
+    border:1px solid rgba(229,9,20,.16);
+    border-radius:50%;
+    box-shadow:0 0 0 20px rgba(229,9,20,.018);
+}
+
+.service:hover,
+.country:hover,
+.tech-card:hover{
+    transform:
+        perspective(1000px)
+        rotateX(4deg)
+        rotateY(-4deg)
+        translateY(-10px)
+        translateZ(15px)!important;
+    border-color:rgba(229,9,20,.55)!important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.10),
+        0 30px 65px rgba(0,0,0,.48),
+        0 0 35px rgba(229,9,20,.08);
+}
+
+.service-icon{
+    text-shadow:
+        0 0 18px rgba(229,9,20,.38),
+        0 4px 0 #4e0004;
+}
+
+/* Behance = showroom wall */
+.behance{
+    background:
+        radial-gradient(circle at 15% 30%,rgba(229,9,20,.07),transparent 25%),
+        #070707;
+}
+
+.behance-card{
+    border:1px solid rgba(255,255,255,.10)!important;
+    box-shadow:0 18px 45px rgba(0,0,0,.42);
+    transform-style:preserve-3d;
+}
+
+.behance-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:2;
+    pointer-events:none;
+    background:linear-gradient(135deg,rgba(255,255,255,.10),transparent 25%,transparent 72%,rgba(229,9,20,.10));
+}
+
+.behance-card:hover{
+    transform:
+        perspective(1000px)
+        rotateX(2deg)
+        rotateY(-3deg)
+        translateY(-12px)
+        scale(1.015)!important;
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.6),
+        0 0 35px rgba(229,9,20,.10);
+}
+
+/* Ingenious TV = command / broadcast module */
+.youtube{
+    background:
+        radial-gradient(circle at 80% 30%,rgba(229,9,20,.09),transparent 28%),
+        #040404;
+}
+
+.tv-video{
+    border:1px solid rgba(255,255,255,.12)!important;
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.5),
+        inset 0 1px 0 rgba(255,255,255,.10);
+}
+
+.tv-video::after{
+    content:"INGENIOUS TV / LIVE PRODUCTION";
+    position:absolute;
+    left:16px;
+    top:16px;
+    padding:7px 10px;
+    background:rgba(0,0,0,.72);
+    border-left:2px solid var(--red);
+    color:#fff;
+    font-size:8px;
+    letter-spacing:2px;
+    backdrop-filter:blur(8px);
+}
+
+.play{
+    box-shadow:
+        0 0 0 10px rgba(229,9,20,.10),
+        0 0 40px rgba(229,9,20,.25);
+}
+
+/* Technology section gets factory-floor feeling */
+.technical{
+    background:
+        linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),
+        radial-gradient(circle at 50% 0,rgba(229,9,20,.10),transparent 32%),
+        #060606;
+    background-size:80px 80px,80px 80px,auto;
+}
+
+.tech-card{
+    min-height:300px;
+}
+
+.tech-number{
+    color:#777!important;
+    letter-spacing:2px;
+}
+
+.tech-tag{
+    box-shadow:0 0 15px rgba(229,9,20,.10);
+}
+
+/* International cards */
+.international{
+    background:
+        radial-gradient(circle at 20% 70%,rgba(229,9,20,.07),transparent 24%),
+        #080808;
+}
+
+.country h3{
+    text-shadow:0 3px 15px rgba(0,0,0,.5);
+}
+
+/* Location */
+.location{
+    background:#060606;
+}
+
+.map-card{
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.02),
+        0 25px 70px rgba(0,0,0,.45);
+}
+
+/* Footer */
+footer{
+    position:relative;
+    background:
+        linear-gradient(180deg,#0a0a0b,#030303)!important;
+    border-top:1px solid rgba(255,255,255,.09);
+}
+
+footer::before{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:2px;
+    background:linear-gradient(90deg,transparent,var(--red),transparent);
+}
+
+/* Scroll reveal */
+.reveal{
+    will-change:transform,opacity;
+}
+
+/* Industrial horizontal light */
+section{
+    scroll-margin-top:90px;
+}
+
+@media(max-width:900px){
+    .hero-packaging::after{
+        display:none;
+    }
+
+    .service:hover,
+    .country:hover,
+    .tech-card:hover{
+        transform:translateY(-7px)!important;
+    }
+}
+
+@media(max-width:600px){
+    section:not(.hero)::before{
+        background-size:45px 45px;
+    }
+
+    .hero-packaging-copy::after{
+        display:none;
+    }
+
+    .hero-packaging-badge{
+        box-shadow:0 12px 30px rgba(0,0,0,.5);
+    }
+}
+
 </style>
+
+<style>
+.industrial-loader{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    background:#030303;
+    transition:opacity .7s,visibility .7s;
+}
+.industrial-loader-mark{
+    font-family:"Ethnocentric",Arial,sans-serif;
+    font-size:42px;
+    font-weight:900;
+    color:#fff;
+    text-shadow:0 0 30px rgba(229,9,20,.35);
+}
+.industrial-loader-line{
+    width:190px;
+    height:2px;
+    background:#222;
+    overflow:hidden;
+}
+.industrial-loader-line span{
+    display:block;
+    width:40%;
+    height:100%;
+    background:#e50914;
+    box-shadow:0 0 15px #e50914;
+    animation:loaderMove 1.2s infinite ease-in-out;
+}
+.industrial-loader small{
+    font-size:8px;
+    letter-spacing:3px;
+    color:#777;
+}
+@keyframes loaderMove{
+    0%{transform:translateX(-120%)}
+    100%{transform:translateX(370%)}
+}
+.industrial-loader.done{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+</style>
+
 </head>
 
 
 <body>
+
+<!-- =========================================================
+     INGENIOUS AI NEURAL NETWORK BACKGROUND
+========================================================= -->
+<canvas id="ingenious-neural-network" aria-hidden="true"></canvas>
+<div class="neural-vignette" aria-hidden="true"></div>
+
+
+<div class="industrial-loader" id="industrialLoader" aria-hidden="true">
+    <div class="industrial-loader-mark">IG</div>
+    <div class="industrial-loader-line"><span></span></div>
+    <small>INDUSTRIAL PACKAGING SYSTEM</small>
+</div>
+
 
 <div class="cursor-light" id="cursorLight"></div>
 
@@ -3078,18 +3659,16 @@ INGENIOUS GROUPS ALGERIA
 </div>
 
 <h1>
-YOUR PACKAGING<br>
-<span>OUR EXPERTISE.</span>
+INDUSTRIAL<br>
+<span>PACKAGING POWER.</span>
 </h1>
 
 <p class="hero-welcome">
-Professional Packaging & Printing Solutions
+Professional Packaging • Printing • 3D Visualization
 </p>
 
 <p class="hero-description">
-From design to printing, we transform Algerian products
-into powerful brands with premium labels, doypacks,
-boxes and flexible packaging.
+From concept to production, we build powerful packaging systems with precision design, 3D visualization, prepress engineering and professional printing.
 </p>
 
 <div class="hero-service-pills">
@@ -5988,5 +6567,213 @@ cleanUrl
 
 </script>
 
+
+<script>
+window.addEventListener("load",function(){
+    setTimeout(function(){
+        var loader=document.getElementById("industrialLoader");
+        if(loader) loader.classList.add("done");
+    },450);
+});
+</script>
+
+<script>
+
+/* =========================================================
+   INGENIOUS FULL-SITE 3D NEURAL SPACE
+========================================================= */
+(function(){
+    const canvas = document.getElementById("ingenious-neural-network");
+    if(!canvas) return;
+
+    const ctx = canvas.getContext("2d", {alpha:true});
+    let W=0,H=0,dpr=1;
+    let points=[];
+    let pointer={x:-9999,y:-9999,active:false};
+    let energy=0,targetEnergy=0;
+    let scrollVelocity=0,lastScroll=window.scrollY||0,lastT=performance.now();
+
+    const isMobile=()=>window.innerWidth<700;
+    const COUNT_DESKTOP=115;
+    const COUNT_MOBILE=58;
+    const FOV=620;
+    const DEPTH=950;
+
+    function resize(){
+        dpr=Math.min(window.devicePixelRatio||1,2);
+        W=innerWidth; H=innerHeight;
+        canvas.width=W*dpr; canvas.height=H*dpr;
+        canvas.style.width=W+"px"; canvas.style.height=H+"px";
+        ctx.setTransform(dpr,0,0,dpr,0,0);
+
+        const count=isMobile()?COUNT_MOBILE:COUNT_DESKTOP;
+        points=Array.from({length:count},(_,i)=>({
+            x:(Math.random()-.5)*W*1.8,
+            y:(Math.random()-.5)*H*1.55,
+            z:Math.random()*DEPTH,
+            vx:(Math.random()-.5)*.09,
+            vy:(Math.random()-.5)*.09,
+            vz:(Math.random()-.5)*.16,
+            phase:Math.random()*Math.PI*2,
+            size:.65+Math.random()*1.25,
+            seed:Math.random()
+        }));
+    }
+
+    function activate(x,y,amount=.18){
+        pointer.x=x; pointer.y=y; pointer.active=true;
+        targetEnergy=Math.min(1,targetEnergy+amount);
+    }
+
+    addEventListener("mousemove",e=>activate(e.clientX,e.clientY,.08),{passive:true});
+
+    addEventListener("touchstart",e=>{
+        if(e.touches[0]) activate(e.touches[0].clientX,e.touches[0].clientY,.22);
+    },{passive:true});
+
+    addEventListener("touchmove",e=>{
+        if(e.touches[0]) activate(e.touches[0].clientX,e.touches[0].clientY,.13);
+    },{passive:true});
+
+    addEventListener("scroll",()=>{
+        const y=scrollY||0;
+        const delta=Math.abs(y-lastScroll);
+        targetEnergy=Math.min(1,targetEnergy+Math.min(.55,delta/55));
+        lastScroll=y;
+    },{passive:true});
+
+    addEventListener("mouseleave",()=>{
+        pointer.active=false;
+    },{passive:true});
+
+    function project(p){
+        const z=p.z+120;
+        const scale=FOV/z;
+        return {
+            x:W/2+p.x*scale,
+            y:H/2+p.y*scale,
+            scale
+        };
+    }
+
+    function animate(now){
+        const dt=Math.min(32,now-lastT);
+        lastT=now;
+
+        energy+=(targetEnergy-energy)*.065;
+        targetEnergy*=.962;
+        scrollVelocity+=(targetEnergy-scrollVelocity)*.035;
+
+        ctx.clearRect(0,0,W,H);
+
+        const t=now*.001;
+        const depthMotion=.14+energy*.85;
+
+        // Slowly rotate the virtual neural volume.
+        const rot=Math.sin(t*.075)*.12;
+        const cos=Math.cos(rot), sin=Math.sin(rot);
+
+        for(const p of points){
+            p.x+=p.vx*dt;
+            p.y+=p.vy*dt;
+            p.z+=p.vz*dt*depthMotion;
+
+            if(p.z<5) p.z=DEPTH;
+            if(p.z>DEPTH+80) p.z=5;
+
+            // Gentle neural breathing.
+            p.x += Math.sin(t*.35+p.phase)*.012*dt;
+            p.y += Math.cos(t*.31+p.phase)*.012*dt;
+        }
+
+        const projected=points.map(p=>{
+            const rx=p.x*cos-p.y*sin;
+            const ry=p.x*sin+p.y*cos;
+            const q=project({x:rx,y:ry,z:p.z});
+            return {...q,p};
+        });
+
+        // Draw deep connections first, then foreground connections.
+        for(let i=0;i<projected.length;i++){
+            for(let j=i+1;j<projected.length;j++){
+                const a=projected[i],b=projected[j];
+                const dx=a.x-b.x,dy=a.y-b.y;
+                const d=Math.hypot(dx,dy);
+
+                if(d>145 || Math.abs(a.p.z-b.p.z)>230) continue;
+
+                let influence=0;
+
+                if(pointer.active){
+                    const mx=(a.x+b.x)*.5;
+                    const my=(a.y+b.y)*.5;
+                    const pd=Math.hypot(mx-pointer.x,my-pointer.y);
+                    influence=Math.max(0,1-pd/240);
+                    influence*=influence;
+                }
+
+                const depth=(a.scale+b.scale)*.5;
+                const pulse=.5+.5*Math.sin(t*(.7+a.p.seed)+a.p.phase);
+                const active=Math.min(1,.018+influence*.82+energy*.50+pulse*.025);
+
+                ctx.beginPath();
+                ctx.moveTo(a.x,a.y);
+                ctx.lineTo(b.x,b.y);
+                ctx.lineWidth=.25+active*(.85*depth);
+                ctx.strokeStyle=`rgba(185,190,195,${.025+active*.22*depth})`;
+                ctx.stroke();
+
+                if(active>.42){
+                    ctx.beginPath();
+                    ctx.moveTo(a.x,a.y);
+                    ctx.lineTo(b.x,b.y);
+                    ctx.lineWidth=.2+active*.45;
+                    ctx.strokeStyle=`rgba(229,9,20,${(active-.42)*.15*depth})`;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        // Foreground nodes and energy pulses.
+        for(const q of projected){
+            let influence=0;
+
+            if(pointer.active){
+                const d=Math.hypot(q.x-pointer.x,q.y-pointer.y);
+                influence=Math.max(0,1-d/220);
+            }
+
+            const pulse=.5+.5*Math.sin(t*(1+q.p.seed)+q.p.phase);
+            const active=Math.min(1,.025+influence*.9+energy*.55+pulse*.03);
+            const r=q.p.size+(active*2.2)*Math.max(.45,q.scale*3);
+
+            if(active>.16){
+                ctx.beginPath();
+                ctx.arc(q.x,q.y,r*5.8,0,Math.PI*2);
+                ctx.fillStyle=`rgba(205,210,215,${active*.025})`;
+                ctx.fill();
+            }
+
+            ctx.beginPath();
+            ctx.arc(q.x,q.y,r,0,Math.PI*2);
+            ctx.fillStyle=`rgba(205,210,215,${.06+active*.50})`;
+            ctx.fill();
+
+            if(active>.55){
+                ctx.beginPath();
+                ctx.arc(q.x,q.y,r*.43,0,Math.PI*2);
+                ctx.fillStyle=`rgba(229,9,20,${(active-.55)*.32})`;
+                ctx.fill();
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    resize();
+    addEventListener("resize",resize,{passive:true});
+    requestAnimationFrame(animate);
+})();
+</script>
 </body>
 </html>
