@@ -8,11 +8,11 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>
-INGENIOUS GROUPS ALGERIA | Advanced Flexo Printing & High Precision Design
+INGENIOUS GROUPS ALGERIA | Modern Packaging Design & Professional Printing
 </title>
 
 <meta name="description"
-content="INGENIOUS GROUPS ALGERIA — Advanced flexographic printing, high-precision packaging design, labels, 3D visualization and premium packaging solutions from Algeria to international markets.">
+content="INGENIOUS GROUPS ALGERIA — Modern packaging design, professional printing, labels and flexible packaging solutions from Algeria to international markets.">
 
 <meta name="keywords"
 content="Ingenious Groups Algeria, flexographic printing Algeria, flexo printing, packaging design, high precision design, labels Algeria, PP labels, packaging, 3D visualization, NVIDIA Blackwell B200">
@@ -3544,6 +3544,370 @@ section{
 }
 </style>
 
+
+<style id="ingenious-modern-overhaul">
+/* =========================================================
+   INGENIOUS MODERN UI OVERHAUL
+   Flat / Dynamic / Industrial / Strong Red
+========================================================= */
+:root{
+  --red:#ff1020;
+  --red2:#ff3340;
+  --red-dark:#c9000f;
+  --black:#050505;
+  --black2:#090909;
+  --panel:#101010;
+  --panel2:#141414;
+  --silver:#d7d7d7;
+  --muted:#8c8c8c;
+  --line:rgba(255,255,255,.10);
+  --line-red:rgba(255,16,32,.42);
+}
+
+html{scroll-behavior:smooth;scroll-padding-top:126px}
+body{
+  background:var(--black);
+  color:#fff;
+  font-family:Inter,Arial,Helvetica,sans-serif;
+}
+h1,h2,h3,.section-title,.intro-big,.contact-title,.article-side h3,
+.address-title,.tv-info h3,.logo,.footer-logo,.nvidia-title{
+  font-family:Inter,Arial,Helvetica,sans-serif !important;
+  font-weight:800 !important;
+  letter-spacing:-.035em !important;
+}
+a,button{transition:color .2s ease,background .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+
+/* Remove decorative 3D/cursor effects */
+.cursor-light,.orbit,.orbit2{display:none!important}
+.hero-grid{
+  opacity:.28;
+  background-size:80px 80px;
+}
+.hero-line{
+  background:linear-gradient(90deg,transparent,var(--red),transparent);
+  box-shadow:0 0 18px rgba(255,16,32,.35);
+}
+
+/* Header: clean, premium, easy navigation */
+header{
+  height:72px;
+  background:rgba(5,5,5,.92);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav{height:72px}
+.logo{
+  font-size:18px!important;
+  letter-spacing:-.02em!important;
+}
+.logo span{color:var(--red)!important}
+.nav-links{gap:6px}
+.nav-links a{
+  position:relative;
+  padding:10px 11px;
+  color:#a1a1a1;
+  border-radius:6px;
+  font-size:10px;
+  letter-spacing:.8px;
+}
+.nav-links a:hover{
+  color:#fff;
+  background:rgba(255,255,255,.045);
+}
+.nav-links a.nav-contact{
+  color:#fff!important;
+  background:var(--red);
+  border:1px solid var(--red);
+  margin-left:5px;
+}
+.nav-links a.nav-contact:hover{
+  background:#fff;
+  color:#080808!important;
+}
+
+/* Ticker: smaller and cleaner */
+.tech-news-bar{
+  top:72px;
+  height:42px;
+  background:#0a0a0a;
+  border-bottom:1px solid rgba(255,16,32,.38);
+  box-shadow:0 8px 30px rgba(0,0,0,.28);
+}
+.tech-news-label{
+  min-width:112px;
+  padding:0 14px;
+  background:var(--red);
+  font-size:9px;
+}
+.tech-news-item,.tech-news-item.arabic{font-size:14px}
+.tech-news-item.english{font-size:13px}
+
+/* Hero: no 3D, stronger editorial hierarchy */
+.hero-packaging{
+  min-height:calc(100vh - 42px);
+  padding-top:138px;
+  padding-bottom:150px;
+  background:#050505;
+}
+.hero-packaging-bg{
+  transform:none;
+  filter:saturate(.75) contrast(1.08);
+}
+.hero-packaging-overlay{
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.82) 42%,rgba(0,0,0,.32) 100%),
+    linear-gradient(0deg,rgba(0,0,0,.78),transparent 45%);
+}
+.hero-packaging-copy{max-width:760px;padding:30px 0 60px}
+.hero-packaging .hero-label{
+  color:#aaa;
+  font-size:10px;
+  letter-spacing:2.5px;
+}
+.hero-packaging h1{
+  font-size:clamp(48px,7vw,94px)!important;
+  line-height:.94!important;
+  letter-spacing:-.065em!important;
+  text-shadow:none!important;
+}
+.hero-packaging h1 span{
+  color:var(--red)!important;
+  text-shadow:0 0 28px rgba(255,16,32,.18)!important;
+}
+.hero-packaging .hero-welcome{
+  font-size:clamp(17px,2vw,24px);
+  color:#eee;
+  font-weight:700;
+}
+.hero-packaging .hero-description{
+  color:#a8a8a8;
+  max-width:620px;
+}
+.hero-service-pills span{
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.10);
+  backdrop-filter:none;
+}
+.hero-service-pills span:hover{
+  border-color:var(--red);
+  color:#fff;
+}
+.hero-buttons{gap:10px}
+.btn{
+  min-height:50px;
+  border-radius:5px;
+  font-size:10px;
+}
+.btn-red{
+  background:var(--red);
+  border-color:var(--red);
+  box-shadow:0 8px 25px rgba(255,16,32,.20);
+}
+.btn-red:hover{
+  background:#fff;
+  border-color:#fff;
+  color:#050505;
+  transform:translateY(-2px);
+}
+.btn-dark{
+  background:#0d0d0d;
+  border-color:#333;
+}
+.btn-dark:hover{border-color:var(--red);color:#fff}
+
+/* Flat offer strip */
+.hero-packaging-badge{
+  background:var(--red);
+  clip-path:none;
+  transform:none;
+  border-radius:4px;
+  box-shadow:0 15px 45px rgba(0,0,0,.35);
+}
+.hero-offer-strip{
+  left:3%;
+  right:3%;
+  bottom:56px;
+  min-height:72px;
+  padding:12px 22px;
+  border-radius:5px;
+  clip-path:none;
+  background:linear-gradient(90deg,#8f000a 0%,var(--red) 55%,#111 100%);
+  border:1px solid rgba(255,255,255,.14);
+}
+.hero-offer-item strong{font-size:30px}
+.hero-bottom-services{
+  min-height:54px;
+  background:#080808;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* Sections */
+section{padding:105px 0}
+.section-head{margin-bottom:42px}
+.section-kicker{
+  color:var(--red);
+  font-size:9px;
+  letter-spacing:2.6px;
+}
+.section-title{
+  font-size:clamp(34px,5vw,62px)!important;
+  letter-spacing:-.055em!important;
+}
+.section-description{color:#858585}
+
+/* Modern flat cards */
+.country,.tech-card,.quality-item,.design-card,.service,.behance-card,
+.tv-info,.map-card,.address-card,.form-intro,.project-form{
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(180deg,#111,#0b0b0b);
+  box-shadow:none;
+}
+.country:hover,.tech-card:hover,.service:hover{
+  transform:translateY(-5px)!important;
+  border-color:var(--line-red);
+  box-shadow:0 14px 35px rgba(0,0,0,.22);
+}
+.tech-card:hover{rotate:0deg!important}
+.service:hover{rotate:0deg!important}
+.country:hover{rotate:0deg!important}
+
+/* Remove oversized decorative text */
+.nvidia-feature::before,.contact-box::after{display:none}
+.nvidia-feature{
+  border-radius:7px;
+  border-color:rgba(255,16,32,.28);
+}
+.nvidia-title span{color:var(--red)}
+.quality-icon{
+  border-radius:5px;
+  border-color:rgba(255,16,32,.45);
+}
+
+/* Services become the visual anchor */
+.service-grid{gap:14px}
+.service{
+  min-height:245px;
+  padding:28px;
+  transition:.25s ease;
+}
+.service::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:3px;
+  height:0;
+  background:var(--red);
+  transition:height .25s ease;
+}
+.service:hover::after{height:100%}
+.service-icon{margin-top:35px;color:var(--red)}
+
+/* Behance / TV */
+.behance-card{
+  border-radius:6px;
+  transition:.3s ease;
+}
+.behance-card:hover{
+  transform:translateY(-5px)!important;
+  scale:1!important;
+  border-color:var(--red);
+}
+.tv-video{border-radius:6px}
+.play{
+  width:64px;height:64px;
+  background:var(--red);
+  box-shadow:0 0 0 8px rgba(255,16,32,.14);
+}
+
+/* Form */
+.form-input,.form-textarea,.form-select{
+  border-radius:4px;
+  background:#070707;
+}
+.form-input:focus,.form-textarea:focus,.form-select:focus{
+  border-color:var(--red);
+  box-shadow:0 0 0 3px rgba(255,16,32,.08);
+}
+.file-box{border-radius:5px}
+.submit-button{background:var(--red)!important}
+
+/* Contact */
+.contact-box{
+  border-radius:7px;
+  background:linear-gradient(135deg,#121212,#080808);
+}
+.contact-title span{color:var(--red)}
+
+/* WhatsApp stays functional */
+.whatsapp{
+  width:52px;height:52px;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+/* Loader */
+.industrial-loader-mark{
+  font-family:Inter,Arial,sans-serif!important;
+  text-shadow:none!important;
+}
+.industrial-loader-line span{
+  background:var(--red);
+  box-shadow:0 0 12px var(--red);
+}
+
+/* Scroll reveal: shorter, sharper */
+.reveal{
+  transform:translateY(18px);
+  transition:opacity .45s ease,transform .45s ease;
+}
+
+/* Mobile navigation */
+@media(max-width:950px){
+  .nav-links{
+    top:72px;
+    padding:12px 18px 18px;
+    background:rgba(7,7,7,.98);
+    backdrop-filter:blur(14px);
+  }
+  .nav-links a{width:100%;padding:13px 8px}
+  .nav-links a.nav-contact{margin:5px 0 0}
+  .hero-packaging{padding-top:112px}
+  .hero-packaging-badge{
+    transform:none;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+  }
+}
+@media(max-width:600px){
+  .tech-news-bar{height:38px}
+  .tech-news-label{min-width:96px}
+  .tech-news-item,.tech-news-item.arabic{font-size:12px}
+  .hero-packaging{
+    padding-top:100px;
+    padding-bottom:145px;
+  }
+  .hero-packaging h1{font-size:clamp(40px,12vw,64px)!important}
+  .hero-offer-strip{
+    border-radius:4px;
+    background:var(--red);
+  }
+  .section-head{display:block}
+  .section-description{margin-top:18px}
+}
+
+/* Respect reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+}
+</style>
+
 </head>
 
 
@@ -6571,6 +6935,22 @@ window.addEventListener("load",function(){
 });
 </script>
 
+
+
+<script id="ingenious-modern-overhaul-js">
+/* Disable legacy 3D interactions while preserving all functional scripts. */
+document.addEventListener("DOMContentLoaded",function(){
+  document.querySelectorAll(".orbit,.orbit2,.cursor-light").forEach(function(el){
+    el.style.display="none";
+  });
+
+  document.querySelectorAll(".service,.tech-card,.country").forEach(function(card){
+    card.style.transform="";
+    card.onmousemove=null;
+    card.onmouseleave=null;
+  });
+});
+</script>
 
 </body>
 </html>
